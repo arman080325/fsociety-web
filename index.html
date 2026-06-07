@@ -6,7 +6,7 @@
   <title>ArmanXploits | fsociety</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -25,47 +25,108 @@
       <li><a href="#about" class="nav-link" data-section="about">whoami</a></li>
       <li><a href="#journey" class="nav-link" data-section="journey">journey</a></li>
       <li><a href="#tools" class="nav-link" data-section="tools">tools</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">projects</a></li>
       <li><a href="#repos" class="nav-link" data-section="repos">repos</a></li>
       <li><a href="#notes" class="nav-link" data-section="notes">notes</a></li>
       <li><a href="#ctf" class="nav-link" data-section="ctf">ctf</a></li>
       <li><a href="#contact" class="nav-link" data-section="contact">contact</a></li>
     </ul>
-    <div class="nav-status">
-      <span class="status-dot"></span>
-      <span class="status-text">SYSTEM ONLINE</span>
-    </div>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <div class="hero-bg-text">FSOCIETY</div>
+    <!-- Particle canvas -->
+    <canvas id="particle-canvas"></canvas>
+    <!-- Decorative gradient orbs -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
     <div class="hero-content">
-      <div class="terminal-window">
-        <div class="terminal-bar">
-          <span class="t-btn t-close"></span>
-          <span class="t-btn t-min"></span>
-          <span class="t-btn t-max"></span>
-          <span class="t-title">armanxploits@fsociety:~$</span>
+
+      <!-- LEFT: Terminal -->
+      <div class="hero-left">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          <span class="eyebrow-text">fsociety // kali linux // ethical hacker</span>
         </div>
-        <div class="terminal-body">
-          <div class="t-line"><span class="prompt">$</span> <span class="cmd" id="typed-cmd"></span><span class="cursor">█</span></div>
-          <div class="t-output" id="hero-output"></div>
+
+        <h1 class="hero-title">
+          <span class="title-line title-line-1">BREAK<span class="title-accent">.</span></span>
+          <span class="title-line title-line-2">ANALYZE<span class="title-accent">.</span></span>
+          <span class="title-line title-line-3">SECURE<span class="title-accent">.</span></span>
+        </h1>
+
+        <p class="hero-desc">
+          4th-year CS Engineer · Pentester in progress · Building the <span class="hero-hl-cyan">fsociety</span> arsenal one exploit at a time.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">
+            <span class="btn-icon">⬡</span> view projects
+          </a>
+          <a href="#journey" class="btn-ghost">explore journey →</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="20">0</span>
+            <span class="stat-label">Tools Configured</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="4">0</span>
+            <span class="stat-label">Years of Study</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="12">0</span>
+            <span class="stat-label">Labs Completed</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num" data-target="2">0</span>
+            <span class="stat-label">Internships</span>
+          </div>
         </div>
       </div>
-      <div class="hero-tagline">
-        <h1>ETHICAL HACKER<span class="accent">.</span> PENTESTER<span class="accent">.</span> 4TH YEAR ENG<span class="accent">.</span></h1>
-        <p class="hero-sub">Breaking things to make them stronger // <span class="accent">fsociety</span></p>
+
+      <!-- RIGHT: Terminal Window -->
+      <div class="hero-right">
+        <div class="terminal-window">
+          <div class="terminal-bar">
+            <span class="t-btn t-close"></span>
+            <span class="t-btn t-min"></span>
+            <span class="t-btn t-max"></span>
+            <span class="t-title">armanxploits@fsociety:~$</span>
+          </div>
+          <div class="terminal-body">
+            <div class="t-line"><span class="prompt">$</span> <span class="cmd" id="typed-cmd"></span><span class="cursor">█</span></div>
+            <div class="t-output" id="hero-output"></div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="badge badge-1">
+          <span class="badge-icon">🛡</span>
+          <span>Ethical Hacker</span>
+        </div>
+        <div class="badge badge-2">
+          <span class="badge-icon">🔓</span>
+          <span>Pentester</span>
+        </div>
+        <div class="badge badge-3">
+          <span class="badge-icon">🕵🏻‍♀</span>
+          <span>Digital Forensics</span>
+        </div>
       </div>
-      <div class="hero-cta">
-        <a href="#journey" class="btn-primary">explore the journey</a>
-        <a href="#repos" class="btn-outline">view tools &amp; repos</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num" data-target="20">0</span><span class="stat-label">Tools Configured</span></div>
-        <div class="stat"><span class="stat-num" data-target="4">0</span><span class="stat-label">Years of Study</span></div>
-        <div class="stat"><span class="stat-num" data-target="12">0</span><span class="stat-label">Labs Completed</span></div>
-        <div class="stat"><span class="stat-num" data-target="1">0</span><span class="stat-label">Internship</span></div>
-      </div>
+
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">scroll</span>
     </div>
   </section>
 
@@ -87,7 +148,7 @@
         <h3 class="about-name">Arman</h3>
         <p class="about-handle"><span class="accent">@</span>armanxploits</p>
         <p class="about-bio">
-          4th-year engineering student focused on cybersecurity. Currently doing a summer internship and actively building toward a career in <span class="accent">ethical hacking</span> and <span class="accent">penetration testing</span>. Runs a system themed around <span class="accent">fsociety</span>. Self-directed, hands-on learner.
+          4th-year engineering student focused on cybersecurity. Currently doing internships and actively building toward a career in <span class="accent">ethical hacking</span> and <span class="accent">penetration testing</span>. Runs a system themed around <span class="accent">fsociety</span>. Self-directed, hands-on learner.
         </p>
         <div class="about-tags">
           <span class="tag">Kali Linux</span>
@@ -322,10 +383,117 @@
     </div>
   </section>
 
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <h2>projects</h2>
+      <div class="section-line"></div>
+    </div>
+    <p class="section-desc">// cybersecurity tools, research, and labs — built in the field</p>
+
+    <div class="projects-grid">
+
+      <!-- PLACEHOLDER PROJECT 1 -->
+      <div class="card project-card project-placeholder">
+        <div class="project-status-bar">
+          <span class="project-badge wip">🔧 in progress</span>
+          <span class="project-year">2025</span>
+        </div>
+        <div class="project-icon-wrap">
+          <div class="project-icon">?</div>
+        </div>
+        <h3 class="project-title">Your First Project</h3>
+        <p class="project-desc">
+          Coming soon — add your cybersecurity project here. Could be a Python exploit script, a recon tool, a CTF writeup, a network sniffer, or a vulnerability scanner.
+        </p>
+        <div class="project-tech">
+          <span class="tag">Python</span>
+          <span class="tag">Networking</span>
+          <span class="tag">Kali Linux</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link project-link-demo" target="_blank">
+            <span>⬡</span> Live Demo
+          </a>
+          <a href="https://github.com/armanxploits" class="project-link project-link-gh" target="_blank">
+            <span>⎇</span> GitHub Repo
+          </a>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER PROJECT 2 -->
+      <div class="card project-card project-placeholder">
+        <div class="project-status-bar">
+          <span class="project-badge planned">📋 planned</span>
+          <span class="project-year">2025</span>
+        </div>
+        <div class="project-icon-wrap">
+          <div class="project-icon">?</div>
+        </div>
+        <h3 class="project-title">Network Recon Dashboard</h3>
+        <p class="project-desc">
+          Planned: A web-based dashboard wrapping Nmap + Shodan API results. Visualize open ports, services, and CVEs for a target IP range in real time.
+        </p>
+        <div class="project-tech">
+          <span class="tag">Python</span>
+          <span class="tag">Flask</span>
+          <span class="tag">Nmap</span>
+          <span class="tag">Shodan</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link project-link-demo disabled" target="_blank">
+            <span>⬡</span> Demo (soon)
+          </a>
+          <a href="#" class="project-link project-link-gh disabled" target="_blank">
+            <span>⎇</span> Repo (soon)
+          </a>
+        </div>
+      </div>
+
+      <!-- PLACEHOLDER PROJECT 3 -->
+      <div class="card project-card project-placeholder">
+        <div class="project-status-bar">
+          <span class="project-badge planned">📋 planned</span>
+          <span class="project-year">2025</span>
+        </div>
+        <div class="project-icon-wrap">
+          <div class="project-icon">?</div>
+        </div>
+        <h3 class="project-title">CTF Writeup Repo</h3>
+        <p class="project-desc">
+          Planned: A structured writeup repository for HackTheBox and TryHackMe machines — methodology, payloads, flags, and lessons learned in clean Markdown.
+        </p>
+        <div class="project-tech">
+          <span class="tag">Markdown</span>
+          <span class="tag">HTB</span>
+          <span class="tag">THM</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link project-link-demo disabled" target="_blank">
+            <span>⬡</span> Demo (soon)
+          </a>
+          <a href="#" class="project-link project-link-gh disabled" target="_blank">
+            <span>⎇</span> Repo (soon)
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Add more CTA -->
+    <div class="projects-add-cta">
+      <span class="add-cta-line"></span>
+      <span class="add-cta-text">// more projects loading...</span>
+      <span class="add-cta-line"></span>
+    </div>
+
+  </section>
+
   <!-- TOP REPOS -->
   <section id="repos">
     <div class="section-header">
-      <span class="section-num">04</span>
+      <span class="section-num">05</span>
       <h2>repos</h2>
       <div class="section-line"></div>
     </div>
@@ -336,7 +504,7 @@
       <div class="repos-col">
         <h3 class="col-title"><span class="accent">~/</span> my repos</h3>
 
-        <a class="card repo-card" href="#" target="_blank">
+        <a class="card repo-card" href="https://github.com/armanxploits/ethical-hacking-notes" target="_blank">
           <div class="repo-header">
             <span class="repo-icon">⬡</span>
             <div>
@@ -430,7 +598,7 @@
           </div>
         </a>
 
-        <a class="card repo-card" href="https://github.com/the-tcpdump-group/tcpdump" target="_blank">
+        <a class="card repo-card" href="https://github.com/sqlmapproject/sqlmap" target="_blank">
           <div class="repo-header">
             <span class="repo-icon">⬡</span>
             <div>
@@ -493,7 +661,7 @@
   <!-- NOTES / METHODOLOGIES -->
   <section id="notes">
     <div class="section-header">
-      <span class="section-num">05</span>
+      <span class="section-num">06</span>
       <h2>notes</h2>
       <div class="section-line"></div>
     </div>
@@ -600,7 +768,7 @@ whatweb http://target.com</code></pre>
               <h4>XSS — DOM-based</h4>
               <pre class="code-block"><code># Classic sink via innerHTML
 document.getElementById('output').innerHTML = location.hash.slice(1)
-# Payload: #<img src=x onerror=alert(1)>
+# Payload: #&lt;img src=x onerror=alert(1)&gt;
 
 # data: URI bypass (XSS Game Level 6)
 # Navigate to: #data:text/javascript,alert(1)</code></pre>
@@ -674,7 +842,7 @@ ls -la /etc/cron*</code></pre>
   <!-- CTF / LABS -->
   <section id="ctf">
     <div class="section-header">
-      <span class="section-num">06</span>
+      <span class="section-num">07</span>
       <h2>ctf &amp; labs</h2>
       <div class="section-line"></div>
     </div>
@@ -730,7 +898,7 @@ ls -la /etc/cron*</code></pre>
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-header">
-      <span class="section-num">07</span>
+      <span class="section-num">08</span>
       <h2>contact</h2>
       <div class="section-line"></div>
     </div>
@@ -739,14 +907,14 @@ ls -la /etc/cron*</code></pre>
         <h3>let's connect<span class="accent">.</span></h3>
         <p>Open to collaboration on CTF teams, bug bounty hunting, security research, and anything ethical hacking related. Currently in internship — reach out!</p>
         <div class="contact-links">
-          <a href="https://github.com/armanxploits" class="contact-link" target="_blank">
-            <span class="contact-icon">⬡</span> github.com/armanxploits
+          <a href="https://github.com/arman080325" class="contact-link" target="_blank">
+            <span class="contact-icon">⬡</span> github.com/arman080325
           </a>
-          <a href="#" class="contact-link">
-            <span class="contact-icon">◈</span> LinkedIn → update this link
+          <a href="https://www.linkedin.com/in/arman-ahemad-khan" class="contact-link" target="_blank">
+            <span class="contact-icon">◈</span> LinkedIn
           </a>
-          <a href="mailto:your@email.com" class="contact-link">
-            <span class="contact-icon">◉</span> your@email.com
+          <a href="mailto:armanxploit@gmail.com" class="contact-link">
+            <span class="contact-icon">◉</span> armanxploit@gmail.com
           </a>
         </div>
       </div>

@@ -26,7 +26,7 @@ const CONFIG = {
     { cmd: "whoami", output: ["armanxploits", "4th Year Eng. | Ethical Hacker | Pentester"] },
     { cmd: "cat /etc/hostname", output: ["fsociety"] },
     { cmd: "uname -a", output: ["Linux fsociety 6.6.0-kali3-amd64 #1 SMP Kali 6.6.15 x86_64 GNU/Linux"] },
-    { cmd: "netstat -active", output: ["LISTENING on port 4444 (reverse shell ready)", "STATUS: all systems operational"] },
+    { cmd: "netstat -active", output: ["LISTENING on port 4444 (reverse shell ready)", "ESTABLISHED: lab target connection live"] },
   ]
 };
 
@@ -259,41 +259,71 @@ function initSmoothScroll() {
   });
 }
 
-/* ===== MATRIX RAIN (subtle background) ===== */
-function initMatrixRain() {
-  const canvas = document.createElement('canvas');
-  canvas.style.cssText = `
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.03;
-  `;
-  document.body.prepend(canvas);
-
+/* ===== PARTICLE HERO BACKGROUND ===== */
+function initParticleCanvas() {
+  const canvas = document.getElementById('particle-canvas');
+  if (!canvas) return;
   const ctx = canvas.getContext('2d');
-  const resize = () => { canvas.width = window.innerWidth; canvas.height = window.innerHeight; };
+
+  const resize = () => {
+    canvas.width  = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+  };
   resize();
   window.addEventListener('resize', resize);
 
-  const cols = Math.floor(canvas.width / 16);
-  const drops = Array(cols).fill(1);
-  const chars = '01アイウエオカキクケコABCDEFGH<>{}[]$#@!';
+  const COLORS = ['#00ff88', '#00d4ff', '#8b5cf6', '#f59e0b'];
+  const COUNT = 60;
 
-  setInterval(() => {
-    ctx.fillStyle = 'rgba(5, 10, 5, 0.05)';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = '#00ff41';
-    ctx.font = '12px "Share Tech Mono", monospace';
+  const particles = Array.from({ length: COUNT }, () => ({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.4,
+    vy: (Math.random() - 0.5) * 0.4,
+    r:  Math.random() * 1.5 + 0.5,
+    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    alpha: Math.random() * 0.5 + 0.2,
+  }));
 
-    drops.forEach((y, i) => {
-      const char = chars[Math.floor(Math.random() * chars.length)];
-      ctx.fillText(char, i * 16, y * 16);
-      if (y * 16 > canvas.height && Math.random() > 0.975) drops[i] = 0;
-      drops[i]++;
+  function drawFrame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw connection lines
+    particles.forEach((p, i) => {
+      particles.slice(i + 1).forEach(q => {
+        const dx = p.x - q.x, dy = p.y - q.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 120) {
+          ctx.beginPath();
+          ctx.moveTo(p.x, p.y);
+          ctx.lineTo(q.x, q.y);
+          ctx.strokeStyle = `rgba(0,212,255,${0.06 * (1 - dist / 120)})`;
+          ctx.lineWidth = 0.5;
+          ctx.stroke();
+        }
+      });
     });
-  }, 80);
+
+    // Draw particles
+    particles.forEach(p => {
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.color;
+      ctx.globalAlpha = p.alpha;
+      ctx.fill();
+      ctx.globalAlpha = 1;
+
+      // Move
+      p.x += p.vx;
+      p.y += p.vy;
+      if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+      if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    });
+
+    requestAnimationFrame(drawFrame);
+  }
+
+  drawFrame();
 }
 
 /* ===== UTILITY ===== */
@@ -301,7 +331,7 @@ function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
 /* ===== INIT ===== */
 document.addEventListener('DOMContentLoaded', () => {
-  initMatrixRain();
+  initParticleCanvas();
   initHeroTerminal();
   animateCounters();
   initSkillBars();
