@@ -1,953 +1,661 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ArmanXploits | fsociety</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fsociety // armanxploits</title>
+    <meta name="description"
+        content="Real-world ethical hacking & cybersecurity field notes, arsenal, interactive roadmap, and live toolbox. Educational use only." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <!-- SCAN LINE OVERLAY -->
-  <div class="scanlines"></div>
-  <div class="noise"></div>
+    <div class="grain"></div>
+    <div class="scan"></div>
+    <div class="vign"></div>
 
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-brand">
-      <span class="bracket">[</span>
-      <span class="brand-text">ARMAN<span class="accent">X</span>PLOITS</span>
-      <span class="bracket">]</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#about" class="nav-link" data-section="about">whoami</a></li>
-      <li><a href="#journey" class="nav-link" data-section="journey">journey</a></li>
-      <li><a href="#tools" class="nav-link" data-section="tools">tools</a></li>
-      <li><a href="#projects" class="nav-link" data-section="projects">projects</a></li>
-      <li><a href="#repos" class="nav-link" data-section="repos">repos</a></li>
-      <li><a href="#notes" class="nav-link" data-section="notes">notes</a></li>
-      <li><a href="#ctf" class="nav-link" data-section="ctf">ctf</a></li>
-      <li><a href="#contact" class="nav-link" data-section="contact">contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO -->
-  <section id="hero">
-    <!-- Particle canvas -->
-    <canvas id="particle-canvas"></canvas>
-    <!-- Decorative gradient orbs -->
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-
-    <div class="hero-content">
-
-      <!-- LEFT: Terminal -->
-      <div class="hero-left">
-        <div class="hero-eyebrow">
-          <span class="eyebrow-dot"></span>
-          <span class="eyebrow-text">fsociety // kali linux // ethical hacker</span>
+    <!-- ======================================================
+     BOOT OVERLAY
+     ====================================================== -->
+    <div id="boot">
+        <div class="boot-box">
+            <div class="boot-line" id="bootLine"></div>
+            <button class="boot-skip" id="bootSkip">[ skip ]</button>
         </div>
-
-        <h1 class="hero-title">
-          <span class="title-line title-line-1">BREAK<span class="title-accent">.</span></span>
-          <span class="title-line title-line-2">ANALYZE<span class="title-accent">.</span></span>
-          <span class="title-line title-line-3">SECURE<span class="title-accent">.</span></span>
-        </h1>
-
-        <p class="hero-desc">
-          4th-year CS Engineer · Pentester in progress · Building the <span class="hero-hl-cyan">fsociety</span> arsenal one exploit at a time.
-        </p>
-
-        <div class="hero-cta">
-          <a href="#projects" class="btn-primary">
-            <span class="btn-icon">⬡</span> view projects
-          </a>
-          <a href="#journey" class="btn-ghost">explore journey →</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num" data-target="20">0</span>
-            <span class="stat-label">Tools Configured</span>
-          </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="4">0</span>
-            <span class="stat-label">Years of Study</span>
-          </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="12">0</span>
-            <span class="stat-label">Labs Completed</span>
-          </div>
-          <div class="stat-div"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="2">0</span>
-            <span class="stat-label">Internships</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- RIGHT: Terminal Window -->
-      <div class="hero-right">
-        <div class="terminal-window">
-          <div class="terminal-bar">
-            <span class="t-btn t-close"></span>
-            <span class="t-btn t-min"></span>
-            <span class="t-btn t-max"></span>
-            <span class="t-title">armanxploits@fsociety:~$</span>
-          </div>
-          <div class="terminal-body">
-            <div class="t-line"><span class="prompt">$</span> <span class="cmd" id="typed-cmd"></span><span class="cursor">█</span></div>
-            <div class="t-output" id="hero-output"></div>
-          </div>
-        </div>
-
-        <!-- Floating badges -->
-        <div class="badge badge-1">
-          <span class="badge-icon">🛡</span>
-          <span>Ethical Hacker</span>
-        </div>
-        <div class="badge badge-2">
-          <span class="badge-icon">🔓</span>
-          <span>Pentester</span>
-        </div>
-        <div class="badge badge-3">
-          <span class="badge-icon">🕵🏻‍♀</span>
-          <span>Digital Forensics</span>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator">
-      <div class="scroll-line"></div>
-      <span class="scroll-text">scroll</span>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="section-header">
-      <span class="section-num">01</span>
-      <h2>whoami</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-card card">
-        <div class="card-label">// identity</div>
-        <div class="about-avatar">
-          <div class="avatar-ring">
-            <div class="avatar-inner">AX</div>
-          </div>
+    <!-- ======================================================
+     KEYBOARD SHORTCUTS OVERLAY
+     ====================================================== -->
+    <div id="kbOverlay">
+        <div class="kb-box">
+            <h2>keyboard <b>shortcuts</b></h2>
+            <div class="kb-grid" id="kbGrid"></div>
+            <div class="kb-close">press ESC or click outside to close</div>
         </div>
-        <h3 class="about-name">Arman</h3>
-        <p class="about-handle"><span class="accent">@</span>armanxploits</p>
-        <p class="about-bio">
-          4th-year engineering student focused on cybersecurity. Currently doing internships and actively building toward a career in <span class="accent">ethical hacking</span> and <span class="accent">penetration testing</span>. Runs a system themed around <span class="accent">fsociety</span>. Self-directed, hands-on learner.
-        </p>
-        <div class="about-tags">
-          <span class="tag">Kali Linux</span>
-          <span class="tag">Metasploit</span>
-          <span class="tag">Burp Suite Pro</span>
-          <span class="tag">Aircrack-ng</span>
-          <span class="tag">Nmap</span>
-          <span class="tag">Bettercap</span>
-        </div>
-      </div>
-
-      <div class="about-right">
-        <div class="card skill-card">
-          <div class="card-label">// current focus</div>
-          <div class="skill-list">
-            <div class="skill-item">
-              <span class="skill-name">Web App Pentesting</span>
-              <div class="skill-bar"><div class="skill-fill" style="--pct:75%"></div></div>
-              <span class="skill-pct">75%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Network Attacks</span>
-              <div class="skill-bar"><div class="skill-fill" style="--pct:70%"></div></div>
-              <span class="skill-pct">70%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">WiFi / Wireless</span>
-              <div class="skill-bar"><div class="skill-fill" style="--pct:65%"></div></div>
-              <span class="skill-pct">65%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">Exploitation (MSF)</span>
-              <div class="skill-bar"><div class="skill-fill" style="--pct:60%"></div></div>
-              <span class="skill-pct">60%</span>
-            </div>
-            <div class="skill-item">
-              <span class="skill-name">OSINT &amp; Recon</span>
-              <div class="skill-bar"><div class="skill-fill" style="--pct:68%"></div></div>
-              <span class="skill-pct">68%</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="card setup-card">
-          <div class="card-label">// fsociety box specs</div>
-          <div class="setup-list">
-            <div class="setup-item"><span class="setup-key">machine</span><span class="setup-val">ASUS TUF Gaming F16</span></div>
-            <div class="setup-item"><span class="setup-key">os</span><span class="setup-val">Kali Linux (Xfce) + Win11</span></div>
-            <div class="setup-item"><span class="setup-key">shell</span><span class="setup-val">zsh + Oh My Zsh + p10k</span></div>
-            <div class="setup-item"><span class="setup-key">wireless</span><span class="setup-val">Realtek RTL8852BE (wlan0)</span></div>
-            <div class="setup-item"><span class="setup-key">burp</span><span class="setup-val">Burp Suite Pro + Java 21</span></div>
-            <div class="setup-item"><span class="setup-key">mcp</span><span class="setup-val">Metasploit MCP + Aircrack MCP</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- JOURNEY TIMELINE -->
-  <section id="journey">
-    <div class="section-header">
-      <span class="section-num">02</span>
-      <h2>journey</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="timeline">
-
-      <div class="timeline-item left">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="tl-date">2021</div>
-          <h3>The Beginning</h3>
-          <p>Got interested in cybersecurity. Started with networking fundamentals — OSI model, TCP/IP, ARP, DNS. Began exploring Kali Linux on a KDE Plasma dual-boot.</p>
-          <div class="tl-tags"><span class="tag">Networking</span><span class="tag">Kali Linux</span></div>
-        </div>
-      </div>
-
-      <div class="timeline-item right">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="tl-date">2022</div>
-          <h3>Tools &amp; CTF Foundations</h3>
-          <p>Installed core tools: SecLists, VS Code, Obsidian, CherryTree, tmux. Explored Android wireless ADB from Kali. Solved XSS Game challenges. Studied ARP packet structure.</p>
-          <div class="tl-tags"><span class="tag">CTF</span><span class="tag">XSS</span><span class="tag">SecLists</span></div>
-        </div>
-      </div>
-
-      <div class="timeline-item left">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="tl-date">2023</div>
-          <h3>MitM Attacks &amp; Wireless</h3>
-          <p>Learned MitM attacks with Bettercap, ARP/DNS spoofing, WPA/WPA2 handshake capture. Built Ethical Hacking Notes GitHub repo with formatted Markdown methodology notes.</p>
-          <div class="tl-tags"><span class="tag">Bettercap</span><span class="tag">ARP Spoofing</span><span class="tag">WPA2</span><span class="tag">Aircrack-ng</span></div>
-        </div>
-      </div>
-
-      <div class="timeline-item right">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="tl-date">2024 early</div>
-          <h3>Full Kali Setup + Burp Pro</h3>
-          <p>New dual-boot on ASUS TUF F16 (Xfce). Resolved GRUB, USB mode, clock sync, TLP, Bluetooth. Invested in Burp Suite Pro. Configured Java 21. Started PortSwigger Web Academy labs.</p>
-          <div class="tl-tags"><span class="tag">Burp Suite Pro</span><span class="tag">PortSwigger</span><span class="tag">GRUB</span></div>
-        </div>
-      </div>
-
-      <div class="timeline-item left">
-        <div class="timeline-dot"></div>
-        <div class="card timeline-card">
-          <div class="tl-date">2024 late</div>
-          <h3>Obsidian Vault + Presentations</h3>
-          <p>Built a cybersecurity knowledge vault in Obsidian: OSI Model, ARP Spoofing, Firewalls, Wireshark, DNS — all cross-linked. Delivered an internship presentation on WannaCry and the Sony Pictures hack.</p>
-          <div class="tl-tags"><span class="tag">Obsidian</span><span class="tag">WannaCry</span><span class="tag">Sony Hack</span></div>
-        </div>
-      </div>
-
-      <div class="timeline-item right active">
-        <div class="timeline-dot pulse"></div>
-        <div class="card timeline-card active-card">
-          <div class="tl-date">2025 — NOW</div>
-          <h3>Internship + MCP Integration</h3>
-          <p>Summer internship in cybersecurity. Configured Metasploit MCP and Aircrack MCP on the fsociety box. Running recon scans against local lab targets. Resolving RTL8852BE WiFi driver issues.</p>
-          <div class="tl-tags"><span class="tag">Metasploit MCP</span><span class="tag">Internship</span><span class="tag">Lab Targets</span></div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- TOOLS ARSENAL -->
-  <section id="tools">
-    <div class="section-header">
-      <span class="section-num">03</span>
-      <h2>tools</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="tools-filter">
-      <button class="filter-btn active" data-filter="all">all</button>
-      <button class="filter-btn" data-filter="recon">recon</button>
-      <button class="filter-btn" data-filter="exploit">exploitation</button>
-      <button class="filter-btn" data-filter="wireless">wireless</button>
-      <button class="filter-btn" data-filter="web">web</button>
-      <button class="filter-btn" data-filter="misc">misc</button>
-    </div>
-    <div class="tools-grid" id="tools-grid">
-
-      <div class="card tool-card" data-cat="recon">
-        <div class="tool-icon">◈</div>
-        <h3>Nmap</h3>
-        <p>Network discovery and security auditing. Host discovery, port scanning, OS detection.</p>
-        <div class="tool-meta"><span class="tag">Recon</span><span class="tool-status configured">configured</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="exploit">
-        <div class="tool-icon">◉</div>
-        <h3>Metasploit</h3>
-        <p>World's most used penetration testing framework. Full MCP integration on fsociety box.</p>
-        <div class="tool-meta"><span class="tag">Exploitation</span><span class="tool-status configured">MCP active</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="web">
-        <div class="tool-icon">◐</div>
-        <h3>Burp Suite Pro</h3>
-        <p>Web app security testing. Intercepting proxy, scanner, intruder, repeater. Java 21 required.</p>
-        <div class="tool-meta"><span class="tag">Web</span><span class="tool-status configured">licensed</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="wireless">
-        <div class="tool-icon">◑</div>
-        <h3>Aircrack-ng</h3>
-        <p>WPA/WPA2 handshake capture and cracking. Full MCP integration. wlan0 (RTL8852BE).</p>
-        <div class="tool-meta"><span class="tag">Wireless</span><span class="tool-status configured">MCP active</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="wireless">
-        <div class="tool-icon">◇</div>
-        <h3>Bettercap</h3>
-        <p>MitM attacks, ARP spoofing, DNS spoofing, and network recon. Written in Go.</p>
-        <div class="tool-meta"><span class="tag">Wireless</span><span class="tag">MitM</span><span class="tool-status configured">configured</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="web">
-        <div class="tool-icon">◆</div>
-        <h3>OWASP ZAP</h3>
-        <p>Open-source web app scanner. Good companion to Burp for automated scanning.</p>
-        <div class="tool-meta"><span class="tag">Web</span><span class="tool-status learning">learning</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="recon">
-        <div class="tool-icon">◈</div>
-        <h3>Wireshark</h3>
-        <p>Deep packet inspection. Used for ARP analysis, DNS traffic, and network forensics.</p>
-        <div class="tool-meta"><span class="tag">Recon</span><span class="tool-status configured">configured</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="recon">
-        <div class="tool-icon">◉</div>
-        <h3>SecLists</h3>
-        <p>Collection of multiple types of lists for security assessments. Located at /usr/share/seclists/.</p>
-        <div class="tool-meta"><span class="tag">Wordlists</span><span class="tool-status configured">installed</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="misc">
-        <div class="tool-icon">◐</div>
-        <h3>tmux</h3>
-        <p>Terminal multiplexer. Manages multiple terminal sessions during active engagements.</p>
-        <div class="tool-meta"><span class="tag">Misc</span><span class="tool-status configured">configured</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="exploit">
-        <div class="tool-icon">◑</div>
-        <h3>John the Ripper</h3>
-        <p>Password cracker supporting many hash types. Pairs well with Hashcat for GPU cracking.</p>
-        <div class="tool-meta"><span class="tag">Exploitation</span><span class="tool-status learning">learning</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="recon">
-        <div class="tool-icon">◇</div>
-        <h3>Gobuster</h3>
-        <p>Directory/file, DNS and vhost busting tool written in Go. Essential for web recon.</p>
-        <div class="tool-meta"><span class="tag">Recon</span><span class="tool-status learning">learning</span></div>
-      </div>
-
-      <div class="card tool-card" data-cat="misc">
-        <div class="tool-icon">◆</div>
-        <h3>Obsidian</h3>
-        <p>Knowledge management vault for cybersecurity notes. Cross-linked notes on all major topics.</p>
-        <div class="tool-meta"><span class="tag">Notes</span><span class="tool-status configured">active vault</span></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== PROJECTS ===== -->
-  <section id="projects">
-    <div class="section-header">
-      <span class="section-num">04</span>
-      <h2>projects</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="section-desc">// cybersecurity tools, research, and labs — built in the field</p>
-
-    <div class="projects-grid">
-
-      <!-- PLACEHOLDER PROJECT 1 -->
-      <div class="card project-card project-placeholder">
-        <div class="project-status-bar">
-          <span class="project-badge wip">🔧 in progress</span>
-          <span class="project-year">2025</span>
-        </div>
-        <div class="project-icon-wrap">
-          <div class="project-icon">?</div>
-        </div>
-        <h3 class="project-title">Your First Project</h3>
-        <p class="project-desc">
-          Coming soon — add your cybersecurity project here. Could be a Python exploit script, a recon tool, a CTF writeup, a network sniffer, or a vulnerability scanner.
-        </p>
-        <div class="project-tech">
-          <span class="tag">Python</span>
-          <span class="tag">Networking</span>
-          <span class="tag">Kali Linux</span>
-        </div>
-        <div class="project-links">
-          <a href="#" class="project-link project-link-demo" target="_blank">
-            <span>⬡</span> Live Demo
-          </a>
-          <a href="https://github.com/armanxploits" class="project-link project-link-gh" target="_blank">
-            <span>⎇</span> GitHub Repo
-          </a>
-        </div>
-      </div>
-
-      <!-- PLACEHOLDER PROJECT 2 -->
-      <div class="card project-card project-placeholder">
-        <div class="project-status-bar">
-          <span class="project-badge planned">📋 planned</span>
-          <span class="project-year">2025</span>
-        </div>
-        <div class="project-icon-wrap">
-          <div class="project-icon">?</div>
-        </div>
-        <h3 class="project-title">Network Recon Dashboard</h3>
-        <p class="project-desc">
-          Planned: A web-based dashboard wrapping Nmap + Shodan API results. Visualize open ports, services, and CVEs for a target IP range in real time.
-        </p>
-        <div class="project-tech">
-          <span class="tag">Python</span>
-          <span class="tag">Flask</span>
-          <span class="tag">Nmap</span>
-          <span class="tag">Shodan</span>
-        </div>
-        <div class="project-links">
-          <a href="#" class="project-link project-link-demo disabled" target="_blank">
-            <span>⬡</span> Demo (soon)
-          </a>
-          <a href="#" class="project-link project-link-gh disabled" target="_blank">
-            <span>⎇</span> Repo (soon)
-          </a>
-        </div>
-      </div>
-
-      <!-- PLACEHOLDER PROJECT 3 -->
-      <div class="card project-card project-placeholder">
-        <div class="project-status-bar">
-          <span class="project-badge planned">📋 planned</span>
-          <span class="project-year">2025</span>
-        </div>
-        <div class="project-icon-wrap">
-          <div class="project-icon">?</div>
-        </div>
-        <h3 class="project-title">CTF Writeup Repo</h3>
-        <p class="project-desc">
-          Planned: A structured writeup repository for HackTheBox and TryHackMe machines — methodology, payloads, flags, and lessons learned in clean Markdown.
-        </p>
-        <div class="project-tech">
-          <span class="tag">Markdown</span>
-          <span class="tag">HTB</span>
-          <span class="tag">THM</span>
-        </div>
-        <div class="project-links">
-          <a href="#" class="project-link project-link-demo disabled" target="_blank">
-            <span>⬡</span> Demo (soon)
-          </a>
-          <a href="#" class="project-link project-link-gh disabled" target="_blank">
-            <span>⎇</span> Repo (soon)
-          </a>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Add more CTA -->
-    <div class="projects-add-cta">
-      <span class="add-cta-line"></span>
-      <span class="add-cta-text">// more projects loading...</span>
-      <span class="add-cta-line"></span>
+    <!-- ======================================================
+     THREAT TICKER
+     ====================================================== -->
+    <div id="threatBar">
+        <div class="ticker-track" id="tickerTrack"></div>
     </div>
 
-  </section>
+    <!-- ======================================================
+     LEFT RAIL
+     ====================================================== -->
+    <aside class="rail">
+        <span class="rail-tick red">fsociety</span>
+        <span class="rail-dot"></span>
+        <span class="rail-tick">// educational use only</span>
+    </aside>
 
-  <!-- TOP REPOS -->
-  <section id="repos">
-    <div class="section-header">
-      <span class="section-num">05</span>
-      <h2>repos</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="section-desc">Top hacking repositories every ethical hacker should know + personal repos.</p>
-    <div class="repos-grid">
-
-      <!-- PERSONAL REPOS -->
-      <div class="repos-col">
-        <h3 class="col-title"><span class="accent">~/</span> my repos</h3>
-
-        <a class="card repo-card" href="https://github.com/armanxploits/ethical-hacking-notes" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">armanxploits / ethical-hacking-notes</div>
-              <div class="repo-desc">Personal methodology notes — MitM, ARP/DNS spoofing, WPA2 capture, Nmap host discovery. Formatted Markdown.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Markdown</span>
-            <span class="repo-badge personal">personal</span>
-          </div>
-        </a>
-
-        <div class="card repo-card add-repo">
-          <div class="add-repo-text">+ add your next repo here</div>
-          <p class="add-repo-sub">Update repos in script.js → myRepos array</p>
+    <!-- ======================================================
+     NAV
+     ====================================================== -->
+    <nav id="nav">
+        <div class="brand">ARMAN<b>X</b>PLOITS<span class="sub">// fsociety</span></div>
+        <div class="nav-spread" id="navSpread">
+            <a href="#whoami" data-s="whoami">whoami</a>
+            <a href="#roadmap" data-s="roadmap">the path</a>
+            <a href="#tutorials" data-s="tutorials">tutorials</a>
+            <a href="#arsenal" data-s="arsenal">arsenal</a>
+            <a href="#toolbox" data-s="toolbox">toolbox</a>
+            <a href="#journey" data-s="journey">journey</a>
+            <a href="#notes" data-s="notes">field notes</a>
+            <a href="#attacktree" data-s="attacktree">attack tree</a>
+            <a href="#proving" data-s="proving">proving</a>
+            <a href="#repos" data-s="repos">repos</a>
+            <a href="#contact" data-s="contact">contact</a>
         </div>
-      </div>
+        <button class="nav-kb-hint" id="kbBtn">? shortcuts</button>
+        <button class="nav-burger" id="burger" aria-label="menu">≡</button>
+    </nav>
 
-      <!-- COMMUNITY REPOS -->
-      <div class="repos-col">
-        <h3 class="col-title"><span class="accent">$</span> essential community repos</h3>
-
-        <a class="card repo-card" href="https://github.com/danielmiessler/SecLists" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">danielmiessler / SecLists</div>
-              <div class="repo-desc">The quintessential security lists collection — usernames, passwords, URLs, payloads. Already on your box at /usr/share/seclists/.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Python</span>
-            <span class="repo-stars">★ 60k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/rapid7/metasploit-framework" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">rapid7 / metasploit-framework</div>
-              <div class="repo-desc">The Metasploit Framework — exploitation, post-exploitation, payloads. MCP integrated on fsociety box.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Ruby</span>
-            <span class="repo-stars">★ 35k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/swisskyrepo/PayloadsAllTheThings" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">swisskyrepo / PayloadsAllTheThings</div>
-              <div class="repo-desc">A list of useful payloads and bypasses for Web Application Security. XSS, SQLi, SSRF, RCE and more.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Python</span>
-            <span class="repo-stars">★ 62k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/carlospolop/PEASS-ng" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">carlospolop / PEASS-ng</div>
-              <div class="repo-desc">Privilege Escalation Awesome Scripts Suite — LinPEAS, WinPEAS. Find possible paths to escalate privs.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Shell</span>
-            <span class="repo-stars">★ 17k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/bettercap/bettercap" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">bettercap / bettercap</div>
-              <div class="repo-desc">Swiss army knife for network attacks. ARP/DNS spoofing, BLE, WiFi, and more. In active use.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Go</span>
-            <span class="repo-stars">★ 17k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/sqlmapproject/sqlmap" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">sqlmapproject / sqlmap</div>
-              <div class="repo-desc">Automatic SQL injection detection and exploitation tool. One of the most used tools in web pentesting.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Python</span>
-            <span class="repo-stars">★ 33k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/BloodHoundAD/BloodHound" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">BloodHoundAD / BloodHound</div>
-              <div class="repo-desc">Active Directory attack path mapping using graph theory. Essential for AD pentesting and red teaming.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">C#</span>
-            <span class="repo-stars">★ 10k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/NationalSecurityAgency/ghidra" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">NationalSecurityAgency / ghidra</div>
-              <div class="repo-desc">NSA's software reverse engineering framework. Disassembly, decompilation, analysis for malware and binary analysis.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">Java</span>
-            <span class="repo-stars">★ 52k+</span>
-          </div>
-        </a>
-
-        <a class="card repo-card" href="https://github.com/vanhauser-thc/thc-hydra" target="_blank">
-          <div class="repo-header">
-            <span class="repo-icon">⬡</span>
-            <div>
-              <div class="repo-name">vanhauser-thc / thc-hydra</div>
-              <div class="repo-desc">Fast and flexible login cracker supporting many protocols — SSH, FTP, HTTP, SMB, and 50+ more.</div>
-            </div>
-          </div>
-          <div class="repo-meta">
-            <span class="repo-lang">C</span>
-            <span class="repo-stars">★ 11k+</span>
-          </div>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- NOTES / METHODOLOGIES -->
-  <section id="notes">
-    <div class="section-header">
-      <span class="section-num">06</span>
-      <h2>notes</h2>
-      <div class="section-line"></div>
-    </div>
-    <p class="section-desc">Hacking methodologies, attack techniques, and personal notes from the field.</p>
-
-    <div class="notes-layout">
-      <div class="notes-sidebar">
-        <div class="notes-nav">
-          <button class="note-tab active" data-note="mitm">MitM Attacks</button>
-          <button class="note-tab" data-note="wifi">WiFi Attacks</button>
-          <button class="note-tab" data-note="web">Web Pentest</button>
-          <button class="note-tab" data-note="recon">Recon</button>
-          <button class="note-tab" data-note="privesc">Privilege Esc.</button>
+    <!-- ======================================================
+     HERO
+     ====================================================== -->
+    <header id="hero">
+        <div class="hero-bg">
+            <canvas id="netcanvas"></canvas>
+            <div class="hero-orb a"></div>
+            <div class="hero-orb b"></div>
         </div>
-      </div>
-      <div class="note-content card" id="note-display">
-
-        <div class="note-page active" data-note="mitm">
-          <h3>// MitM Attacks with Bettercap</h3>
-          <div class="note-meta">Last updated: 2024 · Source: Personal Notes</div>
-          <div class="note-body">
-            <div class="note-section">
-              <h4>ARP Spoofing</h4>
-              <pre class="code-block"><code># Enable IP forwarding
-echo 1 > /proc/sys/net/ipv4/ip_forward
-
-# Start bettercap
-sudo bettercap -iface eth0
-
-# In bettercap REPL:
-net.probe on
-net.recon on
-set arp.spoof.targets 192.168.1.1
-arp.spoof on
-net.sniff on</code></pre>
+        <div class="hero-wrap">
+            <div class="hero-left">
+                <div class="hero-eyebrow"><span class="live"></span> kali linux · pentester in progress · access node
+                    open</div>
+                <h1 class="hero-title">
+                    <span class="l1">WE ARE</span>
+                    <span class="l2">FSOCIETY</span>
+                    <span class="l3">break · learn · secure</span>
+                </h1>
+                <p class="hero-man">
+                    Not a stunt. A <b>field log</b> from a 4th-year CS engineer learning offensive security the hard way
+                    — real labs, real tooling, real notes. Everything here is built to <span class="hl">teach</span>, in
+                    a lab you own, with permission you were given.
+                </p>
+                <div class="hero-cta">
+                    <a href="#roadmap" class="btn btn-main">▸ open the roadmap</a>
+                    <a href="#tutorials" class="btn btn-ghost">read tutorials</a>
+                    <a href="#toolbox" class="btn btn-ghost">open toolbox</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hstat">
+                        <div class="n" data-to="20">0</div>
+                        <div class="k">tools configured</div>
+                    </div>
+                    <div class="hstat">
+                        <div class="n" data-to="4">0</div>
+                        <div class="k">years in</div>
+                    </div>
+                    <div class="hstat">
+                        <div class="n" data-to="12">0</div>
+                        <div class="k">labs cleared</div>
+                    </div>
+                    <div class="hstat">
+                        <div class="n" data-to="2">0</div>
+                        <div class="k">internships</div>
+                    </div>
+                </div>
             </div>
-            <div class="note-section">
-              <h4>DNS Spoofing</h4>
-              <pre class="code-block"><code># After ARP spoofing is active:
-set dns.spoof.domains target.com
-set dns.spoof.address YOUR_IP
-dns.spoof on</code></pre>
+            <div class="hero-right">
+                <div class="term">
+                    <div class="term-bar"><i class="r"></i><i></i><i></i><span
+                            class="ttl">armanxploits@fsociety:~</span></div>
+                    <div class="term-body">
+                        <div><span class="pr">$</span> <span class="cm" id="hcmd"></span><span
+                                class="term-cursor"></span></div>
+                        <div id="hout"></div>
+                    </div>
+                </div>
             </div>
-            <div class="note-section">
-              <h4>Key Concepts</h4>
-              <ul class="note-list">
-                <li>ARP has no authentication — any device can claim any IP</li>
-                <li>Poison both victim → gateway and gateway → victim</li>
-                <li>Use Wireshark to verify traffic is flowing through you</li>
-                <li>Always restore ARP tables after the session</li>
-              </ul>
+        </div>
+    </header>
+
+    <main class="shell">
+
+        <!-- ======================================================
+     01 — WHOAMI
+     ====================================================== -->
+        <section id="whoami">
+            <div class="shead rev"><span class="num">// 01</span>
+                <h2>whoami</h2>
+                <div class="rule"></div>
             </div>
-          </div>
-        </div>
-
-        <div class="note-page" data-note="wifi">
-          <h3>// WPA2 Handshake Capture</h3>
-          <div class="note-meta">Last updated: 2024 · Source: Personal Notes</div>
-          <div class="note-body">
-            <div class="note-section">
-              <h4>Setup Monitor Mode</h4>
-              <pre class="code-block"><code># Kill interfering processes
-sudo airmon-ng check kill
-
-# Enable monitor mode
-sudo airmon-ng start wlan0
-
-# Verify
-iwconfig wlan0mon</code></pre>
+            <div class="who">
+                <div class="panel bracket id-card rev">
+                    <div class="id-avatar">AX</div>
+                    <div class="id-name">Arman</div>
+                    <div class="id-handle">@armanxploits</div>
+                    <p class="id-bio">4th-year engineering student running a <b>Kali fsociety box</b>, currently in
+                        cybersecurity internships and building toward <b>ethical hacking</b> and <b>penetration
+                            testing</b>. Self-directed, hands-on, allergic to copy-paste learning.</p>
+                    <div class="id-tags">
+                        <span class="tag">Kali Linux</span><span class="tag">Burp Pro</span><span
+                            class="tag">Metasploit</span>
+                        <span class="tag">Aircrack-ng</span><span class="tag">Nmap</span><span
+                            class="tag">Bettercap</span>
+                    </div>
+                </div>
+                <div class="who-right">
+                    <div class="panel rev">
+                        <div class="klabel">current focus</div>
+                        <div class="skill-row">
+                            <div class="sn">Web App Pentesting <small>OWASP · PortSwigger</small></div>
+                            <div class="meter"><i style="--p:75%"></i></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="sn">Network Attacks <small>MitM · spoofing</small></div>
+                            <div class="meter"><i style="--p:70%"></i></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="sn">WiFi / Wireless <small>WPA2 capture</small></div>
+                            <div class="meter"><i style="--p:65%"></i></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="sn">Exploitation <small>Metasploit</small></div>
+                            <div class="meter"><i style="--p:60%"></i></div>
+                        </div>
+                        <div class="skill-row">
+                            <div class="sn">OSINT &amp; Recon <small>footprinting</small></div>
+                            <div class="meter"><i style="--p:68%"></i></div>
+                        </div>
+                    </div>
+                    <div class="panel rev">
+                        <div class="klabel">fsociety box // specs</div>
+                        <div class="specs">
+                            <div class="spec"><span class="k">machine</span><span class="v">ASUS TUF F16</span></div>
+                            <div class="spec"><span class="k">os</span><span class="v">Kali Xfce + Win11</span></div>
+                            <div class="spec"><span class="k">shell</span><span class="v">zsh · p10k</span></div>
+                            <div class="spec"><span class="k">wireless</span><span class="v">RTL8852BE</span></div>
+                            <div class="spec"><span class="k">burp</span><span class="v">Pro · Java 21</span></div>
+                            <div class="spec"><span class="k">mcp</span><span class="v">msf · aircrack</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="note-section">
-              <h4>Capture Handshake</h4>
-              <pre class="code-block"><code># Scan for target network
-sudo airodump-ng wlan0mon
+        </section>
 
-# Lock on to target
-sudo airodump-ng -c [CHANNEL] --bssid [AP_MAC] -w capture wlan0mon
-
-# Deauth to force reconnect (new terminal)
-sudo aireplay-ng --deauth 10 -a [AP_MAC] wlan0mon
-
-# Crack with wordlist
-aircrack-ng capture-01.cap -w /usr/share/seclists/Passwords/rockyou.txt</code></pre>
+        <!-- ======================================================
+     02 — ROADMAP
+     ====================================================== -->
+        <section id="roadmap">
+            <div class="shead rev"><span class="num">// 02</span>
+                <h2>the path</h2>
+                <div class="rule"></div>
             </div>
-          </div>
-        </div>
+            <p class="sdesc rev">An attack chain for a career, not a target. Seven phases from <b
+                    style="color:var(--bone)">recon</b> to <b style="color:var(--bone)">operator</b>. Tap any node for a
+                dossier — what it is, why it matters, and where to learn it. Mark what you've cleared; your clearance
+                level climbs. Progress is saved in your browser.</p>
 
-        <div class="note-page" data-note="web">
-          <h3>// Web App Pentest Methodology</h3>
-          <div class="note-meta">Source: PortSwigger Web Academy + Personal</div>
-          <div class="note-body">
-            <div class="note-section">
-              <h4>Recon Phase</h4>
-              <pre class="code-block"><code># Directory busting
-gobuster dir -u http://target.com -w /usr/share/seclists/Discovery/Web-Content/common.txt
-
-# Subdomain enum
-gobuster dns -d target.com -w /usr/share/seclists/Discovery/DNS/subdomains-top1million.txt
-
-# Tech fingerprinting
-whatweb http://target.com</code></pre>
+            <div class="rm-top rev">
+                <div class="rm-clear">
+                    <div class="lbl"><span>clearance level</span><b id="clearPct">0%</b></div>
+                    <div class="rm-meter"><i id="clearBar"></i></div>
+                </div>
+                <div class="rm-filters" id="rmFilters">
+                    <button class="fbtn on" data-track="all">all</button>
+                    <button class="fbtn" data-track="found">foundations</button>
+                    <button class="fbtn" data-track="off">offensive</button>
+                    <button class="fbtn" data-track="practice">practice</button>
+                    <button class="fbtn" data-track="career">credentials</button>
+                    <button class="fbtn rm-reset" id="rmReset">reset progress</button>
+                </div>
             </div>
-            <div class="note-section">
-              <h4>XSS — DOM-based</h4>
-              <pre class="code-block"><code># Classic sink via innerHTML
-document.getElementById('output').innerHTML = location.hash.slice(1)
-# Payload: #&lt;img src=x onerror=alert(1)&gt;
 
-# data: URI bypass (XSS Game Level 6)
-# Navigate to: #data:text/javascript,alert(1)</code></pre>
+            <div class="chain" id="chain"></div>
+        </section>
+
+        <!-- DOSSIER PANEL -->
+        <div class="dossier-scrim" id="dosScrim"></div>
+        <aside class="dossier" id="dossier" aria-hidden="true">
+            <div class="dos-head">
+                <div class="dos-kicker" id="dosKicker">phase</div>
+                <div class="dos-title" id="dosTitle">—</div>
+                <button class="dos-close" id="dosClose" aria-label="close">✕</button>
             </div>
-          </div>
-        </div>
+            <div class="dos-body" id="dosBody"></div>
+            <div class="dos-foot"><button class="clear-btn" id="dosClear">mark as cleared</button></div>
+        </aside>
 
-        <div class="note-page" data-note="recon">
-          <h3>// Nmap Host Discovery</h3>
-          <div class="note-meta">Source: Personal Notes</div>
-          <div class="note-body">
-            <div class="note-section">
-              <h4>Essential Nmap Commands</h4>
-              <pre class="code-block"><code># Ping sweep (host discovery)
-nmap -sn 192.168.1.0/24
+        <!-- ======================================================
+     03 — TUTORIALS (NEW)
+     ====================================================== -->
+        <section id="tutorials">
+            <div style="max-width:var(--maxw);margin:0 auto;padding:120px 34px">
+                <div class="shead rev"><span class="num">// 03</span>
+                    <h2>tutorials</h2>
+                    <div class="rule"></div>
+                </div>
+                <p class="sdesc rev">Step-by-step practical walkthroughs — recon to exploitation — built from lab
+                    sessions and CTF experience. Every tutorial includes real commands, scope warnings, and the thinking
+                    behind each step.</p>
 
-# SYN scan (stealthy, requires root)
-sudo nmap -sS -p- 192.168.1.100
-
-# Version + OS detection
-sudo nmap -sV -O 192.168.1.100
-
-# Aggressive scan
-nmap -A 192.168.1.100
-
-# Script scan (vuln detection)
-nmap --script vuln 192.168.1.100
-
-# Output to file
-nmap -oN scan.txt 192.168.1.100</code></pre>
+                <div class="tut-grid rev">
+                    <div class="tut-sidebar">
+                        <div class="tut-cats">
+                            <button class="tcat on" data-cat="recon">
+                                ▸ Recon &amp; OSINT
+                                <span class="tcat-count">2</span>
+                            </button>
+                            <button class="tcat" data-cat="webpwn">
+                                ▸ Web Exploitation
+                                <span class="tcat-count">2</span>
+                            </button>
+                            <button class="tcat" data-cat="wireless">
+                                ▸ Wireless
+                                <span class="tcat-count">1</span>
+                            </button>
+                            <button class="tcat" data-cat="privesc">
+                                ▸ Privilege Escalation
+                                <span class="tcat-count">2</span>
+                            </button>
+                            <button class="tcat" data-cat="social">
+                                ▸ Social Engineering
+                                <span class="tcat-count">1</span>
+                            </button>
+                            <button class="tcat" data-cat="forensics">
+                                ▸ Forensics
+                                <span class="tcat-count">1</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tut-content" id="tutContent"></div>
+                </div>
             </div>
-          </div>
-        </div>
+        </section>
 
-        <div class="note-page" data-note="privesc">
-          <h3>// Linux Privilege Escalation</h3>
-          <div class="note-meta">Source: Personal Notes + HTB/THM</div>
-          <div class="note-body">
-            <div class="note-section">
-              <h4>Automated Enumeration</h4>
-              <pre class="code-block"><code># Run LinPEAS
-curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas.sh | sh
-
-# Check sudo rights
-sudo -l
-
-# Find SUID binaries
-find / -perm -4000 2>/dev/null
-
-# Check writable cron jobs
-cat /etc/crontab
-ls -la /etc/cron*</code></pre>
+        <!-- ======================================================
+     04 — ARSENAL
+     ====================================================== -->
+        <section id="arsenal">
+            <div class="shead rev"><span class="num">// 04</span>
+                <h2>arsenal</h2>
+                <div class="rule"></div>
             </div>
-            <div class="note-section">
-              <h4>Quick Wins Checklist</h4>
-              <ul class="note-list">
-                <li>sudo -l → check nopasswd entries</li>
-                <li>SUID binaries → check GTFOBins</li>
-                <li>World-writable scripts in cron</li>
-                <li>Passwords in config files / history</li>
-                <li>Kernel exploits (uname -a)</li>
-              </ul>
+            <div class="afilter rev" id="afilter">
+                <button class="fbtn on" data-f="all">all</button>
+                <button class="fbtn" data-f="recon">recon</button>
+                <button class="fbtn" data-f="exploit">exploitation</button>
+                <button class="fbtn" data-f="wireless">wireless</button>
+                <button class="fbtn" data-f="web">web</button>
+                <button class="fbtn" data-f="misc">misc</button>
             </div>
-          </div>
+            <div class="arsenal" id="arsenalGrid"></div>
+        </section>
+
+        <!-- ======================================================
+     05 — TOOLBOX (NEW INTERACTIVE TOOLS)
+     ====================================================== -->
+        <section id="toolbox">
+            <div class="shead rev"><span class="num">// 05</span>
+                <h2>toolbox</h2>
+                <div class="rule"></div>
+            </div>
+            <p class="sdesc rev">Live browser tools — no install needed. Encode payloads, identify hashes, look up CVEs,
+                test regex patterns, and reference common port intel.</p>
+
+            <div class="toolbox-grid">
+
+                <!-- PAYLOAD ENCODER -->
+                <div class="tbox panel rev">
+                    <div class="tbox-head">
+                        <span class="tbox-icon">⌘</span>
+                        <h3>Payload Encoder</h3>
+                        <span class="tbadge">live</span>
+                    </div>
+                    <div class="tbox-body">
+                        <div class="enc-tabs">
+                            <button class="enc-tab on" data-enc="b64">b64 enc</button>
+                            <button class="enc-tab" data-enc="b64d">b64 dec</button>
+                            <button class="enc-tab" data-enc="url">URL enc</button>
+                            <button class="enc-tab" data-enc="urld">URL dec</button>
+                            <button class="enc-tab" data-enc="hex">→ hex</button>
+                            <button class="enc-tab" data-enc="html">HTML ent</button>
+                        </div>
+                        <label>input</label>
+                        <textarea id="encInput" rows="3" placeholder="&lt;script&gt;alert(1)&lt;/script&gt;"></textarea>
+                        <div class="tbox-row">
+                            <button class="btn" id="encBtn">encode / decode</button>
+                            <button class="btn" id="encCopy">copy output</button>
+                        </div>
+                        <label style="margin-top:10px">output</label>
+                        <div class="tbox-out" id="encOut">// waiting for input</div>
+                    </div>
+                </div>
+
+                <!-- HASH IDENTIFIER -->
+                <div class="tbox panel rev">
+                    <div class="tbox-head">
+                        <span class="tbox-icon">#</span>
+                        <h3>Hash Identifier</h3>
+                        <span class="tbadge">live</span>
+                    </div>
+                    <div class="tbox-body">
+                        <label>paste hash</label>
+                        <input id="hashInput" type="text" placeholder="5f4dcc3b5aa765d61d8327deb882cf99" />
+                        <div class="tbox-row">
+                            <button class="btn" id="hashBtn">identify</button>
+                        </div>
+                        <label style="margin-top:10px">possible types</label>
+                        <div class="tbox-out" id="hashOut">// paste a hash above</div>
+                        <div style="margin-top:10px;font-size:.66rem;color:var(--ash)">Identified by length & format.
+                            For cracking: use Hashcat -m flag matching type.</div>
+                    </div>
+                </div>
+
+                <!-- CVE LOOKUP -->
+                <div class="tbox panel rev">
+                    <div class="tbox-head">
+                        <span class="tbox-icon">⚡</span>
+                        <h3>CVE Lookup</h3>
+                        <span class="tbadge">local db</span>
+                    </div>
+                    <div class="tbox-body">
+                        <label>CVE ID or keyword</label>
+                        <input id="cveInput" type="text" placeholder="log4shell  OR  CVE-2021-44228" />
+                        <div class="tbox-row">
+                            <button class="btn" id="cveBtn">search</button>
+                        </div>
+                        <div id="cveOut"></div>
+                        <div style="margin-top:10px;font-size:.66rem;color:var(--ash)">Local DB of critical CVEs. For
+                            full details → <a href="https://nvd.nist.gov" target="_blank" rel="noopener"
+                                style="color:var(--signal)">nvd.nist.gov</a></div>
+                    </div>
+                </div>
+
+                <!-- REGEX TESTER -->
+                <div class="tbox panel rev">
+                    <div class="tbox-head">
+                        <span class="tbox-icon">.*</span>
+                        <h3>Regex Tester</h3>
+                        <span class="tbadge">live</span>
+                    </div>
+                    <div class="tbox-body">
+                        <label>pattern</label>
+                        <input id="regPattern" type="text" placeholder="(\d{1,3}\.){3}\d{1,3}" />
+                        <label style="margin-top:8px">flags</label>
+                        <input id="regFlags" type="text" placeholder="gi" style="width:80px" />
+                        <label style="margin-top:8px">test string</label>
+                        <textarea id="regInput" rows="3"
+                            placeholder="192.168.1.1 is live&#10;10.0.0.50 is up&#10;not an IP here"></textarea>
+                        <label style="margin-top:8px">matches highlighted</label>
+                        <div class="tbox-out" id="regOut" style="white-space:pre-wrap;min-height:60px">// type pattern
+                            above</div>
+                    </div>
+                </div>
+
+                <!-- PORT REFERENCE -->
+                <div class="tbox panel rev" style="grid-column:span 2">
+                    <div class="tbox-head">
+                        <span class="tbox-icon">◈</span>
+                        <h3>Common Ports — Pentest Reference</h3>
+                        <span class="tbadge">static ref</span>
+                    </div>
+                    <div class="tbox-body" id="portTable"></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ======================================================
+     06 — ATTACK TREE (NEW)
+     ====================================================== -->
+        <section id="attacktree">
+            <div class="shead rev"><span class="num">// 06</span>
+                <h2>attack tree</h2>
+                <div class="rule"></div>
+            </div>
+            <p class="sdesc rev">Interactive top-down attack chains — recon to impact. Click any node to inspect, switch
+                scenarios left.</p>
+            <div class="atree-wrap rev">
+                <div class="atree-sidebar">
+                    <button class="atree-btn on" data-tree="webapp">&#x2B21; Web App</button>
+                    <button class="atree-btn" data-tree="network">&#x25C8; Network</button>
+                    <button class="atree-btn" data-tree="wireless">&#x25C9; Wireless</button>
+                </div>
+                <div class="atree-main">
+                    <svg id="atreeSvg"></svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+     07 — JOURNEY
+     ====================================================== -->
+        <section id="journey">
+            <div class="shead rev"><span class="num">// 07</span>
+                <h2>journey</h2>
+                <div class="rule"></div>
+            </div>
+            <div class="jlist">
+                <div class="jrow rev">
+                    <div class="jdate">2021</div>
+                    <h3>The Beginning</h3>
+                    <p>Caught the bug. Started with networking fundamentals — OSI, TCP/IP, ARP, DNS — and a first Kali
+                        dual-boot.</p>
+                    <div class="jtags"><span class="tag">Networking</span><span class="tag">Kali</span></div>
+                </div>
+                <div class="jrow rev">
+                    <div class="jdate">2022</div>
+                    <h3>Tools &amp; CTF Foundations</h3>
+                    <p>Installed the core kit: SecLists, tmux, Obsidian. Solved Google's XSS Game. Dissected ARP packet
+                        structure by hand.</p>
+                    <div class="jtags"><span class="tag">CTF</span><span class="tag">XSS</span><span
+                            class="tag">SecLists</span></div>
+                </div>
+                <div class="jrow rev">
+                    <div class="jdate">2023</div>
+                    <h3>MitM &amp; Wireless</h3>
+                    <p>Learned MitM with Bettercap, ARP/DNS spoofing, WPA2 handshake capture. Started the
+                        ethical-hacking-notes repo.</p>
+                    <div class="jtags"><span class="tag">Bettercap</span><span class="tag">WPA2</span><span
+                            class="tag">Aircrack-ng</span></div>
+                </div>
+                <div class="jrow rev">
+                    <div class="jdate">2024 early</div>
+                    <h3>Full Kali + Burp Pro</h3>
+                    <p>Fresh dual-boot on the ASUS TUF F16. Fought GRUB, TLP, clock sync. Bought Burp Suite Pro, set up
+                        Java 21, started PortSwigger labs.</p>
+                    <div class="jtags"><span class="tag">Burp Pro</span><span class="tag">PortSwigger</span></div>
+                </div>
+                <div class="jrow rev">
+                    <div class="jdate">2024 late</div>
+                    <h3>Knowledge Vault</h3>
+                    <p>Built a cross-linked Obsidian vault: OSI, ARP, firewalls, Wireshark, DNS. Delivered an internship
+                        talk on WannaCry &amp; the Sony breach.</p>
+                    <div class="jtags"><span class="tag">Obsidian</span><span class="tag">WannaCry</span></div>
+                </div>
+                <div class="jrow now rev">
+                    <div class="jdate">2025 — NOW</div>
+                    <h3>Internship + MCP</h3>
+                    <p>Summer cybersecurity internship. Wired Metasploit MCP and Aircrack MCP into the fsociety box.
+                        Running recon against lab targets, taming the RTL8852BE driver.</p>
+                    <div class="jtags"><span class="tag">Metasploit MCP</span><span class="tag">Internship</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+     08 — FIELD NOTES
+     ====================================================== -->
+        <section id="notes">
+            <div class="shead rev"><span class="num">// 08</span>
+                <h2>field notes</h2>
+                <div class="rule"></div>
+            </div>
+            <p class="sdesc rev">Methodology notes from labs I own and engagements I'm authorised on. High-level
+                technique, not a how-to-attack-strangers manual — that's the whole difference between a pentester and a
+                problem.</p>
+            <div class="notewrap rev">
+                <div class="notenav" id="notenav">
+                    <button class="ntab on" data-n="mitm">MitM</button>
+                    <button class="ntab" data-n="wifi">WiFi</button>
+                    <button class="ntab" data-n="web">Web</button>
+                    <button class="ntab" data-n="recon">Recon</button>
+                    <button class="ntab" data-n="privesc">PrivEsc</button>
+                </div>
+                <div class="panel notebody" id="notebody"></div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+     09 — PROVING GROUND
+     ====================================================== -->
+        <section id="proving">
+            <div class="shead rev"><span class="num">// 09</span>
+                <h2>proving ground</h2>
+                <div class="rule"></div>
+            </div>
+            <div class="ctf">
+                <div class="panel bracket ctf-card rev">
+                    <div class="plat">PortSwigger</div>
+                    <h3>Web Security Academy</h3>
+                    <p>Primary web-app range. Working XSS, SQLi, SSRF, IDOR and auth-bypass labs.</p>
+                    <div class="ctf-bar"><i style="--p:35%"></i></div>
+                    <div class="cmeta"><span>35% cleared</span><a class="clink"
+                            href="https://portswigger.net/web-security" target="_blank" rel="noopener">open ▸</a></div>
+                </div>
+                <div class="panel ctf-card rev">
+                    <div class="plat">Google</div>
+                    <h3>XSS Game</h3>
+                    <p>All 6 levels down, including the DOM-based level via a data: URI bypass.</p>
+                    <div class="ctf-bar"><i style="--p:100%"></i></div>
+                    <div class="cmeta"><span>6/6 ✓</span><a class="clink" href="https://xss-game.appspot.com"
+                            target="_blank" rel="noopener">open ▸</a></div>
+                </div>
+                <div class="panel ctf-card rev">
+                    <div class="plat">TryHackMe</div>
+                    <h3>Learning Paths</h3>
+                    <p>Beginner→intermediate rooms: networking, Linux, web fundamentals.</p>
+                    <div class="ctf-bar"><i style="--p:40%"></i></div>
+                    <div class="cmeta"><span>in progress</span><a class="clink" href="https://tryhackme.com"
+                            target="_blank" rel="noopener">open ▸</a></div>
+                </div>
+                <div class="panel ctf-card rev">
+                    <div class="plat">HackTheBox</div>
+                    <h3>Starting Point</h3>
+                    <p>Practical machine hacking — building real exploitation reps from the ground up.</p>
+                    <div class="ctf-bar"><i style="--p:20%"></i></div>
+                    <div class="cmeta"><span>just started</span><a class="clink" href="https://hackthebox.com"
+                            target="_blank" rel="noopener">open ▸</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+     10 — REPOS
+     ====================================================== -->
+        <section id="repos">
+            <div class="shead rev"><span class="num">// 10</span>
+                <h2>repos</h2>
+                <div class="rule"></div>
+            </div>
+            <div class="repos">
+                <div class="repocol rev">
+                    <div class="ctitle">~/ my repos</div>
+                    <a class="repo" href="https://github.com/armanxploits/ethical-hacking-notes" target="_blank"
+                        rel="noopener">
+                        <div class="rname">armanxploits / ethical-hacking-notes</div>
+                        <div class="rdesc">Personal methodology — MitM, ARP/DNS spoofing, WPA2 capture, Nmap host
+                            discovery. Clean Markdown.</div>
+                        <div class="rmeta"><span class="tag">Markdown</span><span>personal</span></div>
+                    </a>
+                    <a class="repo" href="https://github.com/arman080325/fsociety-web" target="_blank" rel="noopener">
+                        <div class="rname">arman080325 / fsociety-web</div>
+                        <div class="rdesc">This site — the fsociety hub. Field notes, arsenal, tutorials, toolbox, and
+                            the interactive roadmap.</div>
+                        <div class="rmeta"><span class="tag">HTML/CSS/JS</span><span>personal</span></div>
+                    </a>
+                    <div class="repo add">
+                        <div class="rname">+ next repo</div>
+                        <div class="rdesc">Drop your next build into the myRepos array in script.js.</div>
+                    </div>
+                </div>
+                <div class="repocol rev">
+                    <div class="ctitle">$ essential community repos</div>
+                    <div id="commRepos"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================================================
+     11 — CONTACT
+     ====================================================== -->
+        <section id="contact">
+            <div class="shead rev"><span class="num">// 11</span>
+                <h2>contact</h2>
+                <div class="rule"></div>
+            </div>
+            <div class="contact">
+                <div class="rev">
+                    <h3>let's connect<b>.</b></h3>
+                    <p>Open to CTF teams, bug-bounty collabs, security research, and anything ethical-hacking related.
+                        Currently interning — say hi.</p>
+                    <div class="clinks">
+                        <a class="clink-row" href="https://github.com/arman080325" target="_blank" rel="noopener"><span
+                                class="ci">⬡</span> github.com/arman080325</a>
+                        <a class="clink-row" href="https://www.linkedin.com/in/arman-ahemad-khan" target="_blank"
+                            rel="noopener"><span class="ci">◈</span> linkedin / arman-ahemad-khan</a>
+                        <a class="clink-row" href="mailto:armanxploit@gmail.com"><span class="ci">◉</span>
+                            armanxploit@gmail.com</a>
+                    </div>
+                </div>
+                <div class="panel bracket rev">
+                    <div class="term-bar" style="border:0;padding:0 0 12px"><i class="r"></i><i></i><i></i><span
+                            class="ttl">contact.sh</span></div>
+                    <div style="font-size:.78rem;line-height:2">
+                        <div><span style="color:var(--signal)">$</span> ping armanxploits</div>
+                        <div style="color:var(--phosphor-dim);padding-left:14px">PING armanxploits — 56 bytes</div>
+                        <div style="color:var(--phosphor-dim);padding-left:14px">64 bytes: icmp_seq=1 ttl=64 time=0.1ms
+                        </div>
+                        <div style="color:var(--signal);padding-left:14px">--- node is REACHABLE ---</div>
+                        <div><span style="color:var(--signal)">$</span> <span class="term-cursor"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="fbrand">ARMAN<b>X</b>PLOITS // fsociety</div>
+        <div class="fnote">built on kali linux · hello, friend. · press ? for shortcuts</div>
+        <div class="fwarn">⚠ for educational use only · ethical hacking is legal hacking · always get written permission
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- CTF / LABS -->
-  <section id="ctf">
-    <div class="section-header">
-      <span class="section-num">07</span>
-      <h2>ctf &amp; labs</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="ctf-grid">
-
-      <div class="card ctf-card">
-        <div class="ctf-platform">PortSwigger</div>
-        <h3>Web Security Academy</h3>
-        <p>Primary web app hacking practice platform. Working through XSS, SQLi, SSRF, IDOR, Auth bypass labs.</p>
-        <div class="ctf-progress">
-          <div class="ctf-bar"><div class="ctf-fill" style="--pct:35%"></div></div>
-          <span>35% complete</span>
-        </div>
-        <a href="https://portswigger.net/web-security" target="_blank" class="ctf-link">portswigger.net →</a>
-      </div>
-
-      <div class="card ctf-card">
-        <div class="ctf-platform">Google</div>
-        <h3>XSS Game</h3>
-        <p>Completed all 6 levels including the hard DOM-based XSS Level 6 via data: URI bypass.</p>
-        <div class="ctf-progress">
-          <div class="ctf-bar"><div class="ctf-fill" style="--pct:100%"></div></div>
-          <span>6/6 levels ✓</span>
-        </div>
-        <a href="https://xss-game.appspot.com" target="_blank" class="ctf-link">xss-game.appspot.com →</a>
-      </div>
-
-      <div class="card ctf-card">
-        <div class="ctf-platform">TryHackMe</div>
-        <h3>Learning Paths</h3>
-        <p>Working through beginner-to-intermediate rooms. Networking, Linux, Web fundamentals, and more.</p>
-        <div class="ctf-progress">
-          <div class="ctf-bar"><div class="ctf-fill" style="--pct:40%"></div></div>
-          <span>in progress</span>
-        </div>
-        <a href="https://tryhackme.com" target="_blank" class="ctf-link">tryhackme.com →</a>
-      </div>
-
-      <div class="card ctf-card">
-        <div class="ctf-platform">HackTheBox</div>
-        <h3>Starting Point</h3>
-        <p>Practical machine hacking. Working through Starting Point machines to build real exploitation skills.</p>
-        <div class="ctf-progress">
-          <div class="ctf-bar"><div class="ctf-fill" style="--pct:20%"></div></div>
-          <span>just started</span>
-        </div>
-        <a href="https://hackthebox.com" target="_blank" class="ctf-link">hackthebox.com →</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-header">
-      <span class="section-num">08</span>
-      <h2>contact</h2>
-      <div class="section-line"></div>
-    </div>
-    <div class="contact-grid">
-      <div class="contact-text">
-        <h3>let's connect<span class="accent">.</span></h3>
-        <p>Open to collaboration on CTF teams, bug bounty hunting, security research, and anything ethical hacking related. Currently in internship — reach out!</p>
-        <div class="contact-links">
-          <a href="https://github.com/arman080325" class="contact-link" target="_blank">
-            <span class="contact-icon">⬡</span> github.com/arman080325
-          </a>
-          <a href="https://www.linkedin.com/in/arman-ahemad-khan" class="contact-link" target="_blank">
-            <span class="contact-icon">◈</span> LinkedIn
-          </a>
-          <a href="mailto:armanxploit@gmail.com" class="contact-link">
-            <span class="contact-icon">◉</span> armanxploit@gmail.com
-          </a>
-        </div>
-      </div>
-      <div class="card contact-terminal">
-        <div class="terminal-bar">
-          <span class="t-btn t-close"></span>
-          <span class="t-btn t-min"></span>
-          <span class="t-btn t-max"></span>
-          <span class="t-title">contact.sh</span>
-        </div>
-        <div class="terminal-body">
-          <div class="t-line"><span class="prompt">$</span> ping armanxploits</div>
-          <div class="t-line output">PING armanxploits: 56 bytes of data.</div>
-          <div class="t-line output">64 bytes: icmp_seq=1 ttl=64 time=0.1ms</div>
-          <div class="t-line output accent-line">--- armanxploits is REACHABLE ---</div>
-          <div class="t-line"><span class="prompt">$</span> <span class="cursor">█</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <span class="bracket">[</span>ARMAN<span class="accent">X</span>PLOITS<span class="bracket">]</span>
-        <span class="footer-sub">// fsociety</span>
-      </div>
-      <div class="footer-note">built with ♥ on kali linux · for educational purposes only</div>
-      <div class="footer-copy">© 2025 armanxploits · ethical hacking is legal hacking</div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
