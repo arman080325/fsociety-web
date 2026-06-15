@@ -6,7 +6,7 @@
 A cinematic, dark-themed cybersecurity portfolio built for **ethical hackers, pentesters, and security researchers in progress**. Themed around [fsociety / Mr. Robot](https://en.wikipedia.org/wiki/Mr._Robot) with a polished operator aesthetic — electric red, acid green, cyber cyan, and violet on a deep void-black background — with genuine educational content, not just decoration.
 
 **Built by:** Arman Ahemad Khan · [@armanxploits](https://github.com/arman080325)  
-**Live:** [armanxploits.github.io/fsociety-web](https://arman080325.github.io/fsociety-web) *(update this)*  
+**Live:** [armanxploits.github.io/fsociety-web](https://fsociety-web.vercel.app)
 **Status:** Active — 4th-year CS engineering student, cybersecurity intern, pentester in progress.
 
 ---
