@@ -1505,3 +1505,21 @@ Object.assign(NOTES, {
         }, 120);
     });
 })();
+
+/* ===== fsociety entry sound — plays once on first interaction ===== */
+(function(){
+  const snd = new Audio('fsociety_enter.mp3');
+  snd.volume = 1.0;
+  snd.loop = true;          // <-- repeat forever
+  let started = false;
+  function fire(){
+    if (started) return; started = true;
+    snd.play().catch(()=>{});
+    window.removeEventListener('pointerdown', fire);
+    window.removeEventListener('keydown', fire);
+  }
+  const skip = document.getElementById('bootSkip');
+  if (skip) skip.addEventListener('click', fire);
+  window.addEventListener('pointerdown', fire);
+  window.addEventListener('keydown', fire);
+})();

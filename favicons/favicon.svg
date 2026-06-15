@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect x="0" y="0" width="64" height="64" rx="9" fill="#0b0b0c"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="8" fill="none" stroke="#26262a" stroke-width="1.5"/>
+  <!-- corner brackets (fsociety frame) -->
+  <g stroke="#d8392b" stroke-width="2.4" fill="none" stroke-linecap="square">
+    <path d="M9 18 V9 H18"/>
+    <path d="M55 46 V55 H46"/>
+  </g>
+  <!-- the X -->
+  <g stroke="#d8392b" stroke-width="9.5" stroke-linecap="round">
+    <line x1="20" y1="20" x2="44" y2="44"/>
+    <line x1="44" y1="20" x2="20" y2="44"/>
+  </g>
+</svg>
