@@ -1,0 +1,38 @@
+/* ============================================================
+   theme.css — fsociety light-mode + theme toggle button
+   link this AFTER style.css in <head>
+   ============================================================ */
+
+/* toggle button (used in both modes) */
+.theme-btn{
+  margin-left:10px;background:none;border:1px solid var(--line2);color:var(--bone-dim);
+  font-family:var(--mono);font-size:.7rem;letter-spacing:1px;padding:6px 11px;cursor:pointer;
+  display:inline-flex;align-items:center;gap:7px;transition:.2s var(--ease);white-space:nowrap;
+}
+.theme-btn:hover{color:var(--signal);border-color:var(--signal)}
+@media(max-width:880px){.theme-btn{margin-left:auto;margin-right:8px}}
+
+/* ===== LIGHT MODE ===== */
+[data-theme="light"]{
+  --void:#e9e7e0; --void2:#f2f0ea; --panel:#fbfaf6; --panel2:#efece4;
+  --line:#d7d4cb; --line2:#bfbbb0;
+  --bone:#18181a; --bone-dim:#45433e; --ash:#74726a; --ash2:#9a978d;
+  --signal:#c1271b; --signal-soft:#d8392b; --signal-glow:rgba(193,39,27,.12);
+  --phosphor:#2e7d3e; --phosphor-dim:#587a53; --ember:#996117;
+}
+[data-theme="light"] .scan{opacity:.16;background:repeating-linear-gradient(0deg,transparent 0 2px,rgba(0,0,0,.045) 2px 3px)}
+[data-theme="light"] .vign{background:radial-gradient(120% 90% at 50% 40%,transparent 60%,rgba(120,116,104,.12) 100%)}
+[data-theme="light"] .grain{opacity:.05;mix-blend-mode:multiply}
+[data-theme="light"] nav.solid{background:rgba(233,231,224,.88);border-color:var(--line)}
+[data-theme="light"] .rail{background:rgba(233,231,224,.6)}
+[data-theme="light"] .dossier-scrim{background:rgba(60,58,52,.34)}
+[data-theme="light"] #netcanvas{opacity:.16}
+
+/* terminals stay dark — a real terminal on a light desk */
+[data-theme="light"] .term{background:#0b0b0c;border-color:#2a2a2e;box-shadow:0 22px 60px rgba(80,70,60,.18)}
+[data-theme="light"] .term-bar{border-color:#26262a}
+[data-theme="light"] .term-body{color:#cfcabb}
+[data-theme="light"] .term-body .cm{color:#e8f5ee}
+[data-theme="light"] .term-body .out{color:#7fa279}
+[data-theme="light"] pre.code{background:#0b0b0c;border-color:#26262a;border-left-color:var(--signal)}
+[data-theme="light"] pre.code code{color:#8fb98a}

@@ -1523,3 +1523,16 @@ Object.assign(NOTES, {
   window.addEventListener('pointerdown', fire);
   window.addEventListener('keydown', fire);
 })();
+
+/* ===== THEME TOGGLE ===== */
+(function(){
+  const root=document.documentElement, btn=document.getElementById('themeToggle');
+  if(!btn) return;
+  function paint(){const light=root.dataset.theme==='light';btn.innerHTML=light?'☀ light':'☾ dark';}
+  paint();
+  btn.addEventListener('click',()=>{
+    root.dataset.theme = root.dataset.theme==='light' ? 'dark' : 'light';
+    try{localStorage.setItem('fsoc_theme',root.dataset.theme);}catch(e){}
+    paint();
+  });
+})();
