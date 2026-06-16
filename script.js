@@ -13,7 +13,18 @@ const COMM_REPOS = [
     { n: "bettercap / bettercap", d: "Swiss-army knife for network attacks. In active use.", l: "Go", s: "17k+", u: "https://github.com/bettercap/bettercap" },
     { n: "sqlmapproject / sqlmap", d: "Automatic SQL injection detection & exploitation.", l: "Python", s: "33k+", u: "https://github.com/sqlmapproject/sqlmap" },
     { n: "NationalSecurityAgency / ghidra", d: "NSA reverse-engineering framework — disassembly & decompilation.", l: "Java", s: "52k+", u: "https://github.com/NationalSecurityAgency/ghidra" },
-    { n: "vanhauser-thc / thc-hydra", d: "Fast login cracker — SSH, FTP, HTTP, SMB and 50+ protocols.", l: "C", s: "11k+", u: "https://github.com/vanhauser-thc/thc-hydra" }
+    { n: "vanhauser-thc / thc-hydra", d: "Fast login cracker — SSH, FTP, HTTP, SMB and 50+ protocols.", l: "C", s: "11k+", u: "https://github.com/vanhauser-thc/thc-hydra" },
+    { n: "hexsecteam / DroidHunter", d: "DroidHunter is a comprehensive, CLI-based Android security assessment framework targeting ethical hackers and professional penetration testers. It integrates multiple attack surfaces into a single tool with a hacker-aesthetic terminal interface.", l: "Python", s: "138+", u: "https://github.com/hexsecteam/DroidHunter.git"},
+    { n: "AzeemIdrisi / PhoneSploit-Pro", d: "An all-in-one hacking tool to remotely exploit Android devices using ADB and Metasploit-Framework to get a Meterpreter session.", l: "Python,Shell,Powershell", s: "5.9k+", u: "https://github.com/AzeemIdrisi/PhoneSploit-Pro.git"},
+    { n: "ultrasecurity/Storm-Breaker", d: "Social engineering tool [Access Webcam & Microphone & Location Finder] With {Py,JS,PHP}", l: "HTML,CSS,Javascript,Python,Shell,PHP", s: "5.9k+", u: "https://github.com/ultrasecurity/Storm-Breaker.git"},
+    { n: "Genymobile/scrcpy", d: "pronounced as &quot;screen copy&quot; This application mirrors Android devices (video and audio) connected via USB or TCP/IP and allows control using the computer's keyboard and mouse. It does not require root access or an app installed on the device. It works on Linux, Windows, and macOS.",l:"C,Java,Roff,Shell,Meson,AIDL", s: "144k+", u: "https://github.com/Genymobile/scrcpy.git"},
+    { n: "trimstray/the-book-of-secret-knowledge", d: "A collection of inspiring lists, manuals, cheatsheets, blogs, hacks, one-liners, cli/web tools and more.",l:"none", s: "229k+", u: "https://github.com/trimstray/the-book-of-secret-knowledge.git"},
+    { n: "Hack-with-Github/Awesome-Hacking", d: "A collection of various awesome lists for hackers, pentesters and security researchers",l:"none", s: "114k+", u: "https://github.com/Hack-with-Github/Awesome-Hacking.git"},
+    { n: "Z4nzu/hackingtool", d: "ALL IN ONE Hacking Tool For Hackers",l:"Python,Shell,Dockerfile", s: "77.5k+", u: "https://github.com/Z4nzu/hackingtool.git"},
+    { n: "WerWolv/ImHex", d: "🔍 A Hex Editor for Reverse Engineers, Programmers and people who value their retinas when working at 3 AM.",l:"C++,CMake,C#", s: "53.9k+", u: "https://github.com/WerWolv/ImHex.git"},
+    { n: "x64dbg/x64dbg", d: "An open-source user mode debugger for Windows. Optimized for reverse engineering and malware analysis.",l:"C++,C,Python,CMake,CSS,Assembly", s: "48.7k+", u: "https://github.com/x64dbg/x64dbg.git"},
+
+    // Will add more repos in the free time.
 ];
 
 const TOOLS = [
