@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>arsenal // armanxploits</title>
+<meta name="description" content="Curated arsenal of ethical-hacking & cybersecurity tools, categorised and searchable. Educational use only." />
+<link rel="icon" href="favicons/favicon.ico" sizes="32x32" />
+<link rel="icon" type="image/svg+xml" href="favicons/favicon.svg" />
+<link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<!-- inherit the site theme + tokens -->
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="theme.css" />
+<!-- set theme before paint to avoid flash -->
+<script>try{var _t=localStorage.getItem('fsoc_theme');if(_t)document.documentElement.dataset.theme=_t;}catch(e){}</script>
+<style>
+/* ===== arsenal page-specific ===== */
+.arsenal-head{max-width:var(--maxw);margin:0 auto;padding:120px 34px 30px}
+.back-link{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;color:var(--bone-dim);letter-spacing:1px;margin-bottom:26px;transition:.2s var(--ease)}
+.back-link:hover{color:var(--signal)}
+.arsenal-title{font-family:var(--disp);font-weight:900;font-size:clamp(2rem,5vw,3.4rem);text-transform:uppercase;letter-spacing:-1px;line-height:1}
+.arsenal-title b{color:var(--signal)}
+.arsenal-sub{color:var(--bone-dim);font-size:.9rem;margin-top:14px;max-width:64ch}
+
+.controls{max-width:var(--maxw);margin:0 auto;padding:8px 34px 0;display:flex;flex-direction:column;gap:16px}
+.searchbar{position:relative;max-width:520px}
+.searchbar input{
+  width:100%;background:var(--panel);border:1px solid var(--line2);color:var(--bone);
+  font-family:var(--mono);font-size:.86rem;padding:13px 16px 13px 38px;outline:none;transition:.2s var(--ease)
+}
+.searchbar input:focus{border-color:var(--signal)}
+.searchbar .si{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--ash);font-size:.9rem}
+.searchbar .kbd{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:.6rem;color:var(--ash);border:1px solid var(--line2);padding:2px 6px}
+.pills{display:flex;gap:6px;flex-wrap:wrap}
+.pill{font-family:var(--mono);font-size:.68rem;letter-spacing:.5px;padding:7px 12px;background:none;border:1px solid var(--line);color:var(--bone-dim);cursor:pointer;transition:.18s var(--ease)}
+.pill:hover{border-color:var(--line2);color:var(--bone)}
+.pill.on{border-color:var(--signal);color:var(--signal);background:var(--signal-glow)}
+.pill .c{opacity:.6;margin-left:5px}
+.count{font-family:var(--mono);font-size:.72rem;color:var(--ash);letter-spacing:1px}
+
+.repo-grid{
+  max-width:var(--maxw);margin:0 auto;padding:24px 34px 40px;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px;
+}
+.rcard{display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);overflow:hidden;text-decoration:none;color:inherit;transition:.18s var(--ease)}
+.rcard:hover{border-color:var(--signal);transform:translateY(-3px);box-shadow:0 18px 44px rgba(0,0,0,.35)}
+.rcard-img{position:relative;aspect-ratio:2/1;background:var(--void2);overflow:hidden}
+.rcard-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s var(--ease)}
+.rcard:hover .rcard-img img{transform:scale(1.04)}
+.rcard-img::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 72%,rgba(5,5,7,.35))}
+.rcard-mono{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-weight:900;font-size:1.9rem;color:var(--signal);background:radial-gradient(circle at 30% 25%,var(--panel2),var(--void))}
+.rcard-foot{display:flex;align-items:center;gap:8px;padding:11px 13px;border-top:1px solid var(--line)}
+.rcard-name{font-size:.74rem;color:var(--bone);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex:1}
+.rcard-cat{font-size:.56rem;letter-spacing:1px;color:var(--signal);border:1px solid var(--line2);padding:2px 6px;text-transform:uppercase;white-space:nowrap}
+.rcard-star{font-size:.66rem;color:var(--ember);white-space:nowrap}
+.rcard-lang{font-size:.62rem;color:var(--ash);white-space:nowrap}
+
+.loadwrap{max-width:var(--maxw);margin:0 auto;padding:0 34px 90px;display:flex;justify-content:center}
+.loadmore{font-family:var(--mono);font-size:.78rem;letter-spacing:1px;padding:13px 28px;background:none;border:1px solid var(--line2);color:var(--bone);cursor:pointer;transition:.2s var(--ease)}
+.loadmore:hover{border-color:var(--signal);color:var(--signal)}
+.empty{max-width:var(--maxw);margin:0 auto;padding:40px 34px;color:var(--ash);font-size:.85rem}
+
+@media(max-width:880px){
+  .arsenal-head{padding:90px 20px 24px}
+  .controls,.repo-grid,.loadwrap,.empty{padding-left:20px;padding-right:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="scan"></div>
+<div class="vign"></div>
+
+<aside class="rail">
+  <span class="rail-tick red">fsociety</span>
+  <span class="rail-dot"></span>
+  <span class="rail-tick">// the arsenal</span>
+</aside>
+
+<nav id="nav">
+  <a class="brand" href="index.html">ARMAN<b>X</b>PLOITS<span class="sub">// arsenal</span></a>
+  <div style="margin-left:auto;display:flex;align-items:center;gap:6px">
+    <a class="back-link" href="index.html" style="margin:0">⬡ back to base</a>
+    <button class="theme-btn" id="themeToggle" title="toggle theme" aria-label="toggle theme">☾ dark</button>
+  </div>
+</nav>
+
+<header class="arsenal-head">
+  <a class="back-link" href="index.html">← back to base</a>
+  <h1 class="arsenal-title">THE <b>ARSENAL</b></h1>
+  <p class="arsenal-sub">Every tool worth knowing, categorised and searchable. Cards are pulled live from GitHub. <span style="color:var(--signal)">Educational use only</span> — know your tools before you point them anywhere.</p>
+</header>
+
+<div class="controls">
+  <div class="searchbar">
+    <span class="si">⌕</span>
+    <input id="search" type="text" placeholder="search tools, owners, descriptions…" autocomplete="off" />
+    <span class="kbd">/</span>
+  </div>
+  <div class="pills" id="pills"></div>
+  <div class="count" id="count"></div>
+</div>
+
+<div class="repo-grid" id="grid"></div>
+<div class="empty" id="empty" style="display:none">// no tools match that filter.</div>
+<div class="loadwrap"><button class="loadmore" id="loadmore" style="display:none">load more ▾</button></div>
+
+<footer>
+  <div class="fbrand">ARMAN<b>X</b>PLOITS // fsociety</div>
+  <div class="fnote">the arsenal · cards via github · hello, friend.</div>
+  <div class="fwarn">⚠ for educational use only · ethical hacking is legal hacking</div>
+</footer>
+
+<script src="repos-data.js"></script>
+<script src="repos.js"></script>
+<script>
+/* theme toggle (shared behaviour) */
+(function(){
+  const root=document.documentElement, btn=document.getElementById('themeToggle');
+  if(!btn) return;
+  function paint(){btn.innerHTML=root.dataset.theme==='light'?'☀ light':'☾ dark';}
+  paint();
+  btn.addEventListener('click',()=>{root.dataset.theme=root.dataset.theme==='light'?'dark':'light';
+    try{localStorage.setItem('fsoc_theme',root.dataset.theme);}catch(e){}paint();});
+  addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('solid',scrollY>40));
+})();
+</script>
+</body>
+</html>
