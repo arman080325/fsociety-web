@@ -1,0 +1,20 @@
+# backups & temp
+*.bak
+*.tmp
+*~
+
+# secrets — NEVER commit a token
+.env
+.env.local
+*.token
+
+# node (only if you ever add npm packages)
+node_modules/
+npm-debug.log*
+
+# OS / editor cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/*
+!.vscode/settings.json
