@@ -3693,3 +3693,30 @@ footer {
   opacity: 0.9;
   color: var(--signal);
 } /* lights up red on hover */
+
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 880px) {
+  /* Bug 1: kill the giant empty hero on mobile */
+  #hero {
+    min-height: auto;
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+}
+
+/* Bug 2: stop ALL sideways scroll/zoom */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* clip the scrolling ticker at its source (the real culprit) */
+.ticker-track {
+  max-width: 100vw;
+}
+
+/* keep the boot ASCII + footer mask from pushing the page wider */
+.boot-art, .foot-mask {
+  max-width: 100%;
+  overflow: hidden;
+}
