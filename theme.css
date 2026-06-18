@@ -36,3 +36,29 @@
 [data-theme="light"] .term-body .out{color:#7fa279}
 [data-theme="light"] pre.code{background:#0b0b0c;border-color:#26262a;border-left-color:var(--signal)}
 [data-theme="light"] pre.code code{color:#8fb98a}
+
+/* ===== theme dropdown ===== */
+.theme-select { position: relative; margin-left: 10px; }
+.theme-select .theme-btn { margin-left: 0; }              /* override the old margin */
+.theme-caret { font-size: .6rem; opacity: .7; }
+
+.theme-menu {
+  position: absolute; top: calc(100% + 6px); right: 0;
+  min-width: 130px; list-style: none; margin: 0; padding: 4px;
+  background: var(--panel); border: 1px solid var(--line2);
+  display: none; flex-direction: column; gap: 2px; z-index: 1200;
+  box-shadow: 0 12px 30px rgba(0,0,0,.4);
+}
+.theme-select.open .theme-menu { display: flex; }
+
+.theme-menu li {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--mono); font-size: .72rem; letter-spacing: 1px;
+  color: var(--bone-dim); padding: 8px 11px; cursor: pointer;
+  transition: .15s var(--ease);
+}
+.theme-menu li:hover { color: var(--bone); background: var(--void2); }
+.theme-menu li.on { color: var(--signal); border-left: 2px solid var(--signal); }
+.theme-menu li span { width: 14px; text-align: center; }
+
+@media (max-width: 880px) { .theme-select { margin-left: auto; margin-right: 8px; } }

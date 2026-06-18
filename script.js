@@ -3342,21 +3342,52 @@ Object.assign(NOTES, {
   window.addEventListener("keydown", fire);
 })();
 
-/* ===== THEME TOGGLE ===== */
+/* ===== THEME DROPDOWN — dark / light / system ===== */
 (function () {
-  const root = document.documentElement,
-    btn = document.getElementById("themeToggle");
-  if (!btn) return;
-  function paint() {
-    const light = root.dataset.theme === "light";
-    btn.innerHTML = light ? "☀ light" : "☾ dark";
+  const root = document.documentElement;
+  const wrap = document.getElementById('themeSelect');
+  const btn  = document.getElementById('themeBtn');
+  const menu = document.getElementById('themeMenu');
+  const label = document.getElementById('themeLabel');
+  if (!wrap || !btn || !menu) return;
+
+  const KEY = 'fsoc_theme';
+  const mq  = matchMedia('(prefers-color-scheme: light)');
+  const systemTheme = () => mq.matches ? 'light' : 'dark';
+  const getChoice = () => { try { return localStorage.getItem(KEY) || 'system'; } catch (e) { return 'system'; } };
+
+  const ICON = { dark: '☾', light: '☀', system: '⊙' };
+
+  function apply() {
+    const choice = getChoice();
+    root.dataset.theme = (choice === 'system') ? systemTheme() : choice;
+    label.textContent = ICON[choice] + ' ' + choice;
+    // highlight the active option
+    menu.querySelectorAll('li').forEach(li =>
+      li.classList.toggle('on', li.dataset.val === choice));
   }
-  paint();
-  btn.addEventListener("click", () => {
-    root.dataset.theme = root.dataset.theme === "light" ? "dark" : "light";
-    try {
-      localStorage.setItem("fsoc_theme", root.dataset.theme);
-    } catch (e) {}
-    paint();
+
+  function setChoice(val) {
+    try { localStorage.setItem(KEY, val); } catch (e) {}
+    apply();
+  }
+
+  // open / close
+  function close() { wrap.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = wrap.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
   });
+  menu.querySelectorAll('li').forEach(li =>
+    li.addEventListener('click', () => { setChoice(li.dataset.val); close(); }));
+
+  // close when clicking elsewhere or pressing Esc
+  document.addEventListener('click', e => { if (!wrap.contains(e.target)) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+  // live-follow the OS only while on "system"
+  mq.addEventListener('change', () => { if (getChoice() === 'system') apply(); });
+
+  apply();
 })();

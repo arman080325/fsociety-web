@@ -19,7 +19,16 @@
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="theme.css">
-    <script>try { var _t = localStorage.getItem('fsoc_theme'); if (_t) document.documentElement.dataset.theme = _t; } catch (e) { }</script>
+    <script>
+        try {
+            var _t = localStorage.getItem('fsoc_theme');
+            // no saved pref OR explicitly "system" → follow the OS
+            if (!_t || _t === 'system') {
+                _t = matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.dataset.theme = _t;
+        } catch (e) { }
+    </script>
 </head>
 
 <body>
@@ -118,7 +127,17 @@
             <a href="#contact" data-s="contact">contact</a>
         </div>
         <button class="nav-kb-hint" id="kbBtn">? shortcuts</button>
-        <button class="theme-btn" id="themeToggle" title="toggle theme" aria-label="toggle theme">☾ dark</button>
+        <div class="theme-select" id="themeSelect">
+            <button class="theme-btn" id="themeBtn" aria-haspopup="listbox" aria-expanded="false">
+                <span id="themeLabel">⊙ system</span>
+                <span class="theme-caret">▾</span>
+            </button>
+            <ul class="theme-menu" id="themeMenu" role="listbox">
+                <li role="option" data-val="dark"><span>☾</span> dark</li>
+                <li role="option" data-val="light"><span>☀</span> light</li>
+                <li role="option" data-val="system"><span>⊙</span> system</li>
+            </ul>
+        </div>
         <button class="nav-burger" id="burger" aria-label="menu">≡</button>
     </nav>
 
