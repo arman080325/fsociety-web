@@ -598,6 +598,287 @@ const PHASES = [
 ];
 
 /* ============================================================
+   DATA — ROADMAP KNOWLEDGE CHECKS (quiz-gated clearance)
+   one MCQ per node — must answer correctly to mark the node cleared
+   ============================================================ */
+const QUIZZES = {
+  net: {
+    q: "Which OSI layer is responsible for IP addressing and routing?",
+    options: ["Layer 2 — Data Link", "Layer 3 — Network", "Layer 4 — Transport", "Layer 7 — Application"],
+    correct: 1,
+    explain: "IP addressing and routing happen at Layer 3. MAC addresses and switching live at Layer 2.",
+  },
+  lin: {
+    q: "Which permission bit lets a binary run with its owner's privileges instead of the invoking user's?",
+    options: ["sudo", "SUID bit", "umask", "sticky bit"],
+    correct: 1,
+    explain: "The SUID bit executes a file as its owner. Misconfigured SUID binaries are a classic Linux privesc vector.",
+  },
+  win: {
+    q: "Which protocol handles Windows file/printer sharing and hosted EternalBlue (MS17-010)?",
+    options: ["RDP", "SMB", "LDAP", "WinRM"],
+    correct: 1,
+    explain: "SMB (port 445) handles Windows file sharing and has been the root of major RCEs like EternalBlue.",
+  },
+  prog: {
+    q: "You need to check which of 500 URLs return HTTP 200. What's the efficient move?",
+    options: ["Open each in a browser tab manually", "A short script looping requests and logging status codes", "Ask a teammate to check", "Only check the first 10"],
+    correct: 1,
+    explain: "This is exactly what scripting is for — a 10-line script replaces hours of manual clicking.",
+  },
+  princ: {
+    q: "In the CIA triad, which property ensures data isn't modified without authorization?",
+    options: ["Confidentiality", "Integrity", "Availability", "Accountability"],
+    correct: 1,
+    explain: "Integrity = data hasn't been tampered with. Confidentiality is about who can read it; availability is about uptime.",
+  },
+  crypto: {
+    q: "Why is an unsalted password hash risky even if the algorithm itself is strong?",
+    options: ["It's too slow to compute", "Precomputed rainbow tables can crack it quickly", "It uses too much disk space", "It can't be brute-forced at all"],
+    correct: 1,
+    explain: "A salt makes precomputed rainbow tables useless — without one, identical passwords produce identical hashes across every user and site.",
+  },
+  webf: {
+    q: "What does the Same-Origin Policy primarily restrict?",
+    options: ["How many cookies a site can set", "Scripts from one origin reading responses from a different origin", "The number of open browser tabs", "Which HTTP methods a server accepts"],
+    correct: 1,
+    explain: "SOP stops a script on evil.com from reading responses fetched from bank.com — it's the backbone of browser security.",
+  },
+  webp: {
+    q: "Which vulnerability lets an attacker view another user's data just by changing an ID in the URL?",
+    options: ["Reflected XSS", "IDOR — Insecure Direct Object Reference", "SSRF", "CSRF"],
+    correct: 1,
+    explain: "IDOR happens when the server trusts the client-supplied ID without checking the requester actually owns that resource.",
+  },
+  netp: {
+    q: "What's the term for routing traffic through a compromised host to reach an otherwise unreachable internal network?",
+    options: ["Spoofing", "Pivoting / tunnelling", "Sniffing", "Fuzzing"],
+    correct: 1,
+    explain: "Pivoting uses a foothold as a relay point to attack hosts the attacker couldn't otherwise route to.",
+  },
+  ad: {
+    q: "Which tool is most associated with visually mapping Active Directory attack paths (ACL abuse, group nesting)?",
+    options: ["Nmap", "BloodHound", "Wireshark", "Metasploit"],
+    correct: 1,
+    explain: "BloodHound ingests AD relationships and graphs the shortest path from a low-priv user to Domain Admin.",
+  },
+  wifi: {
+    q: "What must you capture to attempt an offline WPA2 password crack?",
+    options: ["The router's firmware image", "The 4-way handshake", "The SSID broadcast alone", "The DHCP lease table"],
+    correct: 1,
+    explain: "The 4-way handshake contains what's needed to verify password guesses offline — no need to stay connected while cracking.",
+  },
+  priv: {
+    q: "After landing a low-privilege shell on Linux, what should you check first?",
+    options: ["Only the kernel version", "SUID binaries, sudo -l output, and cron jobs", "The desktop wallpaper", "Nothing — guess the root password"],
+    correct: 1,
+    explain: "SUID misconfigs, sudo rules, and writable cron jobs are the highest-yield, lowest-noise privesc checks to run first.",
+  },
+  osint: {
+    q: "Which of these is a passive recon technique (no direct contact with the target)?",
+    options: ["Port scanning with Nmap", "Search-engine dorking and public records", "Sending phishing emails", "Brute-forcing a login form"],
+    correct: 1,
+    explain: "Passive recon gathers intel from public sources without ever touching the target's infrastructure directly.",
+  },
+  ps: {
+    q: "What's the main advantage of PortSwigger's Web Security Academy labs?",
+    options: ["They require a paid HTB VIP subscription", "Free, vulnerability-specific labs paired with theory", "They only cover network pentesting", "They replace the need to learn HTTP"],
+    correct: 1,
+    explain: "Free, per-vulnerability labs with matching theory is what makes it the standard first stop for web appsec practice.",
+  },
+  thm: {
+    q: "TryHackMe rooms are best described as:",
+    options: ["Unstructured with zero guidance", "Structured, guided paths good for beginners", "Paid-only certification exams", "Purely theoretical, no hands-on labs"],
+    correct: 1,
+    explain: "TryHackMe's strength is guided, beginner-friendly structure — a gentler on-ramp than HTB.",
+  },
+  htb: {
+    q: "Compared to TryHackMe, HackTheBox boxes are generally:",
+    options: ["More hand-held with step-by-step hints", "Closer to real engagements, with less guidance", "Web-app only", "Not useful for OSCP-style prep"],
+    correct: 1,
+    explain: "HTB expects more independent enumeration and thinking — closer to how a real assessment feels.",
+  },
+  ctf: {
+    q: "What's the main benefit of time-boxed CTF competitions?",
+    options: ["They guarantee a job offer", "Time pressure exposes knowledge gaps fast", "They replace the need for labs entirely", "They only test cryptography"],
+    correct: 1,
+    explain: "The clock forces you to find gaps in your own workflow faster than untimed practice ever will.",
+  },
+  secp: {
+    q: "CompTIA Security+ is best described as:",
+    options: ["A 24-hour hands-on practical exam", "A broad, vendor-neutral, entry-level credential", "A web-specialist certification", "A red-team-only credential"],
+    correct: 1,
+    explain: "Security+ is a broad multiple-choice baseline cert many entry-level job filters require — not a hands-on exam.",
+  },
+  ejpt: {
+    q: "INE's eJPT is aimed at:",
+    options: ["Seasoned red-team leads", "Beginners proving they can run a basic hands-on assessment", "Cloud security specialists only", "Malware reverse engineers"],
+    correct: 1,
+    explain: "eJPT is a beginner-friendly, fully practical cert — a good first hands-on credential after the fundamentals.",
+  },
+  pnpt: {
+    q: "What makes TCM's PNPT distinctive among pentest certifications?",
+    options: ["It's multiple-choice only", "It ends in a live debrief plus a real deliverable report", "It has no exam at all", "It only tests wireless attacks"],
+    correct: 1,
+    explain: "PNPT mirrors an actual client engagement end-to-end, including the report and a live debrief call.",
+  },
+  oscp: {
+    q: "OSCP is widely known for:",
+    options: ["A short multiple-choice quiz", "A grueling ~24-hour hands-on practical exam", "Being purely theoretical", "Guaranteeing a job with zero experience"],
+    correct: 1,
+    explain: "OSCP's reputation comes from its brutal, fully practical exam format — \"try harder\" is the whole ethos.",
+  },
+  bscp: {
+    q: "PortSwigger's BSCP certification specifically validates skill in:",
+    options: ["Active Directory attacks", "Web application security", "Wireless cracking", "Cloud IAM misconfigurations"],
+    correct: 1,
+    explain: "BSCP backs the Web Security Academy labs with a recognised, web-focused practical credential.",
+  },
+  report: {
+    q: "In a pentest report, CVSS is used to:",
+    options: ["List which tools were used", "Score and communicate vulnerability severity", "Encrypt the report file", "Track billable hours"],
+    correct: 1,
+    explain: "CVSS gives clients a standardised, comparable severity score — what actually gets fixed first depends on it.",
+  },
+  bb: {
+    q: "Before testing a bug bounty target, the first thing to check is:",
+    options: ["Nothing — just start hacking", "The program's scope and rules of engagement", "Whether the company is famous", "The bounty payout table only"],
+    correct: 1,
+    explain: "Testing outside scope can get you banned from a program or land you in legal trouble — scope is read first, always.",
+  },
+  red: {
+    q: "How does red teaming typically differ from a standard pentest?",
+    options: ["It only checks patch levels", "It's a full-scope, stealthy adversary simulation testing detection & response too", "It never touches production systems", "It's fully automated with no human involvement"],
+    correct: 1,
+    explain: "Red teaming tests people and detection capability, not just technical vulnerabilities — stealth and objectives matter as much as access.",
+  },
+  spec: {
+    q: "'Specialising' in a track like cloud, mobile, or OT security mainly helps you:",
+    options: ["Avoid ever learning anything new again", "Build deep, differentiated expertise once fundamentals are solid", "Skip the fundamentals phase entirely", "Guarantee a higher salary regardless of skill"],
+    correct: 1,
+    explain: "Generalists get hired; specialists with deep, provable expertise in one lane get remembered and referred.",
+  },
+};
+
+/* ============================================================
+   DATA — SPOT THE VULNERABILITY (code-review challenge)
+   ============================================================ */
+const VULN_CHALLENGES = [
+  {
+    lang: "PHP",
+    code: `$id = $_GET['id'];
+$result = mysqli_query(
+  $conn,
+  "SELECT * FROM users WHERE id = " . $id
+);`,
+    options: ["SQL Injection", "Cross-Site Scripting", "Path Traversal", "CSRF"],
+    correct: 0,
+    explain: "User input is concatenated straight into the query string with no parameterization. Fix: use prepared statements / parameterized queries.",
+  },
+  {
+    lang: "Node / Express",
+    code: `app.get('/search', (req, res) => {
+  res.send('<h1>Results for ' + req.query.q + '</h1>');
+});`,
+    options: ["Cross-Site Scripting (XSS)", "SSRF", "IDOR", "Command Injection"],
+    correct: 0,
+    explain: "Unescaped user input is echoed straight into HTML — a reflected XSS. Fix: encode output, or let your templating engine auto-escape.",
+  },
+  {
+    lang: "Python",
+    code: `filename = request.args.get('file')
+os.system("cat " + filename)`,
+    options: ["Command Injection", "SQL Injection", "XXE", "Open Redirect"],
+    correct: 0,
+    explain: "User input flows straight into a shell command via os.system. Fix: use subprocess with an argument list (no shell=True), and validate input.",
+  },
+  {
+    lang: "Node / Express",
+    code: `app.get('/download', (req, res) => {
+  const file = req.query.file;
+  res.sendFile(path.join(__dirname, 'uploads', file));
+});`,
+    options: ["Path Traversal", "CSRF", "IDOR", "Insecure Deserialization"],
+    correct: 0,
+    explain: "No sanitization of '../' sequences — an attacker can request '../../etc/passwd'. Fix: resolve the path and verify it stays inside the uploads directory.",
+  },
+  {
+    lang: "Java / Spring",
+    code: `@GetMapping("/invoice/{id}")
+public Invoice getInvoice(@PathVariable Long id) {
+    return invoiceRepo.findById(id).get();
+}`,
+    options: ["IDOR / Broken Access Control", "XXE", "CSRF", "Race Condition"],
+    correct: 0,
+    explain: "There's no check that the invoice actually belongs to the logged-in user — anyone can increment the id and view someone else's data. Fix: verify ownership server-side before returning the record.",
+  },
+  {
+    lang: "Python / Flask",
+    code: `url = request.form['url']
+resp = requests.get(url)
+return resp.text`,
+    options: ["SSRF", "XSS", "Hardcoded Credentials", "Open Redirect"],
+    correct: 0,
+    explain: "The server fetches an attacker-supplied URL, which can be pointed at internal services (e.g. cloud metadata endpoints). Fix: allowlist destinations and block internal/private IP ranges.",
+  },
+  {
+    lang: "JavaScript",
+    code: `const AWS_ACCESS_KEY = "AKIAABCDEFGHIJKLMNOP";
+const AWS_SECRET = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";`,
+    options: ["Hardcoded Credentials", "SQL Injection", "XXE", "CSRF"],
+    correct: 0,
+    explain: "Secrets committed to source are trivially findable via repo history or automated scanners. Fix: use environment variables or a secrets manager, and rotate immediately if ever leaked.",
+  },
+  {
+    lang: "HTML",
+    code: `<form action="https://bank.example/transfer" method="POST">
+  <input type="hidden" name="to" value="attacker">
+  <input type="hidden" name="amount" value="1000">
+</form>
+<script>document.forms[0].submit()</script>`,
+    options: ["CSRF", "Cross-Site Scripting", "SSRF", "Command Injection"],
+    correct: 0,
+    explain: "This relies on a victim's authenticated session cookie riding along automatically, with no anti-CSRF token check. Fix: CSRF tokens plus SameSite=Strict/Lax cookies.",
+  },
+  {
+    lang: "Java",
+    code: `DocumentBuilderFactory dbf =
+  DocumentBuilderFactory.newInstance();
+Document doc = dbf.newDocumentBuilder()
+  .parse(userSuppliedXml);`,
+    options: ["XML External Entity (XXE)", "Insecure Deserialization", "SSRF", "Buffer Overflow"],
+    correct: 0,
+    explain: "The default parser config allows external entity resolution, letting a crafted XML file read local files or trigger SSRF. Fix: explicitly disable DTDs and external entities on the factory.",
+  },
+  {
+    lang: "Python",
+    code: `data = request.data
+obj = pickle.loads(data)`,
+    options: ["Insecure Deserialization", "SQL Injection", "Path Traversal", "Open Redirect"],
+    correct: 0,
+    explain: "pickle.loads() on untrusted input can execute arbitrary code during deserialization. Fix: never unpickle untrusted data — use a safe format like JSON instead.",
+  },
+  {
+    lang: "Python / Flask",
+    code: `next_url = request.args.get('next')
+return redirect(next_url)`,
+    options: ["Open Redirect", "IDOR", "Cross-Site Scripting", "Command Injection"],
+    correct: 0,
+    explain: "An unvalidated redirect target lets attackers craft phishing links that appear to start on your trusted domain. Fix: allowlist redirect targets, or only allow relative paths.",
+  },
+  {
+    lang: "Node / Express",
+    code: `if (req.body.username === "admin" &&
+    req.body.password === "admin123") {
+  req.session.isAdmin = true;
+}`,
+    options: ["Hardcoded Credentials / Broken Authentication", "CSRF", "XXE", "SSRF"],
+    correct: 0,
+    explain: "Hardcoded admin credentials baked into source code are a critical broken-authentication flaw — anyone reading the code (or a leaked repo) has full admin access. Fix: remove hardcoded creds; authenticate against hashed, stored credentials.",
+  },
+];
+
+/* ============================================================
    DATA — NOTES
    ============================================================ */
 const NOTES = {
@@ -1613,6 +1894,53 @@ const RM = (function () {
   const dBody = document.getElementById("dosBody"),
     dClear = document.getElementById("dosClear");
   let current = null;
+  let quizPassedThisOpen = false;
+  function renderQuizBlock(n) {
+    const quiz = QUIZZES[n.id];
+    if (!quiz) return "";
+    return `
+      <h4>knowledge check</h4>
+      <div class="dos-quiz" data-node="${n.id}">
+        <p class="qz-q">${quiz.q}</p>
+        <div class="qz-opts">
+          ${quiz.options.map((o, i) => `<button class="qz-opt" data-i="${i}">${o}</button>`).join("")}
+        </div>
+        <div class="qz-fb"></div>
+      </div>`;
+  }
+  function bindQuiz(n) {
+    const quiz = QUIZZES[n.id];
+    quizPassedThisOpen = RM.isClear(n.id);
+    if (!quiz) {
+      quizPassedThisOpen = true; // no check defined — don't block clearing
+      syncBtn();
+      return;
+    }
+    const wrap = dBody.querySelector(".dos-quiz");
+    syncBtn();
+    if (!wrap) return;
+    const fb = wrap.querySelector(".qz-fb");
+    if (quizPassedThisOpen) {
+      fb.innerHTML = `<span class="qz-ok">✓ already cleared this check.</span>`;
+    }
+    wrap.querySelectorAll(".qz-opt").forEach((btn) => {
+      btn.onclick = () => {
+        const i = +btn.dataset.i;
+        wrap
+          .querySelectorAll(".qz-opt")
+          .forEach((b) => b.classList.remove("right", "wrong"));
+        if (i === quiz.correct) {
+          btn.classList.add("right");
+          fb.innerHTML = `<span class="qz-ok">✓ correct.</span> ${quiz.explain}`;
+          quizPassedThisOpen = true;
+          syncBtn();
+        } else {
+          btn.classList.add("wrong");
+          fb.innerHTML = `<span class="qz-no">✗ not quite.</span> ${quiz.explain}`;
+        }
+      };
+    });
+  }
   function open(id) {
     const n = RM.node(id);
     if (!n) return;
@@ -1630,16 +1958,24 @@ const RM = (function () {
       <h4>brief</h4><p>${n.blurb}</p>
       <h4>why it matters</h4><p>${n.why}</p>
       <h4>key topics</h4><div class="dos-topics">${n.topics.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
-      <h4>where to learn</h4><div class="dos-res">${n.res.map((r) => `<a href="${r.u}" target="_blank" rel="noopener">${r.n}<span class="arr">↗</span></a>`).join("")}</div>`;
-    syncBtn();
+      <h4>where to learn</h4><div class="dos-res">${n.res.map((r) => `<a href="${r.u}" target="_blank" rel="noopener">${r.n}<span class="arr">↗</span></a>`).join("")}</div>
+      ${renderQuizBlock(n)}`;
+    bindQuiz(n);
     dossier.classList.add("open");
     scrim.classList.add("open");
     dossier.setAttribute("aria-hidden", "false");
   }
   function syncBtn() {
     const on = RM.isClear(current);
-    dClear.textContent = on ? "✓ cleared — undo" : "mark as cleared";
+    const locked = !on && !quizPassedThisOpen;
+    dClear.disabled = locked;
     dClear.classList.toggle("is-clear", on);
+    dClear.classList.toggle("locked", locked);
+    dClear.textContent = on
+      ? "✓ cleared — undo"
+      : locked
+        ? "🔒 pass the check above to clear"
+        : "mark as cleared";
   }
   function close() {
     dossier.classList.remove("open");
@@ -1655,7 +1991,7 @@ const RM = (function () {
   RM.setBind(bindNodes);
   bindNodes();
   dClear.onclick = () => {
-    if (current) {
+    if (current && (RM.isClear(current) || quizPassedThisOpen)) {
       RM.toggle(current);
       syncBtn();
     }
@@ -3390,4 +3726,85 @@ Object.assign(NOTES, {
   mq.addEventListener('change', () => { if (getChoice() === 'system') apply(); });
 
   apply();
+})();
+/* ============================================================
+   SPOT THE VULNERABILITY — code review challenge widget
+   ============================================================ */
+(function () {
+  const wrap = document.getElementById("vhWidget");
+  if (!wrap) return;
+
+  const langEl = wrap.querySelector("#vhLang");
+  const codeEl = wrap.querySelector("#vhCode");
+  const optsEl = wrap.querySelector("#vhOpts");
+  const fbEl = wrap.querySelector("#vhFeedback");
+  const nextBtn = wrap.querySelector("#vhNext");
+  const scoreEl = wrap.querySelector("#vhScore");
+  const progEl = wrap.querySelector("#vhProg");
+
+  // shuffle order once per page load so repeat visitors see fresh sequencing
+  const order = VULN_CHALLENGES.map((_, i) => i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [order[i], order[j]] = [order[j], order[i]];
+  }
+
+  let ptr = 0;
+  let correct = 0;
+  let answered = 0;
+  let locked = false;
+
+  function escapeHtml(s) {
+    return s
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function updateScore() {
+    scoreEl.textContent = `${correct}/${answered} correct`;
+    progEl.textContent = `challenge ${ptr + 1} / ${VULN_CHALLENGES.length}`;
+  }
+
+  function render() {
+    const c = VULN_CHALLENGES[order[ptr]];
+    locked = false;
+    langEl.textContent = c.lang;
+    codeEl.textContent = c.code;
+    fbEl.innerHTML = "";
+    fbEl.className = "vh-fb";
+    nextBtn.disabled = true;
+    optsEl.innerHTML = c.options
+      .map((o, i) => `<button class="vh-opt" data-i="${i}">${escapeHtml(o)}</button>`)
+      .join("");
+    optsEl.querySelectorAll(".vh-opt").forEach((btn) => {
+      btn.onclick = () => {
+        if (locked) return;
+        locked = true;
+        answered++;
+        const i = +btn.dataset.i;
+        const ok = i === c.correct;
+        if (ok) correct++;
+        optsEl.querySelectorAll(".vh-opt").forEach((b) => {
+          const bi = +b.dataset.i;
+          if (bi === c.correct) b.classList.add("right");
+          else if (bi === i) b.classList.add("wrong");
+          b.disabled = true;
+        });
+        fbEl.innerHTML = ok
+          ? `<span class="qz-ok">✓ correct — ${escapeHtml(c.options[c.correct])}.</span> ${c.explain}`
+          : `<span class="qz-no">✗ it's actually ${escapeHtml(c.options[c.correct])}.</span> ${c.explain}`;
+        nextBtn.disabled = false;
+        updateScore();
+      };
+    });
+    updateScore();
+  }
+
+  nextBtn.onclick = () => {
+    ptr = (ptr + 1) % VULN_CHALLENGES.length;
+    render();
+  };
+
+  render();
 })();

@@ -1427,6 +1427,84 @@ section {
   background: var(--signal-glow);
 }
 
+.clear-btn.locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+  border-color: var(--ash2);
+  color: var(--ash);
+}
+
+.clear-btn.locked:hover {
+  background: none;
+}
+
+/* ================= ROADMAP KNOWLEDGE CHECK ================= */
+.dos-quiz {
+  border: 1px solid var(--line);
+  background: var(--panel2);
+  padding: 16px;
+}
+
+.qz-q {
+  font-size: 0.82rem;
+  color: var(--bone);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.qz-opts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.qz-opt {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--bone-dim);
+  background: var(--panel);
+  border: 1px solid var(--line2);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: 0.15s var(--ease);
+}
+
+.qz-opt:hover {
+  border-color: var(--bone-dim);
+  color: var(--bone);
+}
+
+.qz-opt.right {
+  border-color: var(--phosphor);
+  color: var(--phosphor);
+  background: rgba(143, 185, 138, 0.1);
+}
+
+.qz-opt.wrong {
+  border-color: var(--signal);
+  color: var(--signal);
+  background: var(--signal-glow);
+}
+
+.qz-fb {
+  margin-top: 12px;
+  font-size: 0.76rem;
+  line-height: 1.6;
+  color: var(--bone-dim);
+  min-height: 1px;
+}
+
+.qz-fb .qz-ok {
+  color: var(--phosphor);
+  font-weight: 600;
+}
+
+.qz-fb .qz-no {
+  color: var(--signal-soft);
+  font-weight: 600;
+}
+
 /* ================= ARSENAL ================= */
 .arsenal {
   display: grid;
@@ -1818,6 +1896,129 @@ pre.code code {
   min-height: 38px;
   word-break: break-all;
   line-height: 1.6;
+}
+
+/* ================= SPOT THE VULNERABILITY ================= */
+#vulnhunt {
+  background: var(--void2);
+}
+
+.vh-widget {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.vh-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.vh-lang {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--cyan);
+  border: 1px solid var(--cyan);
+  padding: 3px 8px;
+}
+
+.vh-prog {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--ash);
+}
+
+.vh-code {
+  background: #070708;
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--signal);
+  padding: 16px 18px;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--phosphor);
+  line-height: 1.75;
+  white-space: pre;
+  margin-bottom: 16px;
+}
+
+.vh-label {
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ash);
+  margin-bottom: 10px;
+}
+
+.vh-opts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.vh-opt {
+  text-align: left;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--bone-dim);
+  background: var(--panel2);
+  border: 1px solid var(--line2);
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: 0.15s var(--ease);
+}
+
+.vh-opt:hover:not(:disabled) {
+  border-color: var(--bone-dim);
+  color: var(--bone);
+}
+
+.vh-opt:disabled {
+  cursor: default;
+}
+
+.vh-opt.right {
+  border-color: var(--phosphor);
+  color: var(--phosphor);
+  background: rgba(143, 185, 138, 0.1);
+}
+
+.vh-opt.wrong {
+  border-color: var(--signal);
+  color: var(--signal);
+  background: var(--signal-glow);
+}
+
+.vh-fb {
+  margin-top: 16px;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  color: var(--bone-dim);
+  min-height: 1px;
+}
+
+.vh-foot {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+
+.vh-score {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--bone-dim);
+}
+
+#vhNext:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
 }
 
 .tbox-out.err {
