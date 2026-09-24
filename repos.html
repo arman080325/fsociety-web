@@ -303,16 +303,140 @@
     }
 
     @media(max-width:880px) {
+      nav {
+        left: 0 !important;
+        padding: 10px 16px !important;
+      }
+
+      .brand {
+        font-size: 0.92rem;
+        min-width: 0;
+        flex-shrink: 1;
+      }
+
+      .brand .sub {
+        font-size: 0.55rem;
+      }
+
+      .nav-back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.68rem;
+        color: var(--bone-dim);
+        padding: 5px 8px;
+        margin: 0;
+        border: 1px solid var(--line2);
+        white-space: nowrap;
+        transition: .2s var(--ease);
+      }
+
+      .nav-back-link:hover {
+        color: var(--signal);
+        border-color: var(--signal);
+      }
+
       .arsenal-head {
-        padding: 90px 20px 24px
+        padding: 85px 16px 20px;
+      }
+
+      .arsenal-title {
+        font-size: clamp(1.8rem, 8vw, 3rem);
+      }
+
+      .arsenal-sub {
+        font-size: 0.82rem;
+      }
+
+      .controls {
+        padding: 6px 16px 0;
+        gap: 12px;
+      }
+
+      .searchbar {
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .searchbar input {
+        font-size: 16px !important;
+        padding: 11px 14px 11px 36px;
+      }
+
+      .searchbar .kbd {
+        display: none;
+      }
+
+      .pills {
+        gap: 4px;
+      }
+
+      .pill {
+        padding: 6px 10px;
+        font-size: 0.66rem;
+      }
+
+      .repo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+        padding: 18px 16px 36px;
+        gap: 12px;
+      }
+
+      .rcard-name {
+        min-width: 0;
+      }
+
+      .rcard-foot {
+        gap: 6px;
+        padding: 9px 10px;
+      }
+
+      .loadwrap {
+        padding: 0 16px 50px;
+      }
+
+      .loadmore {
+        width: 100%;
+        max-width: 280px;
+        padding: 11px 20px;
+        font-size: 0.74rem;
+      }
+
+      .empty {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      footer {
+        margin-left: 0 !important;
+        padding: 30px 16px calc(40px + env(safe-area-inset-bottom, 0px)) !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 8px 12px !important;
+      }
+
+      .back-text {
+        display: none;
+      }
+
+      .nav-back-link::after {
+        content: "base";
+      }
+
+      .repo-grid {
+        grid-template-columns: 1fr;
+        padding: 14px 12px 30px;
       }
 
       .controls,
-      .repo-grid,
+      .arsenal-head,
       .loadwrap,
       .empty {
-        padding-left: 20px;
-        padding-right: 20px
+        padding-left: 12px;
+        padding-right: 12px;
       }
     }
   </style>
@@ -333,7 +457,7 @@
   <nav id="nav">
     <a class="brand" href="index.html">ARMAN<b>X</b>PLOITS<span class="sub">// arsenal</span></a>
     <div style="margin-left:auto;display:flex;align-items:center;gap:6px">
-      <a class="back-link" href="index.html" style="margin:0">⬡ back to base</a>
+      <a class="nav-back-link" href="index.html" style="margin:0"><span class="back-sym">⬡</span> <span class="back-text">back to base</span></a>
       <div class="theme-select" id="themeSelect">
         <button class="theme-btn" id="themeBtn" aria-haspopup="listbox" aria-expanded="false">
           <span id="themeLabel">⊙ system</span>
