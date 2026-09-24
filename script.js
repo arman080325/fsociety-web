@@ -2434,10 +2434,28 @@ function bindCopy(root = document) {
   addEventListener("scroll", () => nav.classList.toggle("solid", scrollY > 40));
   const burger = document.getElementById("burger"),
     spread = document.getElementById("navSpread");
-  burger.onclick = () => spread.classList.toggle("open");
-  spread
-    .querySelectorAll("a")
-    .forEach((a) => (a.onclick = () => spread.classList.remove("open")));
+  if (burger && spread) {
+    burger.onclick = (e) => {
+      e.stopPropagation();
+      const open = spread.classList.toggle("open");
+      burger.textContent = open ? "✕" : "≡";
+      burger.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    spread
+      .querySelectorAll("a")
+      .forEach((a) => (a.onclick = () => {
+        spread.classList.remove("open");
+        burger.textContent = "≡";
+        burger.setAttribute("aria-expanded", "false");
+      }));
+    document.addEventListener("click", (e) => {
+      if (spread.classList.contains("open") && !spread.contains(e.target) && e.target !== burger) {
+        spread.classList.remove("open");
+        burger.textContent = "≡";
+        burger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
   // active nav link
   const links = [...document.querySelectorAll(".nav-spread a")];
   const secObs = new IntersectionObserver(
