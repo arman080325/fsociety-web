@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <title>fsociety // armanxploits</title>
     <link rel="icon" href="favicons/apple-touch-icon.png" sizes="32x32">
     <link rel="icon" type="image/svg+xml" href="favicons/favicon.svg">
@@ -126,6 +126,7 @@
             <a href="#proving" data-s="proving">proving</a>
             <a href="#repos" data-s="repos">repos</a>
             <a href="#contact" data-s="contact">contact</a>
+            <button class="nav-kb-link" id="mobileKbBtn">⌨ shortcuts</button>
         </div>
         <button class="nav-kb-hint" id="kbBtn">? shortcuts</button>
         <div class="theme-select" id="themeSelect">
@@ -314,7 +315,7 @@
      03 — TUTORIALS (NEW)
      ====================================================== -->
         <section id="tutorials">
-            <div style="max-width:var(--maxw);margin:0 auto;padding:120px 34px">
+            <div class="tut-container">
                 <div class="shead rev"><span class="num">// 03</span>
                     <h2>tutorials</h2>
                     <div class="rule"></div>
@@ -478,7 +479,7 @@
                 </div>
 
                 <!-- PORT REFERENCE -->
-                <div class="tbox panel rev" style="grid-column:span 2">
+                <div class="tbox panel rev tbox-wide">
                     <div class="tbox-head">
                         <span class="tbox-icon">◈</span>
                         <h3>Common Ports — Pentest Reference</h3>

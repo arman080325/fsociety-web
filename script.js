@@ -2357,6 +2357,19 @@ function bindCopy(root = document) {
     overlay.classList.remove("open");
   }
   kbBtn && kbBtn.addEventListener("click", openKb);
+  const mobileKbBtn = document.getElementById("mobileKbBtn");
+  if (mobileKbBtn) {
+    mobileKbBtn.addEventListener("click", () => {
+      openKb();
+      const spread = document.getElementById("navSpread");
+      const burger = document.getElementById("burger");
+      if (spread) spread.classList.remove("open");
+      if (burger) {
+        burger.textContent = "≡";
+        burger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
   overlay.addEventListener("click", (e) => {
     if (e.target === overlay) closeKb();
   });
