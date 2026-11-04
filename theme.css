@@ -10,7 +10,7 @@
   display:inline-flex;align-items:center;gap:7px;transition:.2s var(--ease);white-space:nowrap;
 }
 .theme-btn:hover{color:var(--signal);border-color:var(--signal)}
-@media(max-width:880px){.theme-btn{margin-left:auto;margin-right:8px}}
+@media(max-width:1024px){.theme-btn{margin-left:auto;margin-right:8px}}
 
 /* ===== LIGHT MODE ===== */
 [data-theme="light"]{
@@ -61,4 +61,4 @@
 .theme-menu li.on { color: var(--signal); border-left: 2px solid var(--signal); }
 .theme-menu li span { width: 14px; text-align: center; }
 
-@media (max-width: 880px) { .theme-select { margin-left: auto; margin-right: 8px; } }
+@media (max-width: 1024px) { .theme-select { margin-left: auto; margin-right: 8px; } }
