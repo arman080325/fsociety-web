@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="452" viewBox="0 0 1200 452" role="img" aria-label="the node — twelve sections">
+<title>the node — twelve sections</title>
+<style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.d{font-family:'Archivo Black','Archivo','Arial Black','Helvetica Neue',Impact,sans-serif;font-weight:900}
+.b{font-weight:700}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes on{0%{opacity:0}1.5%,7%{opacity:1}12%,100%{opacity:0}}
+@keyframes gl{0%{opacity:.18}1.5%,7%{opacity:1}12%,100%{opacity:.18}}
+@keyframes tb{0%{transform:scaleX(0)}6%{transform:scaleX(1)}10%{transform:scaleX(1);opacity:1}12%,100%{transform:scaleX(1);opacity:0}}
+.on{animation:on 13.2s infinite both}.gl{animation:gl 13.2s infinite both}
+.tb{transform-box:fill-box;transform-origin:left;animation:tb 13.2s infinite both}
+</style>
+<g>
+<rect x="0.5" y="0.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:0.00s"><rect x="0.5" y="0.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M5 17V5H17" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M283 17V5H271" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M5 123V135H17" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M283 123V135H271" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="268" y="28" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="20" y="28" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 01</text>
+<text class="gl" style="animation-delay:0.00s" x="266" y="118" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">◉</text>
+<text x="20" y="62" font-size="21" fill="#e8e4d9" class="b">whoami</text>
+<text x="20" y="90" font-size="12.5" fill="#a09c90">ID card, skill meters and</text>
+<text x="20" y="108" font-size="12.5" fill="#a09c90">the fsociety box spec sheet</text>
+<rect class="tb" style="animation-delay:0.00s" x="1" y="136" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="304.5" y="0.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:1.10s"><rect x="304.5" y="0.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M309 17V5H321" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M587 17V5H575" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M309 123V135H321" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M587 123V135H575" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="572" y="28" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="324" y="28" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 02</text>
+<text class="gl" style="animation-delay:1.10s" x="570" y="118" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">◈</text>
+<text x="324" y="62" font-size="21" fill="#e8e4d9" class="b">the path</text>
+<text x="324" y="90" font-size="12.5" fill="#a09c90">6-phase career kill chain,</text>
+<text x="324" y="108" font-size="12.5" fill="#a09c90">26 quiz-gated nodes</text>
+<rect class="tb" style="animation-delay:1.10s" x="305" y="136" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="608.5" y="0.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:2.20s"><rect x="608.5" y="0.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M613 17V5H625" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M891 17V5H879" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M613 123V135H625" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M891 123V135H879" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="876" y="28" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="628" y="28" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 03</text>
+<text class="gl" style="animation-delay:2.20s" x="874" y="118" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">▶</text>
+<text x="628" y="62" font-size="21" fill="#e8e4d9" class="b">tutorials</text>
+<text x="628" y="90" font-size="12.5" fill="#a09c90">recon → privesc walkthroughs</text>
+<text x="628" y="108" font-size="12.5" fill="#a09c90">with real commands</text>
+<rect class="tb" style="animation-delay:2.20s" x="609" y="136" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="912.5" y="0.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:3.30s"><rect x="912.5" y="0.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M917 17V5H929" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M1195 17V5H1183" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M917 123V135H929" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M1195 123V135H1183" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="1180" y="28" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="932" y="28" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 04</text>
+<text class="gl" style="animation-delay:3.30s" x="1178" y="118" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">⬡</text>
+<text x="932" y="62" font-size="21" fill="#e8e4d9" class="b">arsenal</text>
+<text x="932" y="90" font-size="12.5" fill="#a09c90">28 tools · filter by recon,</text>
+<text x="932" y="108" font-size="12.5" fill="#a09c90">exploit, web, wireless</text>
+<rect class="tb" style="animation-delay:3.30s" x="913" y="136" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="0.5" y="156.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:4.40s"><rect x="0.5" y="156.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M5 173V161H17" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M283 173V161H271" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M5 279V291H17" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M283 279V291H271" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="268" y="184" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="20" y="184" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 05</text>
+<text class="gl" style="animation-delay:4.40s" x="266" y="274" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">⌘</text>
+<text x="20" y="218" font-size="21" fill="#e8e4d9" class="b">toolbox</text>
+<text x="20" y="246" font-size="12.5" fill="#a09c90">encoder · hash id · CVE db</text>
+<text x="20" y="264" font-size="12.5" fill="#a09c90">regex tester · port intel</text>
+<rect class="tb" style="animation-delay:4.40s" x="1" y="292" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="304.5" y="156.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:5.50s"><rect x="304.5" y="156.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M309 173V161H321" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M587 173V161H575" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M309 279V291H321" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M587 279V291H575" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="572" y="184" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="324" y="184" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 06</text>
+<text class="gl" style="animation-delay:5.50s" x="570" y="274" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">⚠</text>
+<text x="324" y="218" font-size="21" fill="#e8e4d9" class="b">vuln hunt</text>
+<text x="324" y="246" font-size="12.5" fill="#a09c90">12 code snippets,</text>
+<text x="324" y="264" font-size="12.5" fill="#a09c90">one planted bug each</text>
+<rect class="tb" style="animation-delay:5.50s" x="305" y="292" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="608.5" y="156.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:6.60s"><rect x="608.5" y="156.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M613 173V161H625" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M891 173V161H879" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M613 279V291H625" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M891 279V291H879" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="876" y="184" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="628" y="184" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 07</text>
+<text class="gl" style="animation-delay:6.60s" x="874" y="274" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">△</text>
+<text x="628" y="218" font-size="21" fill="#e8e4d9" class="b">attack tree</text>
+<text x="628" y="246" font-size="12.5" fill="#a09c90">animated kill chains: web,</text>
+<text x="628" y="264" font-size="12.5" fill="#a09c90">network, wireless</text>
+<rect class="tb" style="animation-delay:6.60s" x="609" y="292" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="912.5" y="156.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:7.70s"><rect x="912.5" y="156.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M917 173V161H929" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M1195 173V161H1183" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M917 279V291H929" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M1195 279V291H1183" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="1180" y="184" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="932" y="184" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 08</text>
+<text class="gl" style="animation-delay:7.70s" x="1178" y="274" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">◷</text>
+<text x="932" y="218" font-size="21" fill="#e8e4d9" class="b">journey</text>
+<text x="932" y="246" font-size="12.5" fill="#a09c90">2021 → now: first dual-boot</text>
+<text x="932" y="264" font-size="12.5" fill="#a09c90">to the internship</text>
+<rect class="tb" style="animation-delay:7.70s" x="913" y="292" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="0.5" y="312.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:8.80s"><rect x="0.5" y="312.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M5 329V317H17" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M283 329V317H271" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M5 435V447H17" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M283 435V447H271" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="268" y="340" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="20" y="340" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 09</text>
+<text class="gl" style="animation-delay:8.80s" x="266" y="430" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">✎</text>
+<text x="20" y="374" font-size="21" fill="#e8e4d9" class="b">field notes</text>
+<text x="20" y="402" font-size="12.5" fill="#a09c90">7 tabbed cheat-sheets from</text>
+<text x="20" y="420" font-size="12.5" fill="#a09c90">authorised labs</text>
+<rect class="tb" style="animation-delay:8.80s" x="1" y="448" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="304.5" y="312.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:9.90s"><rect x="304.5" y="312.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M309 329V317H321" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M587 329V317H575" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M309 435V447H321" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M587 435V447H575" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="572" y="340" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="324" y="340" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 10</text>
+<text class="gl" style="animation-delay:9.90s" x="570" y="430" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">⚑</text>
+<text x="324" y="374" font-size="21" fill="#e8e4d9" class="b">proving</text>
+<text x="324" y="402" font-size="12.5" fill="#a09c90">PortSwigger · XSS Game</text>
+<text x="324" y="420" font-size="12.5" fill="#a09c90">TryHackMe · HackTheBox</text>
+<rect class="tb" style="animation-delay:9.90s" x="305" y="448" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="608.5" y="312.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:11.00s"><rect x="608.5" y="312.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M613 329V317H625" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M891 329V317H879" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M613 435V447H625" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M891 435V447H879" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="876" y="340" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="628" y="340" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 11</text>
+<text class="gl" style="animation-delay:11.00s" x="874" y="430" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">⎇</text>
+<text x="628" y="374" font-size="21" fill="#e8e4d9" class="b">repos</text>
+<text x="628" y="402" font-size="12.5" fill="#a09c90">personal tools + a 67-repo</text>
+<text x="628" y="420" font-size="12.5" fill="#a09c90">community index</text>
+<rect class="tb" style="animation-delay:11.00s" x="609" y="448" width="286" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="912.5" y="312.5" width="287" height="139" fill="#111114" stroke="#1e1e22"/>
+<g class="on" style="animation-delay:12.10s"><rect x="912.5" y="312.5" width="287" height="139" fill="#ff2d2d" fill-opacity=".06" stroke="#ff2d2d"/>
+<path d="M917 329V317H929" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M1195 329V317H1183" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M917 435V447H929" fill="none" stroke="#ff2d2d" stroke-width="2"/><path d="M1195 435V447H1183" fill="none" stroke="#ff2d2d" stroke-width="2"/>
+<text x="1180" y="340" font-size="11" fill="#39ff7e" text-anchor="end" letter-spacing="2">● ACTIVE</text></g>
+<text x="932" y="340" font-size="12" fill="#ff2d2d" letter-spacing="2" class="b">// 12</text>
+<text class="gl" style="animation-delay:12.10s" x="1178" y="430" font-size="54" fill="#ff2d2d" fill-opacity=".35" text-anchor="end">✉</text>
+<text x="932" y="374" font-size="21" fill="#e8e4d9" class="b">contact</text>
+<text x="932" y="402" font-size="12.5" fill="#a09c90">ping the node.</text>
+<text x="932" y="420" font-size="12.5" fill="#a09c90">it answers.</text>
+<rect class="tb" style="animation-delay:12.10s" x="913" y="448" width="286" height="3" fill="#ff2d2d"/>
+</g>
+</svg>

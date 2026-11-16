@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img" aria-label="the path — six phases from recon to operator">
+<title>the path — six phases from recon to operator</title>
+<style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.d{font-family:'Archivo Black','Archivo','Arial Black','Helvetica Neue',Impact,sans-serif;font-weight:900}
+.b{font-weight:700}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes draw{0%,6%{stroke-dashoffset:1}62%,93%{stroke-dashoffset:0}100%{stroke-dashoffset:0;opacity:0}}
+.draw{stroke-dasharray:1;animation:draw 11.0s linear infinite both}
+@keyframes mfill{0%,6%{transform:scaleX(0)}62%,93%{transform:scaleX(1)}100%{transform:scaleX(1);opacity:0}}
+.mfill{transform-box:fill-box;transform-origin:left;animation:mfill 11.0s linear infinite both}
+@keyframes scanT{0%,62%{opacity:1}62.01%,100%{opacity:0}}@keyframes doneT{0%,62%{opacity:0}62.01%,93%{opacity:1}97%,100%{opacity:0}}
+.scanT{animation:scanT 11.0s infinite both}.doneT{animation:doneT 11.0s infinite both}
+@keyframes rp{0%{r:16;opacity:.8}100%{r:34;opacity:0}}
+@keyframes lit0{0%,6.00%{opacity:0}6.50%,93%{opacity:1}97%,100%{opacity:0}}.lit0{animation:lit0 11.0s infinite both}
+@keyframes cl0{0%,6.00%{fill:#67655e}6.50%,93%{fill:#e8e4d9}97%,100%{fill:#67655e}}.cl0{animation:cl0 11.0s infinite both}
+@keyframes lit1{0%,17.20%{opacity:0}17.70%,93%{opacity:1}97%,100%{opacity:0}}.lit1{animation:lit1 11.0s infinite both}
+@keyframes cl1{0%,17.20%{fill:#67655e}17.70%,93%{fill:#e8e4d9}97%,100%{fill:#67655e}}.cl1{animation:cl1 11.0s infinite both}
+@keyframes lit2{0%,28.40%{opacity:0}28.90%,93%{opacity:1}97%,100%{opacity:0}}.lit2{animation:lit2 11.0s infinite both}
+@keyframes cl2{0%,28.40%{fill:#67655e}28.90%,93%{fill:#e8e4d9}97%,100%{fill:#67655e}}.cl2{animation:cl2 11.0s infinite both}
+@keyframes lit3{0%,39.60%{opacity:0}40.10%,93%{opacity:1}97%,100%{opacity:0}}.lit3{animation:lit3 11.0s infinite both}
+@keyframes cl3{0%,39.60%{fill:#67655e}40.10%,93%{fill:#e8e4d9}97%,100%{fill:#67655e}}.cl3{animation:cl3 11.0s infinite both}
+@keyframes lit4{0%,50.80%{opacity:0}51.30%,93%{opacity:1}97%,100%{opacity:0}}.lit4{animation:lit4 11.0s infinite both}
+@keyframes cl4{0%,50.80%{fill:#67655e}51.30%,93%{fill:#e8e4d9}97%,100%{fill:#67655e}}.cl4{animation:cl4 11.0s infinite both}
+@keyframes lit5{0%,62.00%{opacity:0}62.50%,93%{opacity:1}97%,100%{opacity:0}}.lit5{animation:lit5 11.0s infinite both}
+@keyframes cl5{0%,62.00%{fill:#67655e}62.50%,93%{fill:#e8e4d9}97%,100%{fill:#67655e}}.cl5{animation:cl5 11.0s infinite both}
+</style>
+<defs><linearGradient id="g" x1="110" x2="1090" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff2d2d"/><stop offset=".5" stop-color="#ff9900"/><stop offset="1" stop-color="#39ff7e"/></linearGradient>
+<filter id="glow" x="-5%" y="-200%" width="110%" height="500%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="1200" height="290" fill="#080809"/><rect x=".5" y=".5" width="1199" height="289" fill="none" stroke="#1e1e22"/>
+<path d="M8 24V8H24" fill="none" stroke="#ff2d2d" stroke-width="1.5"/><path d="M1192 24V8H1176" fill="none" stroke="#ff2d2d" stroke-width="1.5"/><path d="M8 266V282H24" fill="none" stroke="#ff2d2d" stroke-width="1.5"/><path d="M1192 266V282H1176" fill="none" stroke="#ff2d2d" stroke-width="1.5"/>
+<text x="32" y="44" font-size="12" fill="#a09c90" letter-spacing="3">THE PATH // career attack chain</text>
+<text x="1168" y="44" font-size="12" fill="#67655e" letter-spacing="2" text-anchor="end">recon → operator</text>
+<line x1="110" y1="132" x2="1090" y2="132" stroke="#2e2e34" stroke-width="3"/>
+<path class="draw" d="M110 132H1090" pathLength="1" stroke="url(#g)" stroke-width="3" fill="none" filter="url(#glow)"/>
+<g>
+<text x="110" y="96" font-size="17" text-anchor="middle" fill="#ff2d2d" class="b">00</text>
+<circle cx="110" cy="132" r="15" fill="#080809" stroke="#2e2e34" stroke-width="2"/>
+<g class="lit0"><circle cx="110" cy="132" r="15" fill="#39ff7e" fill-opacity=".14" stroke="#39ff7e" stroke-width="2"/>
+<circle cx="110" cy="132" r="5" fill="#39ff7e"/>
+<circle cx="110" cy="132" r="16" fill="none" stroke="#39ff7e" style="animation:rp 1.8s ease-out infinite"/></g>
+<text class="cl0" x="110" y="178" font-size="15" text-anchor="middle" font-weight="700">Recon</text>
+<text x="110" y="200" font-size="12" text-anchor="middle" fill="#67655e">foundations · 4 nodes</text>
+</g><g>
+<text x="306" y="96" font-size="17" text-anchor="middle" fill="#ff2d2d" class="b">01</text>
+<circle cx="306" cy="132" r="15" fill="#080809" stroke="#2e2e34" stroke-width="2"/>
+<g class="lit1"><circle cx="306" cy="132" r="15" fill="#39ff7e" fill-opacity=".14" stroke="#39ff7e" stroke-width="2"/>
+<circle cx="306" cy="132" r="5" fill="#39ff7e"/>
+<circle cx="306" cy="132" r="16" fill="none" stroke="#39ff7e" style="animation:rp 1.8s ease-out infinite"/></g>
+<text class="cl1" x="306" y="178" font-size="15" text-anchor="middle" font-weight="700">Foothold</text>
+<text x="306" y="200" font-size="12" text-anchor="middle" fill="#67655e">core security · 3 nodes</text>
+</g><g>
+<text x="502" y="96" font-size="17" text-anchor="middle" fill="#ff2d2d" class="b">02</text>
+<circle cx="502" cy="132" r="15" fill="#080809" stroke="#2e2e34" stroke-width="2"/>
+<g class="lit2"><circle cx="502" cy="132" r="15" fill="#39ff7e" fill-opacity=".14" stroke="#39ff7e" stroke-width="2"/>
+<circle cx="502" cy="132" r="5" fill="#39ff7e"/>
+<circle cx="502" cy="132" r="16" fill="none" stroke="#39ff7e" style="animation:rp 1.8s ease-out infinite"/></g>
+<text class="cl2" x="502" y="178" font-size="15" text-anchor="middle" font-weight="700">Escalation</text>
+<text x="502" y="200" font-size="12" text-anchor="middle" fill="#67655e">offensive skills · 6 nodes</text>
+</g><g>
+<text x="698" y="96" font-size="17" text-anchor="middle" fill="#ff2d2d" class="b">03</text>
+<circle cx="698" cy="132" r="15" fill="#080809" stroke="#2e2e34" stroke-width="2"/>
+<g class="lit3"><circle cx="698" cy="132" r="15" fill="#39ff7e" fill-opacity=".14" stroke="#39ff7e" stroke-width="2"/>
+<circle cx="698" cy="132" r="5" fill="#39ff7e"/>
+<circle cx="698" cy="132" r="16" fill="none" stroke="#39ff7e" style="animation:rp 1.8s ease-out infinite"/></g>
+<text class="cl3" x="698" y="178" font-size="15" text-anchor="middle" font-weight="700">Proving Ground</text>
+<text x="698" y="200" font-size="12" text-anchor="middle" fill="#67655e">practice · 4 nodes</text>
+</g><g>
+<text x="894" y="96" font-size="17" text-anchor="middle" fill="#ff2d2d" class="b">04</text>
+<circle cx="894" cy="132" r="15" fill="#080809" stroke="#2e2e34" stroke-width="2"/>
+<g class="lit4"><circle cx="894" cy="132" r="15" fill="#39ff7e" fill-opacity=".14" stroke="#39ff7e" stroke-width="2"/>
+<circle cx="894" cy="132" r="5" fill="#39ff7e"/>
+<circle cx="894" cy="132" r="16" fill="none" stroke="#39ff7e" style="animation:rp 1.8s ease-out infinite"/></g>
+<text class="cl4" x="894" y="178" font-size="15" text-anchor="middle" font-weight="700">Credentials</text>
+<text x="894" y="200" font-size="12" text-anchor="middle" fill="#67655e">certs · 5 nodes</text>
+</g><g>
+<text x="1090" y="96" font-size="17" text-anchor="middle" fill="#ff2d2d" class="b">05</text>
+<circle cx="1090" cy="132" r="15" fill="#080809" stroke="#2e2e34" stroke-width="2"/>
+<g class="lit5"><circle cx="1090" cy="132" r="15" fill="#39ff7e" fill-opacity=".14" stroke="#39ff7e" stroke-width="2"/>
+<circle cx="1090" cy="132" r="5" fill="#39ff7e"/>
+<circle cx="1090" cy="132" r="16" fill="none" stroke="#39ff7e" style="animation:rp 1.8s ease-out infinite"/></g>
+<text class="cl5" x="1090" y="178" font-size="15" text-anchor="middle" font-weight="700">Operator</text>
+<text x="1090" y="200" font-size="12" text-anchor="middle" fill="#67655e">career · 4 nodes</text>
+</g>
+<text x="110" y="248" font-size="11.5" fill="#a09c90" letter-spacing="3">CLEARANCE LEVEL</text>
+<text class="scanT" x="1090" y="248" font-size="11.5" fill="#ff9900" letter-spacing="2" text-anchor="end">answering knowledge checks…</text>
+<text class="doneT" x="1090" y="248" font-size="11.5" fill="#39ff7e" letter-spacing="2" text-anchor="end" font-weight="700">100% — OPERATOR UNLOCKED</text>
+<rect x="110" y="258" width="980" height="6" fill="#2e2e34"/>
+<rect class="mfill" x="110" y="258" width="980" height="6" fill="url(#g)"/>
+</svg>

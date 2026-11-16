@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-label="attack tree — web app chain">
+<title>attack tree — web app chain</title>
+<style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.d{font-family:'Archivo Black','Archivo','Arial Black','Helvetica Neue',Impact,sans-serif;font-weight:900}
+.b{font-weight:700}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes n0{0%,3.08%{opacity:0;transform:translateY(10px)}6.54%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n0{animation:n0 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e0{0%,10.38%{stroke-dashoffset:1;opacity:1}15.00%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e0{stroke-dasharray:1;animation:e0 13.0s ease-out infinite both}
+@keyframes pk0{0%,17.31%{opacity:0}18.08%,90%{opacity:1}95%,100%{opacity:0}}.pk0{animation:pk0 13.0s infinite both}
+@keyframes e1{0%,12.08%{stroke-dashoffset:1;opacity:1}16.69%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e1{stroke-dasharray:1;animation:e1 13.0s ease-out infinite both}
+@keyframes pk1{0%,19.00%{opacity:0}19.77%,90%{opacity:1}95%,100%{opacity:0}}.pk1{animation:pk1 13.0s infinite both}
+@keyframes n1{0%,14.62%{opacity:0;transform:translateY(10px)}18.08%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n1{animation:n1 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e2{0%,21.92%{stroke-dashoffset:1;opacity:1}26.54%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e2{stroke-dasharray:1;animation:e2 13.0s ease-out infinite both}
+@keyframes pk2{0%,28.85%{opacity:0}29.62%,90%{opacity:1}95%,100%{opacity:0}}.pk2{animation:pk2 13.0s infinite both}
+@keyframes e3{0%,23.62%{stroke-dashoffset:1;opacity:1}28.23%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e3{stroke-dasharray:1;animation:e3 13.0s ease-out infinite both}
+@keyframes pk3{0%,30.54%{opacity:0}31.31%,90%{opacity:1}95%,100%{opacity:0}}.pk3{animation:pk3 13.0s infinite both}
+@keyframes n2{0%,26.15%{opacity:0;transform:translateY(10px)}29.62%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n2{animation:n2 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e4{0%,33.46%{stroke-dashoffset:1;opacity:1}38.08%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e4{stroke-dasharray:1;animation:e4 13.0s ease-out infinite both}
+@keyframes pk4{0%,40.38%{opacity:0}41.15%,90%{opacity:1}95%,100%{opacity:0}}.pk4{animation:pk4 13.0s infinite both}
+@keyframes n3{0%,37.69%{opacity:0;transform:translateY(10px)}41.15%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n3{animation:n3 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes n4{0%,27.85%{opacity:0;transform:translateY(10px)}31.31%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n4{animation:n4 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e5{0%,35.15%{stroke-dashoffset:1;opacity:1}39.77%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e5{stroke-dasharray:1;animation:e5 13.0s ease-out infinite both}
+@keyframes pk5{0%,42.08%{opacity:0}42.85%,90%{opacity:1}95%,100%{opacity:0}}.pk5{animation:pk5 13.0s infinite both}
+@keyframes n5{0%,39.38%{opacity:0;transform:translateY(10px)}42.85%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n5{animation:n5 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes n6{0%,16.31%{opacity:0;transform:translateY(10px)}19.77%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n6{animation:n6 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e6{0%,25.31%{stroke-dashoffset:1;opacity:1}29.92%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e6{stroke-dasharray:1;animation:e6 13.0s ease-out infinite both}
+@keyframes pk6{0%,32.23%{opacity:0}33.00%,90%{opacity:1}95%,100%{opacity:0}}.pk6{animation:pk6 13.0s infinite both}
+@keyframes e7{0%,27.00%{stroke-dashoffset:1;opacity:1}31.62%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e7{stroke-dasharray:1;animation:e7 13.0s ease-out infinite both}
+@keyframes pk7{0%,33.92%{opacity:0}34.69%,90%{opacity:1}95%,100%{opacity:0}}.pk7{animation:pk7 13.0s infinite both}
+@keyframes e8{0%,28.69%{stroke-dashoffset:1;opacity:1}33.31%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e8{stroke-dasharray:1;animation:e8 13.0s ease-out infinite both}
+@keyframes pk8{0%,35.62%{opacity:0}36.38%,90%{opacity:1}95%,100%{opacity:0}}.pk8{animation:pk8 13.0s infinite both}
+@keyframes e9{0%,30.38%{stroke-dashoffset:1;opacity:1}35.00%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e9{stroke-dasharray:1;animation:e9 13.0s ease-out infinite both}
+@keyframes pk9{0%,37.31%{opacity:0}38.08%,90%{opacity:1}95%,100%{opacity:0}}.pk9{animation:pk9 13.0s infinite both}
+@keyframes n7{0%,29.54%{opacity:0;transform:translateY(10px)}33.00%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n7{animation:n7 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e10{0%,36.85%{stroke-dashoffset:1;opacity:1}41.46%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e10{stroke-dasharray:1;animation:e10 13.0s ease-out infinite both}
+@keyframes pk10{0%,43.77%{opacity:0}44.54%,90%{opacity:1}95%,100%{opacity:0}}.pk10{animation:pk10 13.0s infinite both}
+@keyframes n8{0%,41.08%{opacity:0;transform:translateY(10px)}44.54%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n8{animation:n8 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes n9{0%,31.23%{opacity:0;transform:translateY(10px)}34.69%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n9{animation:n9 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e11{0%,38.54%{stroke-dashoffset:1;opacity:1}43.15%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e11{stroke-dasharray:1;animation:e11 13.0s ease-out infinite both}
+@keyframes pk11{0%,45.46%{opacity:0}46.23%,90%{opacity:1}95%,100%{opacity:0}}.pk11{animation:pk11 13.0s infinite both}
+@keyframes n10{0%,42.77%{opacity:0;transform:translateY(10px)}46.23%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n10{animation:n10 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes n11{0%,32.92%{opacity:0;transform:translateY(10px)}36.38%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n11{animation:n11 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e12{0%,40.23%{stroke-dashoffset:1;opacity:1}44.85%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e12{stroke-dasharray:1;animation:e12 13.0s ease-out infinite both}
+@keyframes pk12{0%,47.15%{opacity:0}47.92%,90%{opacity:1}95%,100%{opacity:0}}.pk12{animation:pk12 13.0s infinite both}
+@keyframes n12{0%,44.46%{opacity:0;transform:translateY(10px)}47.92%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n12{animation:n12 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes n13{0%,34.62%{opacity:0;transform:translateY(10px)}38.08%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n13{animation:n13 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes e13{0%,41.92%{stroke-dashoffset:1;opacity:1}46.54%,90%{stroke-dashoffset:0;opacity:1}95%,100%{stroke-dashoffset:0;opacity:0}}.e13{stroke-dasharray:1;animation:e13 13.0s ease-out infinite both}
+@keyframes pk13{0%,48.85%{opacity:0}49.62%,90%{opacity:1}95%,100%{opacity:0}}.pk13{animation:pk13 13.0s infinite both}
+@keyframes n14{0%,46.15%{opacity:0;transform:translateY(10px)}49.62%,90%{opacity:1;transform:translateY(0)}95%,100%{opacity:0;transform:translateY(0)}}.n14{animation:n14 13.0s cubic-bezier(.2,.7,.2,1) infinite both}
+</style>
+<defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#e8e4d9" stroke-opacity=".035"/></pattern>
+<filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="2.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="1200" height="560" fill="#080809"/><rect width="1200" height="560" fill="url(#grid)"/>
+<rect x=".5" y=".5" width="1199" height="559" fill="none" stroke="#1e1e22"/>
+<path d="M8 24V8H24" fill="none" stroke="#bf5fff" stroke-width="1.5"/><path d="M1192 24V8H1176" fill="none" stroke="#bf5fff" stroke-width="1.5"/><path d="M8 536V552H24" fill="none" stroke="#bf5fff" stroke-width="1.5"/><path d="M1192 536V552H1176" fill="none" stroke="#bf5fff" stroke-width="1.5"/>
+<text x="32" y="40" font-size="12" fill="#a09c90" letter-spacing="3">ATTACK TREE // web app chain</text>
+<text x="1168" y="40" font-size="12" fill="#67655e" letter-spacing="2" text-anchor="end">authorised lab · simulated</text>
+<g><path id="p0" class="e0" d="M600.0 126C600.0 154.0 200.0 154.0 200.0 182" pathLength="1" fill="none" stroke="#ff9900" stroke-opacity=".75" stroke-width="1.6"/><g class="pk0"><circle r="3" fill="#ff9900" filter="url(#glow)"><animateMotion dur="1.60s" repeatCount="indefinite" begin="0.00s"><mpath href="#p0"/></animateMotion></circle></g><path id="p1" class="e1" d="M600.0 126C600.0 154.0 800.0 154.0 800.0 182" pathLength="1" fill="none" stroke="#ff9900" stroke-opacity=".75" stroke-width="1.6"/><g class="pk1"><circle r="3" fill="#ff9900" filter="url(#glow)"><animateMotion dur="1.95s" repeatCount="indefinite" begin="0.27s"><mpath href="#p1"/></animateMotion></circle></g><path id="p2" class="e2" d="M200.0 236C200.0 269.0 104.0 269.0 104.0 302" pathLength="1" fill="none" stroke="#00e5ff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk2"><circle r="3" fill="#00e5ff" filter="url(#glow)"><animateMotion dur="2.30s" repeatCount="indefinite" begin="0.54s"><mpath href="#p2"/></animateMotion></circle></g><path id="p3" class="e3" d="M200.0 236C200.0 269.0 296.0 269.0 296.0 302" pathLength="1" fill="none" stroke="#00e5ff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk3"><circle r="3" fill="#00e5ff" filter="url(#glow)"><animateMotion dur="1.60s" repeatCount="indefinite" begin="0.81s"><mpath href="#p3"/></animateMotion></circle></g><path id="p4" class="e4" d="M104.0 356C104.0 389.0 104.0 389.0 104.0 422" pathLength="1" fill="none" stroke="#00e5ff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk4"><circle r="3" fill="#00e5ff" filter="url(#glow)"><animateMotion dur="1.95s" repeatCount="indefinite" begin="1.08s"><mpath href="#p4"/></animateMotion></circle></g><path id="p5" class="e5" d="M296.0 356C296.0 389.0 296.0 389.0 296.0 422" pathLength="1" fill="none" stroke="#00e5ff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk5"><circle r="3" fill="#00e5ff" filter="url(#glow)"><animateMotion dur="2.30s" repeatCount="indefinite" begin="1.35s"><mpath href="#p5"/></animateMotion></circle></g><path id="p6" class="e6" d="M800.0 236C800.0 269.0 512.0 269.0 512.0 302" pathLength="1" fill="none" stroke="#bf5fff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk6"><circle r="3" fill="#bf5fff" filter="url(#glow)"><animateMotion dur="1.60s" repeatCount="indefinite" begin="0.12s"><mpath href="#p6"/></animateMotion></circle></g><path id="p7" class="e7" d="M800.0 236C800.0 269.0 704.0 269.0 704.0 302" pathLength="1" fill="none" stroke="#bf5fff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk7"><circle r="3" fill="#bf5fff" filter="url(#glow)"><animateMotion dur="1.95s" repeatCount="indefinite" begin="0.39s"><mpath href="#p7"/></animateMotion></circle></g><path id="p8" class="e8" d="M800.0 236C800.0 269.0 896.0 269.0 896.0 302" pathLength="1" fill="none" stroke="#bf5fff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk8"><circle r="3" fill="#bf5fff" filter="url(#glow)"><animateMotion dur="2.30s" repeatCount="indefinite" begin="0.66s"><mpath href="#p8"/></animateMotion></circle></g><path id="p9" class="e9" d="M800.0 236C800.0 269.0 1088.0 269.0 1088.0 302" pathLength="1" fill="none" stroke="#bf5fff" stroke-opacity=".75" stroke-width="1.6"/><g class="pk9"><circle r="3" fill="#bf5fff" filter="url(#glow)"><animateMotion dur="1.60s" repeatCount="indefinite" begin="0.93s"><mpath href="#p9"/></animateMotion></circle></g><path id="p10" class="e10" d="M512.0 356C512.0 389.0 512.0 389.0 512.0 422" pathLength="1" fill="none" stroke="#39ff7e" stroke-opacity=".75" stroke-width="1.6"/><g class="pk10"><circle r="3" fill="#39ff7e" filter="url(#glow)"><animateMotion dur="1.95s" repeatCount="indefinite" begin="1.20s"><mpath href="#p10"/></animateMotion></circle></g><path id="p11" class="e11" d="M704.0 356C704.0 389.0 704.0 389.0 704.0 422" pathLength="1" fill="none" stroke="#39ff7e" stroke-opacity=".75" stroke-width="1.6"/><g class="pk11"><circle r="3" fill="#39ff7e" filter="url(#glow)"><animateMotion dur="2.30s" repeatCount="indefinite" begin="1.47s"><mpath href="#p11"/></animateMotion></circle></g><path id="p12" class="e12" d="M896.0 356C896.0 389.0 896.0 389.0 896.0 422" pathLength="1" fill="none" stroke="#39ff7e" stroke-opacity=".75" stroke-width="1.6"/><g class="pk12"><circle r="3" fill="#39ff7e" filter="url(#glow)"><animateMotion dur="1.60s" repeatCount="indefinite" begin="0.24s"><mpath href="#p12"/></animateMotion></circle></g><path id="p13" class="e13" d="M1088.0 356C1088.0 389.0 1088.0 389.0 1088.0 422" pathLength="1" fill="none" stroke="#39ff7e" stroke-opacity=".75" stroke-width="1.6"/><g class="pk13"><circle r="3" fill="#39ff7e" filter="url(#glow)"><animateMotion dur="1.95s" repeatCount="indefinite" begin="0.51s"><mpath href="#p13"/></animateMotion></circle></g></g><g><g class="n0"><rect x="514.0" y="72" width="172" height="54" rx="3" fill="#111114" stroke="#ff2d2d" stroke-width="1.5"/>
+<rect x="514.0" y="72" width="4" height="54" fill="#ff2d2d"/>
+<text x="602.0" y="95" font-size="13.5" fill="#ff2d2d" text-anchor="middle" font-weight="700">TARGET</text>
+<text x="602.0" y="113" font-size="11" fill="#a09c90" text-anchor="middle">scope defined</text></g><g class="n1"><rect x="114.0" y="182" width="172" height="54" rx="3" fill="#111114" stroke="#ff9900" stroke-width="1.5"/>
+<rect x="114.0" y="182" width="4" height="54" fill="#ff9900"/>
+<text x="202.0" y="205" font-size="13.5" fill="#ff9900" text-anchor="middle" font-weight="700">RECON</text>
+<text x="202.0" y="223" font-size="11" fill="#a09c90" text-anchor="middle">passive &amp; active</text></g><g class="n2"><rect x="18.0" y="302" width="172" height="54" rx="3" fill="#111114" stroke="#00e5ff" stroke-width="1.5"/>
+<rect x="18.0" y="302" width="4" height="54" fill="#00e5ff"/>
+<text x="106.0" y="325" font-size="13.5" fill="#00e5ff" text-anchor="middle" font-weight="700">OSINT</text>
+<text x="106.0" y="343" font-size="11" fill="#a09c90" text-anchor="middle">crt.sh · shodan</text></g><g class="n3"><rect x="18.0" y="422" width="172" height="54" rx="3" fill="#111114" stroke="#00e5ff" stroke-width="1.5"/>
+<rect x="18.0" y="422" width="4" height="54" fill="#00e5ff"/>
+<text x="106.0" y="445" font-size="13.5" fill="#00e5ff" text-anchor="middle" font-weight="700">Subdomain Enum</text>
+<text x="106.0" y="463" font-size="11" fill="#a09c90" text-anchor="middle">gobuster · subfinder</text></g><g class="n4"><rect x="210.0" y="302" width="172" height="54" rx="3" fill="#111114" stroke="#00e5ff" stroke-width="1.5"/>
+<rect x="210.0" y="302" width="4" height="54" fill="#00e5ff"/>
+<text x="298.0" y="325" font-size="13.5" fill="#00e5ff" text-anchor="middle" font-weight="700">Web Spider</text>
+<text x="298.0" y="343" font-size="11" fill="#a09c90" text-anchor="middle">katana · burp</text></g><g class="n5"><rect x="210.0" y="422" width="172" height="54" rx="3" fill="#111114" stroke="#00e5ff" stroke-width="1.5"/>
+<rect x="210.0" y="422" width="4" height="54" fill="#00e5ff"/>
+<text x="298.0" y="445" font-size="13.5" fill="#00e5ff" text-anchor="middle" font-weight="700">Dir Busting</text>
+<text x="298.0" y="463" font-size="11" fill="#a09c90" text-anchor="middle">ffuf · gobuster</text></g><g class="n6"><rect x="714.0" y="182" width="172" height="54" rx="3" fill="#111114" stroke="#ff9900" stroke-width="1.5"/>
+<rect x="714.0" y="182" width="4" height="54" fill="#ff9900"/>
+<text x="802.0" y="205" font-size="13.5" fill="#ff9900" text-anchor="middle" font-weight="700">INTERCEPT</text>
+<text x="802.0" y="223" font-size="11" fill="#a09c90" text-anchor="middle">burp suite pro</text></g><g class="n7"><rect x="426.0" y="302" width="172" height="54" rx="3" fill="#111114" stroke="#bf5fff" stroke-width="1.5"/>
+<rect x="426.0" y="302" width="4" height="54" fill="#bf5fff"/>
+<text x="514.0" y="325" font-size="13.5" fill="#bf5fff" text-anchor="middle" font-weight="700">XSS</text>
+<text x="514.0" y="343" font-size="11" fill="#a09c90" text-anchor="middle">reflected · DOM · stored</text></g><g class="n8"><rect x="426.0" y="422" width="172" height="54" rx="3" fill="#111114" stroke="#39ff7e" stroke-width="1.5"/>
+<rect x="426.0" y="422" width="4" height="54" fill="#39ff7e"/>
+<text x="514.0" y="445" font-size="13.5" fill="#39ff7e" text-anchor="middle" font-weight="700">Session Hijack</text>
+<text x="514.0" y="463" font-size="11" fill="#a09c90" text-anchor="middle">cookie theft</text></g><g class="n9"><rect x="618.0" y="302" width="172" height="54" rx="3" fill="#111114" stroke="#bf5fff" stroke-width="1.5"/>
+<rect x="618.0" y="302" width="4" height="54" fill="#bf5fff"/>
+<text x="706.0" y="325" font-size="13.5" fill="#bf5fff" text-anchor="middle" font-weight="700">SQLi</text>
+<text x="706.0" y="343" font-size="11" fill="#a09c90" text-anchor="middle">manual · sqlmap</text></g><g class="n10"><rect x="618.0" y="422" width="172" height="54" rx="3" fill="#111114" stroke="#39ff7e" stroke-width="1.5"/>
+<rect x="618.0" y="422" width="4" height="54" fill="#39ff7e"/>
+<text x="706.0" y="445" font-size="13.5" fill="#39ff7e" text-anchor="middle" font-weight="700">Data Exfil</text>
+<text x="706.0" y="463" font-size="11" fill="#a09c90" text-anchor="middle">dump tables</text></g><g class="n11"><rect x="810.0" y="302" width="172" height="54" rx="3" fill="#111114" stroke="#bf5fff" stroke-width="1.5"/>
+<rect x="810.0" y="302" width="4" height="54" fill="#bf5fff"/>
+<text x="898.0" y="325" font-size="13.5" fill="#bf5fff" text-anchor="middle" font-weight="700">SSRF</text>
+<text x="898.0" y="343" font-size="11" fill="#a09c90" text-anchor="middle">internal · cloud IMDS</text></g><g class="n12"><rect x="810.0" y="422" width="172" height="54" rx="3" fill="#111114" stroke="#39ff7e" stroke-width="1.5"/>
+<rect x="810.0" y="422" width="4" height="54" fill="#39ff7e"/>
+<text x="898.0" y="445" font-size="13.5" fill="#39ff7e" text-anchor="middle" font-weight="700">Internal Access</text>
+<text x="898.0" y="463" font-size="11" fill="#a09c90" text-anchor="middle">169.254.x.x</text></g><g class="n13"><rect x="1002.0" y="302" width="172" height="54" rx="3" fill="#111114" stroke="#bf5fff" stroke-width="1.5"/>
+<rect x="1002.0" y="302" width="4" height="54" fill="#bf5fff"/>
+<text x="1090.0" y="325" font-size="13.5" fill="#bf5fff" text-anchor="middle" font-weight="700">IDOR / Auth</text>
+<text x="1090.0" y="343" font-size="11" fill="#a09c90" text-anchor="middle">access control</text></g><g class="n14"><rect x="1002.0" y="422" width="172" height="54" rx="3" fill="#111114" stroke="#39ff7e" stroke-width="1.5"/>
+<rect x="1002.0" y="422" width="4" height="54" fill="#39ff7e"/>
+<text x="1090.0" y="445" font-size="13.5" fill="#39ff7e" text-anchor="middle" font-weight="700">Priv Escalation</text>
+<text x="1090.0" y="463" font-size="11" fill="#a09c90" text-anchor="middle">admin takeover</text></g></g>
+<rect x="32" y="526" width="10" height="10" fill="#ff2d2d"/><text x="50" y="535" font-size="11.5" fill="#a09c90">root / target</text><rect x="173.7" y="526" width="10" height="10" fill="#ff9900"/><text x="191.7" y="535" font-size="11.5" fill="#a09c90">phase</text><rect x="260.2" y="526" width="10" height="10" fill="#00e5ff"/><text x="278.2" y="535" font-size="11.5" fill="#a09c90">recon / discovery</text><rect x="429.5" y="526" width="10" height="10" fill="#bf5fff"/><text x="447.5" y="535" font-size="11.5" fill="#a09c90">exploitation</text><rect x="564.3" y="526" width="10" height="10" fill="#39ff7e"/><text x="582.3" y="535" font-size="11.5" fill="#a09c90">impact (lab)</text>
+</svg>

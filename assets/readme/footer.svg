@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="contact.sh — ping armanxploits">
+<title>contact.sh — ping armanxploits</title>
+<style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.d{font-family:'Archivo Black','Archivo','Arial Black','Helvetica Neue',Impact,sans-serif;font-weight:900}
+.b{font-weight:700}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes k0{0%,4.17%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(22,end)}13.33%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+@keyframes q0{0%,2.50%{opacity:0}2.58%,100%{opacity:1}}.pp0{animation:q0 12.0s infinite both}
+.l0{animation:k0 12.0s infinite both}
+@keyframes k1{0%,16.67%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(4,end)}18.17%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.l1{animation:k1 12.0s infinite both}
+@keyframes k2{0%,20.67%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(4,end)}22.17%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.l2{animation:k2 12.0s infinite both}
+@keyframes k3{0%,24.67%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(4,end)}26.17%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.l3{animation:k3 12.0s infinite both}
+@keyframes k4{0%,28.67%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(21,end)}37.42%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+@keyframes q4{0%,27.00%{opacity:0}27.08%,100%{opacity:1}}.pp4{animation:q4 12.0s infinite both}
+.l4{animation:k4 12.0s infinite both}
+@keyframes k5{0%,40.75%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(14,end)}51.25%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.l5{animation:k5 12.0s infinite both}
+@keyframes fa{0%,94%{opacity:1}98%,100%{opacity:0}}.fa{animation:fa 12.0s infinite}
+</style>
+<defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".35"/></pattern><filter id="glow" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect x="10" y="10" width="1180" height="280" rx="10" fill="#0b0b0c" stroke="#2e2e34"/>
+<rect x="10" y="10" width="1180" height="36" rx="10" fill="#18181c"/><rect x="10" y="36" width="1180" height="10" fill="#18181c"/><rect x="10" y="46" width="1180" height="1" fill="#2e2e34"/>
+<circle cx="36" cy="28" r="6.5" fill="#ff2d2d"/><circle cx="58" cy="28" r="6.5" fill="#ff9900" opacity=".85"/><circle cx="80" cy="28" r="6.5" fill="#39ff7e" opacity=".85"/>
+<text x="600.0" y="33" font-size="13" fill="#a09c90" text-anchor="middle">contact.sh</text>
+<g class="fa" filter="url(#glow)"><text class="pp0" x="44" y="90" font-size="15" fill="#39ff7e" font-weight="700">armanxploits@fsociety:~$</text><text class="l0" x="269.0" y="90" font-size="15" fill="#e8e4d9" textLength="198.0" lengthAdjust="spacingAndGlyphs">ping -c 1 armanxploits</text><text class="l1" x="44" y="120" font-size="15" fill="#a09c90" font-weight="400" textLength="459.0" lengthAdjust="spacingAndGlyphs">PING armanxploits (127.0.0.1) 56(84) bytes of data.</text><text class="l2" x="44" y="150" font-size="15" fill="#a09c90" font-weight="400" textLength="513.0" lengthAdjust="spacingAndGlyphs">64 bytes from armanxploits: icmp_seq=1 ttl=64 time=0.1 ms</text><text class="l3 glowp" x="44" y="180" font-size="15" fill="#39ff7e" font-weight="700" textLength="225.0" lengthAdjust="spacingAndGlyphs">--- node is REACHABLE ---</text><text class="pp4" x="44" y="210" font-size="15" fill="#39ff7e" font-weight="700">armanxploits@fsociety:~$</text><text class="l4" x="269.0" y="210" font-size="15" fill="#e8e4d9" textLength="189.0" lengthAdjust="spacingAndGlyphs">echo &quot;hello, friend.&quot;</text><text class="l5 d" x="44" y="254" font-size="30" fill="#ff2d2d" font-weight="700" textLength="252.0" lengthAdjust="spacingAndGlyphs">hello, friend.</text></g>
+<text x="1160" y="268" font-size="12" fill="#67655e" text-anchor="end" letter-spacing="2">ARMAN<tspan fill="#ff2d2d">X</tspan>PLOITS // fsociety · break · learn · secure</text>
+<rect x="10" y="47" width="1180" height="243" fill="url(#scan)" opacity=".5"/>
+</svg>
