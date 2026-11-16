@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="168" viewBox="0 0 1200 168" role="img" aria-label="by the numbers">
+<title>by the numbers</title>
+<style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.d{font-family:'Archivo Black','Archivo','Arial Black','Helvetica Neue',Impact,sans-serif;font-weight:900}
+.b{font-weight:700}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes v0{0%,4%{opacity:1}4.01%,100%{opacity:0}}
+@keyframes v1{0%,4%{opacity:0}4.01%,8%{opacity:1}8.01%,100%{opacity:0}}
+@keyframes v2{0%,8%{opacity:0}8.01%,12%{opacity:1}12.01%,100%{opacity:0}}
+@keyframes vf{0%,12%{opacity:0}12.01%,100%{opacity:1}}
+@keyframes bar{0%,10%{transform:scaleX(0)}30%,92%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes hl{0%,10%{opacity:0}14%{opacity:.9}40%,100%{opacity:0}}
+.v0{animation:v0 10s infinite both}.v1{animation:v1 10s infinite both}.v2{animation:v2 10s infinite both}.vf{animation:vf 10s infinite both}
+.bar{transform-box:fill-box;transform-origin:left;animation:bar 10s cubic-bezier(.2,.7,.2,1) infinite both}
+.hl{animation:hl 10s infinite both}
+</style>
+<g>
+<rect x="0.5" y=".5" width="186" height="167" fill="#111114" stroke="#1e1e22"/>
+<rect class="hl" style="animation-delay:0.00s" x="0.5" y=".5" width="186" height="167" fill="none" stroke="#ff2d2d"/>
+<path d="M6.0 16V6H16.0" fill="none" stroke="#ff2d2d" stroke-width="1.5"/><path d="M180.0 16V6H170.0" fill="none" stroke="#ff2d2d" stroke-width="1.5"/><path d="M6.0 152V162H16.0" fill="none" stroke="#ff2d2d" stroke-width="1.5"/><path d="M180.0 152V162H170.0" fill="none" stroke="#ff2d2d" stroke-width="1.5"/>
+<text x="22.0" y="30" font-size="11" fill="#67655e" letter-spacing="2">0x00</text>
+<text class="d v0" style="animation-delay:0.00s" x="22.0" y="92" font-size="58" fill="#ff2d2d" opacity="0">39</text><text class="d v1" style="animation-delay:0.00s" x="22.0" y="92" font-size="58" fill="#ff2d2d" opacity="0">82</text><text class="d v2" style="animation-delay:0.00s" x="22.0" y="92" font-size="58" fill="#ff2d2d" opacity="0">59</text>
+<text class="d vf" style="animation-delay:0.00s" x="22.0" y="92" font-size="58" fill="#ff2d2d">28</text>
+<text x="22.0" y="124" font-size="11.5" fill="#a09c90" letter-spacing="2.4">ARSENAL TOOLS</text>
+<rect x="22.0" y="140" width="142" height="3" fill="#2e2e34"/>
+<rect class="bar" style="animation-delay:0.00s" x="22.0" y="140" width="142" height="3" fill="#ff2d2d"/>
+</g><g>
+<rect x="203.3" y=".5" width="186" height="167" fill="#111114" stroke="#1e1e22"/>
+<rect class="hl" style="animation-delay:0.18s" x="203.3" y=".5" width="186" height="167" fill="none" stroke="#39ff7e"/>
+<path d="M208.8 16V6H218.8" fill="none" stroke="#39ff7e" stroke-width="1.5"/><path d="M382.8 16V6H372.8" fill="none" stroke="#39ff7e" stroke-width="1.5"/><path d="M208.8 152V162H218.8" fill="none" stroke="#39ff7e" stroke-width="1.5"/><path d="M382.8 152V162H372.8" fill="none" stroke="#39ff7e" stroke-width="1.5"/>
+<text x="224.8" y="30" font-size="11" fill="#67655e" letter-spacing="2">0x01</text>
+<text class="d v0" style="animation-delay:0.18s" x="224.8" y="92" font-size="58" fill="#39ff7e" opacity="0">7#</text><text class="d v1" style="animation-delay:0.18s" x="224.8" y="92" font-size="58" fill="#39ff7e" opacity="0">91</text><text class="d v2" style="animation-delay:0.18s" x="224.8" y="92" font-size="58" fill="#39ff7e" opacity="0">90</text>
+<text class="d vf" style="animation-delay:0.18s" x="224.8" y="92" font-size="58" fill="#39ff7e">26</text>
+<text x="224.8" y="124" font-size="11.5" fill="#a09c90" letter-spacing="2.4">ROADMAP NODES</text>
+<rect x="224.8" y="140" width="142" height="3" fill="#2e2e34"/>
+<rect class="bar" style="animation-delay:0.18s" x="224.8" y="140" width="142" height="3" fill="#39ff7e"/>
+</g><g>
+<rect x="406.1" y=".5" width="186" height="167" fill="#111114" stroke="#1e1e22"/>
+<rect class="hl" style="animation-delay:0.36s" x="406.1" y=".5" width="186" height="167" fill="none" stroke="#bf5fff"/>
+<path d="M411.6 16V6H421.6" fill="none" stroke="#bf5fff" stroke-width="1.5"/><path d="M585.6 16V6H575.6" fill="none" stroke="#bf5fff" stroke-width="1.5"/><path d="M411.6 152V162H421.6" fill="none" stroke="#bf5fff" stroke-width="1.5"/><path d="M585.6 152V162H575.6" fill="none" stroke="#bf5fff" stroke-width="1.5"/>
+<text x="427.6" y="30" font-size="11" fill="#67655e" letter-spacing="2">0x02</text>
+<text class="d v0" style="animation-delay:0.36s" x="427.6" y="92" font-size="58" fill="#bf5fff" opacity="0">$7</text><text class="d v1" style="animation-delay:0.36s" x="427.6" y="92" font-size="58" fill="#bf5fff" opacity="0">48</text><text class="d v2" style="animation-delay:0.36s" x="427.6" y="92" font-size="58" fill="#bf5fff" opacity="0">33</text>
+<text class="d vf" style="animation-delay:0.36s" x="427.6" y="92" font-size="58" fill="#bf5fff">12</text>
+<text x="427.6" y="124" font-size="11.5" fill="#a09c90" letter-spacing="2.4">VULN CHALLENGES</text>
+<rect x="427.6" y="140" width="142" height="3" fill="#2e2e34"/>
+<rect class="bar" style="animation-delay:0.36s" x="427.6" y="140" width="142" height="3" fill="#bf5fff"/>
+</g><g>
+<rect x="608.9000000000001" y=".5" width="186" height="167" fill="#111114" stroke="#1e1e22"/>
+<rect class="hl" style="animation-delay:0.54s" x="608.9000000000001" y=".5" width="186" height="167" fill="none" stroke="#00e5ff"/>
+<path d="M614.4000000000001 16V6H624.4000000000001" fill="none" stroke="#00e5ff" stroke-width="1.5"/><path d="M788.4000000000001 16V6H778.4000000000001" fill="none" stroke="#00e5ff" stroke-width="1.5"/><path d="M614.4000000000001 152V162H624.4000000000001" fill="none" stroke="#00e5ff" stroke-width="1.5"/><path d="M788.4000000000001 152V162H778.4000000000001" fill="none" stroke="#00e5ff" stroke-width="1.5"/>
+<text x="630.4000000000001" y="30" font-size="11" fill="#67655e" letter-spacing="2">0x03</text>
+<text class="d v0" style="animation-delay:0.54s" x="630.4000000000001" y="92" font-size="58" fill="#00e5ff" opacity="0">%7</text><text class="d v1" style="animation-delay:0.54s" x="630.4000000000001" y="92" font-size="58" fill="#00e5ff" opacity="0">8$</text><text class="d v2" style="animation-delay:0.54s" x="630.4000000000001" y="92" font-size="58" fill="#00e5ff" opacity="0">87</text>
+<text class="d vf" style="animation-delay:0.54s" x="630.4000000000001" y="92" font-size="58" fill="#00e5ff">67</text>
+<text x="630.4000000000001" y="124" font-size="11.5" fill="#a09c90" letter-spacing="2.4">COMMUNITY REPOS</text>
+<rect x="630.4000000000001" y="140" width="142" height="3" fill="#2e2e34"/>
+<rect class="bar" style="animation-delay:0.54s" x="630.4000000000001" y="140" width="142" height="3" fill="#00e5ff"/>
+</g><g>
+<rect x="811.7" y=".5" width="186" height="167" fill="#111114" stroke="#1e1e22"/>
+<rect class="hl" style="animation-delay:0.72s" x="811.7" y=".5" width="186" height="167" fill="none" stroke="#ff9900"/>
+<path d="M817.2 16V6H827.2" fill="none" stroke="#ff9900" stroke-width="1.5"/><path d="M991.2 16V6H981.2" fill="none" stroke="#ff9900" stroke-width="1.5"/><path d="M817.2 152V162H827.2" fill="none" stroke="#ff9900" stroke-width="1.5"/><path d="M991.2 152V162H981.2" fill="none" stroke="#ff9900" stroke-width="1.5"/>
+<text x="833.2" y="30" font-size="11" fill="#67655e" letter-spacing="2">0x04</text>
+<text class="d v0" style="animation-delay:0.72s" x="833.2" y="92" font-size="58" fill="#ff9900" opacity="0">6#</text><text class="d v1" style="animation-delay:0.72s" x="833.2" y="92" font-size="58" fill="#ff9900" opacity="0">$2</text><text class="d v2" style="animation-delay:0.72s" x="833.2" y="92" font-size="58" fill="#ff9900" opacity="0">3#</text>
+<text class="d vf" style="animation-delay:0.72s" x="833.2" y="92" font-size="58" fill="#ff9900">16</text>
+<text x="833.2" y="124" font-size="11.5" fill="#a09c90" letter-spacing="2.4">VAULT NOTES</text>
+<rect x="833.2" y="140" width="142" height="3" fill="#2e2e34"/>
+<rect class="bar" style="animation-delay:0.72s" x="833.2" y="140" width="142" height="3" fill="#ff9900"/>
+</g><g>
+<rect x="1014.5" y=".5" width="186" height="167" fill="#111114" stroke="#1e1e22"/>
+<rect class="hl" style="animation-delay:0.90s" x="1014.5" y=".5" width="186" height="167" fill="none" stroke="#e8e4d9"/>
+<path d="M1020.0 16V6H1030.0" fill="none" stroke="#e8e4d9" stroke-width="1.5"/><path d="M1194.0 16V6H1184.0" fill="none" stroke="#e8e4d9" stroke-width="1.5"/><path d="M1020.0 152V162H1030.0" fill="none" stroke="#e8e4d9" stroke-width="1.5"/><path d="M1194.0 152V162H1184.0" fill="none" stroke="#e8e4d9" stroke-width="1.5"/>
+<text x="1036.0" y="30" font-size="11" fill="#67655e" letter-spacing="2">0x05</text>
+<text class="d v0" style="animation-delay:0.90s" x="1036.0" y="92" font-size="58" fill="#e8e4d9" opacity="0">%</text><text class="d v1" style="animation-delay:0.90s" x="1036.0" y="92" font-size="58" fill="#e8e4d9" opacity="0">7</text><text class="d v2" style="animation-delay:0.90s" x="1036.0" y="92" font-size="58" fill="#e8e4d9" opacity="0">$</text>
+<text class="d vf" style="animation-delay:0.90s" x="1036.0" y="92" font-size="58" fill="#e8e4d9">0</text>
+<text x="1036.0" y="124" font-size="11.5" fill="#a09c90" letter-spacing="2.4">DEPENDENCIES</text>
+<rect x="1036.0" y="140" width="142" height="3" fill="#2e2e34"/>
+<rect class="bar" style="animation-delay:0.90s" x="1036.0" y="140" width="142" height="3" fill="#e8e4d9"/>
+</g>
+</svg>

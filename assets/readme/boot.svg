@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img" aria-label="boot sequence — animated terminal">
+<title>boot sequence — animated terminal</title>
+<style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.d{font-family:'Archivo Black','Archivo','Arial Black','Helvetica Neue',Impact,sans-serif;font-weight:900}
+.b{font-weight:700}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes k0{0%,3.33%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(37,end)}12.58%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+@keyframes p0{0%,1.94%{opacity:0}2.00%,100%{opacity:1}}
+.ln0{animation:k0 18.0s infinite both}.ln0p{animation:p0 18.0s infinite both}
+@keyframes k1{0%,14.53%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}15.75%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln1{animation:k1 18.0s infinite both}
+@keyframes k2{0%,16.86%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}18.08%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln2{animation:k2 18.0s infinite both}
+@keyframes k3{0%,19.19%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}20.42%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln3{animation:k3 18.0s infinite both}
+@keyframes k4{0%,21.53%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}22.75%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln4{animation:k4 18.0s infinite both}
+@keyframes k5{0%,23.86%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}25.08%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln5{animation:k5 18.0s infinite both}
+@keyframes k6{0%,26.19%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}27.42%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln6{animation:k6 18.0s infinite both}
+@keyframes k7{0%,28.53%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}29.75%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln7{animation:k7 18.0s infinite both}
+@keyframes k8{0%,30.86%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}32.81%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+@keyframes p8{0%,29.47%{opacity:0}29.53%,100%{opacity:1}}
+.ln8{animation:k8 18.0s infinite both}.ln8p{animation:p8 18.0s infinite both}
+@keyframes k9{0%,34.75%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}35.97%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln9{animation:k9 18.0s infinite both}
+@keyframes k10{0%,38.47%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(11,end)}41.22%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+@keyframes p10{0%,37.08%{opacity:0}37.14%,100%{opacity:1}}
+.ln10{animation:k10 18.0s infinite both}.ln10p{animation:p10 18.0s infinite both}
+@keyframes k11{0%,43.17%{clip-path:inset(0 100% 0 0);-webkit-clip-path:inset(0 100% 0 0);animation-timing-function:steps(6,end)}44.39%,100%{clip-path:inset(0 0 0 0);-webkit-clip-path:inset(0 0 0 0)}}
+
+.ln11{animation:k11 18.0s infinite both}
+@keyframes pf{0%,46.89%{opacity:0}46.90%,100%{opacity:1}}.pf{animation:pf 18.0s infinite both}
+@keyframes fadeall{0%,93%{opacity:1}97%,100%{opacity:0}}.all{animation:fadeall 18.0s infinite}
+@keyframes sweep{0%{transform:translateY(-60px)}100%{transform:translateY(500px)}}.sweep{animation:sweep 5s linear infinite}
+</style>
+<defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" opacity=".35"/></pattern>
+<linearGradient id="sw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#39ff7e" stop-opacity="0"/><stop offset="1" stop-color="#39ff7e" stop-opacity=".06"/></linearGradient>
+<clipPath id="win"><rect x="10" y="10" width="1180" height="460" rx="10"/></clipPath>
+<filter id="sh" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#ff2d2d" flood-opacity=".18"/></filter></defs>
+<rect x="10" y="10" width="1180" height="460" rx="10" fill="#0b0b0c" stroke="#2e2e34" filter="url(#sh)"/>
+<g clip-path="url(#win)">
+<rect x="10" y="10" width="1180" height="38" fill="#18181c"/><rect x="10" y="47" width="1180" height="1" fill="#2e2e34"/>
+<circle cx="36" cy="29" r="6.5" fill="#ff2d2d"/><circle cx="58" cy="29" r="6.5" fill="#ff9900" opacity=".85"/><circle cx="80" cy="29" r="6.5" fill="#39ff7e" opacity=".85"/>
+<text x="600.0" y="34" font-size="13" fill="#a09c90" text-anchor="middle" letter-spacing="1">armanxploits@fsociety: ~/boot — zsh</text>
+<text x="1166" y="34" font-size="12" fill="#67655e" text-anchor="end">⌥ 1</text>
+<g class="all"><text x="44" y="92" font-size="15" fill="#39ff7e" class="b ln0p">armanxploits@fsociety<tspan fill="#a09c90">:</tspan><tspan fill="#00e5ff">~</tspan><tspan fill="#e8e4d9">$</tspan></text><text class="ln0" x="269.0" y="92" font-size="15" fill="#e8e4d9" textLength="333.0" lengthAdjust="spacingAndGlyphs">./fsociety --boot --node armanxploits</text><text class="ln1" x="44" y="119" font-size="15" textLength="540.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#a09c90">[ </tspan><tspan fill="#39ff7e" class="b">OK</tspan><tspan fill="#a09c90"> ] </tspan><tspan fill="#a09c90">mounting /dev/kali ............................. done</tspan></text><text class="ln2" x="44" y="146" font-size="15" textLength="540.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#a09c90">[ </tspan><tspan fill="#39ff7e" class="b">OK</tspan><tspan fill="#a09c90"> ] </tspan><tspan fill="#a09c90">loading arsenal ............................ 28 tools</tspan></text><text class="ln3" x="44" y="173" font-size="15" textLength="531.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#a09c90">[ </tspan><tspan fill="#39ff7e" class="b">OK</tspan><tspan fill="#a09c90"> ] </tspan><tspan fill="#a09c90">compiling the path ............. 6 phases · 26 nodes</tspan></text><text class="ln4" x="44" y="200" font-size="15" textLength="531.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#a09c90">[ </tspan><tspan fill="#39ff7e" class="b">OK</tspan><tspan fill="#a09c90"> ] </tspan><tspan fill="#a09c90">arming toolbox ................. 5 client-side utils</tspan></text><text class="ln5" x="44" y="227" font-size="15" textLength="531.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#a09c90">[ </tspan><tspan fill="#39ff7e" class="b">OK</tspan><tspan fill="#a09c90"> ] </tspan><tspan fill="#a09c90">seeding vuln hunt .................... 12 challenges</tspan></text><text class="ln6" x="44" y="254" font-size="15" textLength="513.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#a09c90">[ </tspan><tspan fill="#39ff7e" class="b">OK</tspan><tspan fill="#a09c90"> ] </tspan><tspan fill="#a09c90">indexing community repos ...... 67 repos · 55 cats</tspan></text><text class="ln7" x="44" y="281" font-size="15" textLength="540.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#a09c90">[ </tspan><tspan fill="#ff9900" class="b">!!</tspan><tspan fill="#a09c90"> ] </tspan><tspan fill="#ff9900">scope check .......... written authorisation required</tspan></text><text x="44" y="308" font-size="15" fill="#39ff7e" class="b ln8p">armanxploits@fsociety<tspan fill="#a09c90">:</tspan><tspan fill="#00e5ff">~</tspan><tspan fill="#e8e4d9">$</tspan></text><text class="ln8" x="269.0" y="308" font-size="15" fill="#e8e4d9" textLength="54.0" lengthAdjust="spacingAndGlyphs">whoami</text><text class="ln9" x="44" y="335" font-size="15" textLength="630.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#e8e4d9">arman ahemad khan — cs engineer · cyber intern · pentester in progress</tspan></text><text x="44" y="362" font-size="15" fill="#39ff7e" class="b ln10p">armanxploits@fsociety<tspan fill="#a09c90">:</tspan><tspan fill="#00e5ff">~</tspan><tspan fill="#e8e4d9">$</tspan></text><text class="ln10" x="269.0" y="362" font-size="15" fill="#e8e4d9" textLength="99.0" lengthAdjust="spacingAndGlyphs">echo $MOTTO</text><text class="ln11" x="44" y="389" font-size="15" textLength="198.0" lengthAdjust="spacingAndGlyphs" xml:space="preserve"><tspan fill="#ff2d2d" class="b">break · learn · secure</tspan></text><g class="pf"><text x="44" y="416" font-size="15" fill="#39ff7e" class="b">armanxploits@fsociety<tspan fill="#a09c90">:</tspan><tspan fill="#00e5ff">~</tspan><tspan fill="#e8e4d9">$</tspan></text><rect class="blink" x="269.0" y="402" width="9" height="18" fill="#39ff7e"/></g></g>
+<rect class="sweep" x="10" y="0" width="1180" height="60" fill="url(#sw)"/>
+<rect x="10" y="48" width="1180" height="422" fill="url(#scan)" opacity=".6"/>
+</g>
+</svg>

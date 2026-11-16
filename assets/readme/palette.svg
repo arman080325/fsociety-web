@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-label="colour tokens">
+<title>colour tokens</title>
+<style>
+text{font-family:'JetBrains Mono','Fira Code','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace}
+.d{font-family:'Archivo Black','Archivo','Arial Black','Helvetica Neue',Impact,sans-serif;font-weight:900}
+.b{font-weight:700}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes pop{0%,100%{transform:translateY(0)}6%{transform:translateY(-8px)}14%{transform:translateY(0)}}.pop{transform-box:fill-box;animation:pop 6s cubic-bezier(.2,.7,.2,1) infinite both}
+@keyframes shine{0%{transform:translateX(-200px)}60%,100%{transform:translateX(1400px)}}.shine{animation:shine 6s ease-in-out infinite}
+</style>
+<defs><linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<clipPath id="sc"><rect x="0.5" y="14.5" width="123" height="78"/><rect x="135.0" y="14.5" width="123" height="78"/><rect x="269.5" y="14.5" width="123" height="78"/><rect x="404.0" y="14.5" width="123" height="78"/><rect x="538.5" y="14.5" width="123" height="78"/><rect x="673.0" y="14.5" width="123" height="78"/><rect x="807.5" y="14.5" width="123" height="78"/><rect x="942.0" y="14.5" width="123" height="78"/><rect x="1076.5" y="14.5" width="123" height="78"/></clipPath></defs>
+<g class="pop" style="animation-delay:0.00s"><rect x="0.5" y="14.5" width="123" height="78" fill="#ff2d2d" stroke="#2e2e34"/>
+<text x="2.0" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--signal</text>
+<text x="2.0" y="136" font-size="12" fill="#67655e">#ff2d2d</text></g><g class="pop" style="animation-delay:0.25s"><rect x="135.0" y="14.5" width="123" height="78" fill="#39ff7e" stroke="#2e2e34"/>
+<text x="136.5" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--phosphor</text>
+<text x="136.5" y="136" font-size="12" fill="#67655e">#39ff7e</text></g><g class="pop" style="animation-delay:0.50s"><rect x="269.5" y="14.5" width="123" height="78" fill="#00e5ff" stroke="#2e2e34"/>
+<text x="271.0" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--cyan</text>
+<text x="271.0" y="136" font-size="12" fill="#67655e">#00e5ff</text></g><g class="pop" style="animation-delay:0.75s"><rect x="404.0" y="14.5" width="123" height="78" fill="#bf5fff" stroke="#2e2e34"/>
+<text x="405.5" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--purple</text>
+<text x="405.5" y="136" font-size="12" fill="#67655e">#bf5fff</text></g><g class="pop" style="animation-delay:1.00s"><rect x="538.5" y="14.5" width="123" height="78" fill="#ff9900" stroke="#2e2e34"/>
+<text x="540.0" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--ember</text>
+<text x="540.0" y="136" font-size="12" fill="#67655e">#ff9900</text></g><g class="pop" style="animation-delay:1.25s"><rect x="673.0" y="14.5" width="123" height="78" fill="#ffe600" stroke="#2e2e34"/>
+<text x="674.5" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--yellow</text>
+<text x="674.5" y="136" font-size="12" fill="#67655e">#ffe600</text></g><g class="pop" style="animation-delay:1.50s"><rect x="807.5" y="14.5" width="123" height="78" fill="#e8e4d9" stroke="#2e2e34"/>
+<text x="809.0" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--bone</text>
+<text x="809.0" y="136" font-size="12" fill="#67655e">#e8e4d9</text></g><g class="pop" style="animation-delay:1.75s"><rect x="942.0" y="14.5" width="123" height="78" fill="#111114" stroke="#2e2e34"/>
+<text x="943.5" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--panel</text>
+<text x="943.5" y="136" font-size="12" fill="#67655e">#111114</text></g><g class="pop" style="animation-delay:2.00s"><rect x="1076.5" y="14.5" width="123" height="78" fill="#080809" stroke="#2e2e34"/>
+<text x="1078.0" y="116" font-size="12.5" fill="#e8e4d9" font-weight="700">--void</text>
+<text x="1078.0" y="136" font-size="12" fill="#67655e">#080809</text></g><g clip-path="url(#sc)"><rect class="shine" x="0" y="0" width="120" height="110" fill="url(#sh)" transform="skewX(-20)"/></g>
+</svg>

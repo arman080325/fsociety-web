@@ -1,415 +1,358 @@
-<div align="center">
+<!--
+  ███ fsociety-web // README ███
+  Every panel below is a hand-built animated SVG living in assets/readme/.
+  No external image services, no tracking pixels, no JS. Just CSS keyframes inside SVG.
+-->
 
-```
-███████╗███████╗ ██████╗  ██████╗██╗███████╗████████╗██╗   ██╗
-██╔════╝██╔════╝██╔═══██╗██╔════╝██║██╔════╝╚══██╔══╝╚██╗ ██╔╝
-█████╗  ███████╗██║   ██║██║     ██║█████╗     ██║    ╚████╔╝
-██╔══╝  ╚════██║██║   ██║██║     ██║██╔══╝     ██║     ╚██╔╝
-██║     ███████║╚██████╔╝╚██████╗██║███████╗   ██║      ██║
-╚═╝     ╚══════╝ ╚═════╝  ╚═════╝╚═╝╚══════╝   ╚═╝      ╚═╝
-                    // a r m a n x p l o i t s
-```
+<p align="center">
+  <a href="https://fsociety-web.vercel.app">
+    <img src="assets/readme/banner.svg" alt="WE ARE FSOCIETY — break · learn · secure" width="100%">
+  </a>
+</p>
 
-### `WE ARE FSOCIETY` — break · learn · secure
+<p align="center">
+  <img src="assets/readme/ticker.svg" alt="live threat ticker" width="100%">
+</p>
 
-*An offensive-security field log you can actually click through.*
+<p align="center">
+  <a href="https://fsociety-web.vercel.app"><img src="https://img.shields.io/badge/%E2%97%89_node-REACHABLE-39ff7e?style=for-the-badge&labelColor=080809" alt="node reachable"></a>
+  <a href="https://fsociety-web.vercel.app/repos.html"><img src="https://img.shields.io/badge/%E2%AC%A1_arsenal-67_repos-00e5ff?style=for-the-badge&labelColor=080809" alt="arsenal"></a>
+  <a href="#-12"><img src="https://img.shields.io/badge/build_step-none-ff2d2d?style=for-the-badge&labelColor=080809" alt="no build step"></a>
+  <a href="#-13"><img src="https://img.shields.io/badge/scope-authorised_only-bf5fff?style=for-the-badge&labelColor=080809" alt="authorised only"></a>
+</p>
 
-[![Live](https://img.shields.io/badge/node-REACHABLE-39ff7e?style=for-the-badge&labelColor=080809)](https://fsociety-web.vercel.app)
-[![Stack](https://img.shields.io/badge/stack-HTML·CSS·JS-ff2d2d?style=for-the-badge&labelColor=080809)](#-tech-stack)
-[![Build](https://img.shields.io/badge/build_step-none-00e5ff?style=for-the-badge&labelColor=080809)](#-boot-it-locally)
-[![Ethics](https://img.shields.io/badge/scope-authorised_only-bf5fff?style=for-the-badge&labelColor=080809)](#-rules-of-engagement)
+<p align="center">
+  <code>hello, friend.</code><br>
+  <sub>you found the source of <b>fsociety-web</b> — the field log of <a href="https://github.com/arman080325"><b>@armanxploits</b></a>,<br>
+  a 4th-year CS engineer, cybersecurity intern and pentester-in-progress, running a Kali box and learning offence the hard way.</sub>
+</p>
 
-**[⟶ enter the node](https://fsociety-web.vercel.app)** &nbsp;·&nbsp; **[⟶ the arsenal](https://fsociety-web.vercel.app/repos.html)** &nbsp;·&nbsp; **[⟶ report a bug](https://github.com/arman080325/fsociety-web/issues)**
+<p align="center">
+  <a href="https://fsociety-web.vercel.app"><b>▸ enter the node</b></a> &nbsp;│&nbsp;
+  <a href="https://fsociety-web.vercel.app/repos.html"><b>▸ the arsenal</b></a> &nbsp;│&nbsp;
+  <a href="#-00"><b>▸ boot locally</b></a> &nbsp;│&nbsp;
+  <a href="#-10"><b>▸ mod it</b></a> &nbsp;│&nbsp;
+  <a href="https://github.com/arman080325/fsociety-web/issues"><b>▸ report a bug</b></a>
+</p>
 
-</div>
+<br>
 
-> *"Hello, friend. Hello, friend? That's lame. Maybe I should give you a name."*
-> — Elliot Alderson
+<a id="-00"></a>
+<img src="assets/readme/h-boot.svg" alt="// 00 boot sequence" width="100%">
 
----
+<p align="center">
+  <img src="assets/readme/boot.svg" alt="animated terminal boot sequence" width="100%">
+</p>
 
-```console
-armanxploits@fsociety:~$ cat /etc/motd
-```
-
-**fsociety-web** is the public hub of **Arman Ahemad Khan** ([@armanxploits](https://github.com/arman080325)) —
-a 4th-year CS engineering student, cybersecurity intern and pentester-in-progress running a Kali box.
-
-It isn't a stunt and it isn't a template. It is a **working field log**: a quiz-gated career roadmap,
-step-by-step lab tutorials, a filterable arsenal, browser-side hacking utilities, a code-review
-vulnerability game, animated attack trees and a 67-repo community index — all wrapped in a
-Mr. Robot–inspired operator aesthetic and shipped as **plain HTML, CSS and vanilla JS**. No framework,
-no bundler, no `npm install`.
-
-> [!IMPORTANT]
-> Everything here is **educational**. Every technique assumes a lab you own or an engagement you are
-> contracted for. *Written authorisation. Always. No exceptions.*
-
----
-
-## ▸ Table of contents
-
-| | | |
-|---|---|---|
-| [`00` Boot it locally](#-boot-it-locally) | [`05` The arsenal page](#-the-arsenal-page-reposhtml) | [`10` Repo map](#-repo-map) |
-| [`01` The tour](#-the-tour--12-sections-one-page) | [`06` Look & feel](#-look--feel) | [`11` Hacking Stuffs vault](#-hacking-stuffs--the-notes-vault) |
-| [`02` Interactive systems](#-interactive-systems) | [`07` Keyboard ops](#-keyboard-ops) | [`12` Deploy](#-deploy) |
-| [`03` Toolbox](#-toolbox--runs-100-in-your-browser) | [`08` Under the hood](#-under-the-hood) | [`13` Rules of engagement](#-rules-of-engagement) |
-| [`04` Spot the vulnerability](#-spot-the-vulnerability) | [`09` Modding guide](#-modding-guide) | [`14` Roadmap](#-whats-next) |
-
----
-
-## ▸ Boot it locally
+No framework. No bundler. No `npm install`. Three commands and you're in:
 
 ```bash
-git clone https://github.com/arman080325/fsociety-web.git
-cd fsociety-web
-python3 -m http.server 8080        # → http://localhost:8080
+git clone https://github.com/arman080325/fsociety-web.git && cd fsociety-web
+python3 -m http.server 8080
+# → http://localhost:8080   (or VS Code Live Server — already pinned to :5501)
 ```
 
-Any static server works (`npx serve .`, `caddy file-server`, VS Code Live Server on port `5501` —
-already configured in `.vscode/settings.json`). You can also just double-click `index.html`.
+<p align="center">
+  <img src="assets/readme/stats.svg" alt="28 tools · 26 roadmap nodes · 12 vuln challenges · 67 repos · 16 notes · 0 dependencies" width="100%">
+</p>
 
-> [!TIP]
-> Serve it over HTTP rather than `file://` if you want the boot sound and GitHub card images on the
-> arsenal page to behave consistently across browsers.
-
----
-
-## ▸ The tour — 12 sections, one page
-
-Before the page even opens you get the **boot sequence**: the fsociety mask rendered in ASCII,
-a typed-out terminal handshake and a `[ skip ]` button. After that, a **live threat ticker** of
-real CVEs scrolls along the bottom edge and a gradient **scroll-progress bar** tracks you along the top.
-
-| `//` | Section | What's inside |
-|:---:|---|---|
-| — | **hero** | `WE ARE FSOCIETY` glitch title, a particle-network canvas, drifting orbs, scanline sweep, a self-typing `armanxploits@fsociety:~` terminal and count-up stats |
-| `01` | **whoami** | ID card, animated skill meters (Web App, Network, Wireless, Exploitation, OSINT) and the *fsociety box* hardware spec sheet |
-| `02` | **the path** | Interactive career roadmap — phases `00 → 05`, 26 nodes, clickable dossiers, quiz-gated clearance, progress saved locally |
-| `03` | **tutorials** | Tabbed walkthroughs across Recon & OSINT, Web Exploitation, Wireless, PrivEsc, Social Engineering and Forensics |
-| `04` | **arsenal** | 28 tools filterable by `recon` · `exploitation` · `wireless` · `web` · `misc`, each tagged *configured*, *live* or *learning* |
-| `05` | **toolbox** | Five utilities that run entirely client-side — see [Toolbox](#-toolbox--runs-100-in-your-browser) |
-| `06` | **spot the vulnerability** | A 12-round code-review game — find the planted bug, read the fix |
-| `07` | **attack tree** | Animated top-down SVG kill chains for **Web App**, **Network** and **Wireless** scenarios |
-| `08` | **journey** | A 2021 → now timeline: first Kali dual-boot, XSS Game, Bettercap, Burp Pro, the Obsidian vault, the internship |
-| `09` | **field notes** | Seven tabbed cheat-sheets: MitM with Bettercap, WPA2 handshake capture, web pentest methodology, Nmap discovery, Linux PrivEsc, social engineering, digital forensics |
-| `10` | **proving ground** | Lab progress cards — PortSwigger Academy, Google XSS Game (6/6), TryHackMe, HackTheBox |
-| `11` | **repos** | Personal repos plus the top featured community repos, with a jump to the full arsenal page |
-| `12` | **contact** | Links out, plus a `contact.sh` widget that pings the node and paints the mask in ASCII |
-
----
-
-## ▸ Interactive systems
-
-<details open>
-<summary><b>◈ the path — a career rendered as an attack chain</b></summary>
 <br>
 
-The roadmap treats a security career like an engagement: you start at recon and work toward operator.
+<a id="-01"></a>
+<img src="assets/readme/h-node.svg" alt="// 01 the node" width="100%">
 
-| Phase | Title | Nodes |
-|:---:|---|:---:|
-| `00` | Recon — Foundations | 4 |
-| `01` | Foothold — Core Security | 3 |
-| `02` | Escalation — Offensive Skills | 6 |
-| `03` | Proving Ground — Practice | 4 |
-| `04` | Credentials — Certs | 5 |
-| `05` | Operator — Career | 4 |
+<p align="center">
+  <img src="assets/readme/modules.svg" alt="the twelve sections of the site" width="100%">
+</p>
 
-- **Dossiers** — tap a node and a side panel slides in with what it is, why it matters, the topics to cover and curated resources.
-- **Knowledge checks** — every one of the 26 nodes has a multiple-choice question. Answer correctly to *mark as cleared*; get it wrong and you get the explanation instead.
-- **Clearance meter** — your percentage climbs as nodes clear. Filter by track (foundations · offensive · practice · credentials) or wipe it with *reset progress*.
-- **Persistence** — progress lives in `localStorage` under `fsoc_cleared_v1`. Nothing leaves your browser.
-
-</details>
+> Before any of that, the page **boots**: the fsociety mask is drawn in ASCII, a terminal handshake types
+> itself out, and you can `[ skip ]`. A **CVE ticker** runs along the bottom edge, a gradient
+> **progress bar** tracks your scroll, and the cursor leaves a **glitch trail** that bursts on click.
 
 <details>
-<summary><b>⬡ tutorials — real commands, scope warnings included</b></summary>
+<summary><b>▸ <code>cat sections.log</code> — what each module actually does</b></summary>
 <br>
 
-Each tutorial has a difficulty badge (`beg` / `int` / `adv`), numbered steps with copy-to-clipboard
-code blocks, tags, and a scope warning. Category tab counts update automatically from the data.
-
-| Category | Examples |
-|---|---|
-| Recon & OSINT | Nmap Full Recon Workflow · Subdomain Enumeration · Shodan Recon & OSINT |
-| Web Exploitation | XSS Hunting — Reflected & DOM · SQL Injection — Manual to sqlmap · SSRF |
-| Wireless | WPA2 Handshake Capture & Crack · Deauth Attack & Evil Twin Setup |
-| Privilege Escalation | Linux PrivEsc — Full Checklist · Windows PrivEsc — Checklist |
-| Social Engineering | Phishing Campaign Setup (awareness / authorised simulations) |
-| Forensics | Incident Response — First Responder |
+| `//` | module | payload |
+|:--:|---|---|
+| `01` | **whoami** | ID card · animated skill meters (web, network, wireless, exploitation, OSINT) · *fsociety box* spec sheet |
+| `02` | **the path** | career roadmap as a kill chain — phases `00 → 05`, 26 nodes, dossier side-panels, quiz-gated clearance |
+| `03` | **tutorials** | 12 walkthroughs across recon, web, wireless, privesc, social engineering and forensics — commands + scope warnings |
+| `04` | **arsenal** | 28 tools, filterable, each tagged `configured` · `live` · `learning` |
+| `05` | **toolbox** | five utilities that run entirely in your browser |
+| `06` | **vuln hunt** | 12-round code-review game, shuffled every visit |
+| `07` | **attack tree** | animated SVG kill chains — web app · network · wireless |
+| `08` | **journey** | 2021 → now: first Kali dual-boot → XSS Game → Bettercap → Burp Pro → Obsidian vault → internship |
+| `09` | **field notes** | 7 tabbed cheat-sheets: MitM, WPA2, web methodology, recon, Linux privesc, social eng, forensics |
+| `10` | **proving ground** | PortSwigger Academy · Google XSS Game (6/6) · TryHackMe · HackTheBox |
+| `11` | **repos** | personal tools + the three featured community repos |
+| `12` | **contact** | links out + a `contact.sh` widget that pings the node |
 
 </details>
+
+<br>
+
+<a id="-02"></a>
+<img src="assets/readme/h-path.svg" alt="// 02 the path" width="100%">
+
+<p align="center">
+  <img src="assets/readme/roadmap.svg" alt="six-phase roadmap lighting up from recon to operator" width="100%">
+</p>
+
+A career mapped like an engagement. Tap a node → a **dossier** slides in: what it is, why a pentester needs it,
+topics to cover, where to learn it. Then comes the gate: **every node has a knowledge check**. Answer right and the node
+clears and your **clearance level** climbs. Answer wrong and you get the explanation instead of the badge.
+
+```diff
++ 00 RECON ........... foundations ....... networking · linux · windows · scripting
++ 01 FOOTHOLD ........ core security ..... security principles · cryptography · web fundamentals
++ 02 ESCALATION ...... offensive skills .. web app · network · active directory · wireless · privesc · OSINT
++ 03 PROVING GROUND .. practice .......... PortSwigger labs · TryHackMe · HackTheBox · CTFs
++ 04 CREDENTIALS ..... certs ............. Security+ · eJPT · PNPT · OSCP · BSCP
++ 05 OPERATOR ........ career ............ reporting · bug bounty · red teaming · specialise
+- progress → localStorage["fsoc_cleared_v1"] — it never leaves your browser
+```
+
+<br>
+
+<a id="-03"></a>
+<img src="assets/readme/h-tree.svg" alt="// 03 attack tree" width="100%">
+
+<p align="center">
+  <img src="assets/readme/attack-tree.svg" alt="animated web app attack tree" width="100%">
+</p>
+
+<sub>☝ that's the <b>web app</b> chain, drawn the same way the site does it: Bézier edges animate in on <code>stroke-dashoffset</code>,
+nodes rise level by level, and packets travel the links. On the site you can also switch to <b>network</b> and <b>wireless</b>
+and click any node to inspect it.</sub>
+
+<br><br>
+
+<a id="-04"></a>
+<img src="assets/readme/h-toolbox.svg" alt="// 04 toolbox" width="100%">
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**`⌘` payload encoder**<br>
+<sub>base64 ⇄ · URL ⇄ · → hex · HTML entities · one-click copy</sub>
+
+**`#` hash identifier**<br>
+<sub>reads length + format → CRC-32, MySQL/DES, MD5/NTLM/MD4, SHA-1, SHA-224/256/384/512 — pick your Hashcat <code>-m</code></sub>
+
+**`.*` regex tester**<br>
+<sub>live pattern + flags, matches highlighted as you type</sub>
+
+</td>
+<td width="50%" valign="top">
+
+**`⚡` CVE lookup**<br>
+<sub>local DB of 13 heavy hitters — Log4Shell, EternalBlue, Spring4Shell, regreSSHion, PAN-OS, ScreenConnect, TeamCity… → NVD</sub>
+
+**`◈` ports reference**<br>
+<sub><code>21 22 23 25 53 80 139 443 445 1433 3306 3389 5985 6379 8080 27017</code> — each with pentest notes</sub>
+
+**`∅` network calls**<br>
+<sub>none. Everything runs client-side. Nothing you paste goes anywhere.</sub>
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<a id="-05"></a>
+<img src="assets/readme/h-vuln.svg" alt="// 05 spot the vuln" width="100%">
+
+The site serves 12 snippets, each with **one planted flaw**: SQLi, XSS, command injection, path traversal, IDOR, SSRF,
+hardcoded creds, CSRF, XXE, insecure deserialization, open redirect and broken auth, across PHP, Node, Python/Flask,
+Java/Spring and HTML. Here's one from the deck. **Try it before you open the answer.**
+
+```python
+# challenge 03 / 12 — Python
+filename = request.args.get('file')
+os.system("cat " + filename)
+```
 
 <details>
-<summary><b>◉ attack tree — kill chains you can watch draw</b></summary>
+<summary><b>▸ <code>./reveal --answer</code></b></summary>
 <br>
 
-Pick a scenario and the tree builds itself top-down: cubic-Bézier SVG paths animate in via
-`stroke-dashoffset` while nodes fade and rise in sequence. Click any node to inspect it.
+> **Command injection.** `?file=x; id` runs both commands because user input is concatenated straight into a shell call.<br>
+> **Fix:** never hand user input to a shell. Read the file with `open()` after validating the path against an allow-list,
+> or use `subprocess.run([...], shell=False)`.
 
-| Colour | Meaning |
-|---|---|
-| 🔴 `#ff2d2d` | Root / target |
-| 🟠 `#ff9900` | Phase header |
-| 🔵 `#00e5ff` | Recon / discovery |
-| 🟣 `#bf5fff` | Exploitation technique |
-| 🟢 `#39ff7e` | Impact / objective achieved |
+The other eleven are waiting on the [live site](https://fsociety-web.vercel.app/#vulnhunt). 🔒
 
 </details>
 
----
+<br>
 
-## ▸ Toolbox — runs 100% in your browser
+<a id="-06"></a>
+<img src="assets/readme/h-arsenal.svg" alt="// 06 the arsenal" width="100%">
 
-No server, no API keys, no telemetry. Paste, click, done.
+[`repos.html`](https://fsociety-web.vercel.app/repos.html) is a second page: **THE ARSENAL**. It holds **67 community security repos** across
+**55 categories**: Active Directory, C2, cloud, DFIR, evasion, exploit dev, OSINT, wireless, automotive/CAN, Bluetooth and more.
 
-| Tool | Does |
-|---|---|
-| **⌘ Payload Encoder** | Base64 encode/decode, URL encode/decode, → hex, HTML entities — plus copy-output |
-| **# Hash Identifier** | Guesses the hash family from its length and format — CRC-32, MySQL/DES, MD5/NTLM/MD4, SHA-1, SHA-224, SHA-256/BLAKE2, SHA-384, SHA-512 — ready for the matching Hashcat `-m` mode |
-| **⚡ CVE Lookup** | Searches a local DB of 13 high-impact CVEs by ID or keyword — Log4Shell, EternalBlue, Spring4Shell, regreSSHion, PAN-OS, ScreenConnect and more — with a link to NVD |
-| **.\* Regex Tester** | Live pattern + flags with highlighted matches |
-| **◈ Ports Reference** | 16 ports that matter on an engagement — 21, 22, 23, 25, 53, 80, 139, 443, 445, 1433, 3306, 3389, 5985, 6379, 8080, 27017 — with pentest notes |
-
----
-
-## ▸ Spot the vulnerability
-
-Twelve short, realistic snippets with one planted flaw each. Choose the vulnerability class, get the
-reasoning and the fix, keep score. The order shuffles on every visit.
-
-```
-SQL Injection · Reflected XSS · Command Injection · Path Traversal · IDOR / Broken Access Control
-SSRF · Hardcoded Credentials · CSRF · XXE · Insecure Deserialization · Open Redirect · Broken Auth
+```text
+⌕ instant search ── owners · names · descriptions
+◉ category pills ── with live counts, empty ones hidden
+▣ card images ───── pulled from GitHub OpenGraph, initials fallback if they fail
+▾ load more ─────── renders 30 at a time
+★ star sync ─────── refresh-stars.js (below)
 ```
 
-Snippets span **PHP, Node/Express, Python/Flask, Java/Spring, JavaScript and HTML**.
-
----
-
-## ▸ The arsenal page (`repos.html`)
-
-A second page, linked from *repos → show all tools ↗*, titled **THE ARSENAL**.
-
-- **67 community security repos** across **55 categories** — Active Directory, C2, cloud, DFIR, evasion, exploit dev, OSINT, wireless, automotive/CAN, Bluetooth and more.
-- **Instant search** over names, owners and descriptions, plus **category pills with live counts**.
-- **Cards pulled from GitHub's OpenGraph images**, with an initials fallback if an image fails.
-- **Chunked rendering** — 30 cards at a time with *load more*.
-- **One source of truth** — `repos-data.js` feeds both this page and the three *featured* repos on the home page.
-
-### Keep star counts fresh
+`repos-data.js` is the single source of truth. It feeds this page *and* the three featured cards on the home page. Keep star counts honest:
 
 ```bash
-node refresh-stars.js --dry          # preview, write nothing
-node refresh-stars.js                # update repos-data.js (makes a .bak)
-GITHUB_TOKEN=ghp_xxx node refresh-stars.js   # 5000 req/hr instead of 60
+node refresh-stars.js --dry                     # preview the diff, write nothing
+node refresh-stars.js                           # rewrite stars:, keep a .bak
+GITHUB_TOKEN=ghp_xxx node refresh-stars.js      # 5000 req/hr instead of 60 — never commit it
 ```
 
-The script only touches the `stars:` numbers — descriptions, categories and `featured` flags are left
-alone. Needs Node 18+. **Never commit the token** (`.env` and `*.token` are already git-ignored).
+<br>
 
----
+<a id="-07"></a>
+<img src="assets/readme/h-look.svg" alt="// 07 look & feel" width="100%">
 
-## ▸ Look & feel
+<p align="center">
+  <img src="assets/readme/palette.svg" alt="colour tokens" width="100%">
+</p>
 
-### Three themes, zero flash
-
-A dropdown in the nav switches between **☾ dark · ☀ light · ⊙ system**. An inline script in `<head>`
-reads `fsoc_theme` from `localStorage` *before* first paint, so there's no flash of the wrong theme.
-In light mode the terminals and code blocks **stay dark** — a real terminal on a light desk.
-
-### Palette
-
-| Token | Hex | Role |
-|---|---|---|
-| `--signal` | `#ff2d2d` | Primary red — titles, alerts, root nodes |
-| `--phosphor` | `#39ff7e` | Terminal green — live and cleared states |
-| `--cyan` | `#00e5ff` | Secondary accents, recon |
-| `--purple` | `#bf5fff` | Exploitation nodes |
-| `--ember` | `#ff9900` | Warnings, phase headers |
-| `--yellow` | `#ffe600` | Highlights |
-| `--bone` | `#e8e4d9` | Body text |
-| `--panel` | `#111114` | Cards |
-| `--void` | `#080809` | The background, the abyss |
-
-### Type
-
-**Archivo** (900) for display headings · **JetBrains Mono** for everything that should feel like a shell.
-
-### Atmosphere
-
-Film grain, CRT scanlines and a vignette layered over the whole page; a Mr. Robot–style cursor trail
-that bursts glitch characters on click; particle pops as section headers scroll in; a periodic glitch
-on the hero title; and an fsociety entry sound that starts quietly on your first click or keypress.
-`prefers-reduced-motion` is respected.
-
-### Responsive
-
-Tuned from ultrawide down to phone width: burger nav, wrapping tabs, cards that shrink to the
-viewport and a ports table that scrolls inside its card instead of breaking the page.
-
----
-
-## ▸ Keyboard ops
-
-| Keys | Action |
+| layer | what you see |
 |---|---|
-| <kbd>?</kbd> | Open the shortcuts panel |
-| <kbd>Esc</kbd> | Close any panel |
-| <kbd>G</kbd> <kbd>H</kbd> | Hero |
-| <kbd>G</kbd> <kbd>W</kbd> | whoami |
-| <kbd>G</kbd> <kbd>R</kbd> | Roadmap |
-| <kbd>G</kbd> <kbd>T</kbd> | Tutorials |
-| <kbd>G</kbd> <kbd>A</kbd> | Arsenal |
-| <kbd>G</kbd> <kbd>X</kbd> | Toolbox |
-| <kbd>G</kbd> <kbd>N</kbd> | Field notes |
-| <kbd>G</kbd> <kbd>C</kbd> | Contact |
+| **atmosphere** | film grain · CRT scanlines · vignette · drifting orbs · a particle network on `<canvas>` |
+| **motion** | periodic title glitch · particle pops as sections reveal · count-up stats · a Mr. Robot–style cursor trail |
+| **sound** | an fsociety entry loop that starts quietly on your first click or keypress |
+| **themes** | `☾ dark` · `☀ light` · `⊙ system`, applied *before first paint* from `localStorage["fsoc_theme"]` so there's no flash. In light mode the terminals stay dark: a real terminal on a light desk |
+| **type** | **Archivo 900** for the shouting · **JetBrains Mono** for everything that should feel like a shell |
+| **reach** | ultrawide → phone · burger nav · wrapping tabs · in-card scrolling tables · `prefers-reduced-motion` respected |
 
-On mobile, open the burger menu and tap **⌨ shortcuts**.
+<br>
 
----
+<a id="-08"></a>
+<img src="assets/readme/h-keys.svg" alt="// 08 keyboard ops" width="100%">
 
-## ▸ Under the hood
+<p align="center">
+<kbd>?</kbd> panel &nbsp; <kbd>Esc</kbd> close &nbsp;│&nbsp;
+<kbd>G</kbd><kbd>H</kbd> hero &nbsp; <kbd>G</kbd><kbd>W</kbd> whoami &nbsp; <kbd>G</kbd><kbd>R</kbd> roadmap &nbsp; <kbd>G</kbd><kbd>T</kbd> tutorials<br>
+<kbd>G</kbd><kbd>A</kbd> arsenal &nbsp; <kbd>G</kbd><kbd>X</kbd> toolbox &nbsp; <kbd>G</kbd><kbd>N</kbd> field notes &nbsp; <kbd>G</kbd><kbd>C</kbd> contact
+<br><sub>on a phone: burger menu → <b>⌨ shortcuts</b></sub>
+</p>
+
+<br>
+
+<a id="-09"></a>
+<img src="assets/readme/h-hood.svg" alt="// 09 under the hood" width="100%">
 
 ```mermaid
+%%{init: {'theme':'base','themeVariables':{'background':'#080809','primaryColor':'#111114','primaryTextColor':'#e8e4d9','primaryBorderColor':'#ff2d2d','lineColor':'#ff2d2d','secondaryColor':'#18181c','tertiaryColor':'#0d0d0f','clusterBkg':'#0d0d0f','clusterBorder':'#2e2e34','fontFamily':'JetBrains Mono, monospace'}}}%%
 flowchart LR
-    subgraph Pages
-        I[index.html]
-        R[repos.html]
+    subgraph PAGES["◉ pages"]
+        I["index.html<br/>the node"]
+        R["repos.html<br/>the arsenal"]
     end
-    subgraph Styles
-        S[style.css]
-        T[theme.css<br/>light mode + theme menu]
+    subgraph DATA["◈ data layer"]
+        D["repos-data.js<br/>REPOS · REPO_CATEGORIES"]
+        S["script.js · data<br/>TOOLS · PHASES · QUIZZES · TUTORIALS<br/>NOTES · THREATS · VULN_CHALLENGES"]
     end
-    subgraph Data
-        D[repos-data.js<br/>REPOS · REPO_CATEGORIES]
-        SJ[script.js<br/>TOOLS · PHASES · QUIZZES<br/>TUTORIALS · NOTES · THREATS<br/>VULN_CHALLENGES · KB_SHORTCUTS]
+    subgraph LOGIC["⌘ modules"]
+        M["script.js · IIFEs<br/>boot · canvas · ticker · roadmap · dossier<br/>toolbox · trail · attack tree · theme · vuln hunt"]
+        RJ["repos.js<br/>search · pills · paging"]
     end
-    RJ[repos.js<br/>search · pills · paging]
-    RS[refresh-stars.js<br/>Node CLI]
-    GH[(GitHub API)]
-
-    I --> S & T
-    R --> S & T
-    I --> D --> SJ
+    CSS["style.css + theme.css"]
+    RS["refresh-stars.js"] -- "stars:" --> D
+    GH[("GitHub API")] -.-> RS
+    I --> CSS
+    R --> CSS
+    I --> D --> S --> M
     R --> D --> RJ
-    RS -- updates stars --> D
-    RS -. fetch .-> GH
 ```
 
-`script.js` is split into a **data layer** at the top (plain arrays and objects) and a set of
-self-contained **IIFE modules** below it — boot, hero terminal, network canvas, ticker, renderers,
-roadmap, dossier, toolbox, shortcuts, cursor trail, scroll bar, attack tree, sound, theme and the
-vuln game. Change the data and the UI follows.
+`script.js` = a **data layer** on top (plain arrays and objects) + self-contained **IIFE modules** below.
+Edit the data and the UI follows. Under the effects: `requestAnimationFrame` canvases, `IntersectionObserver` reveals,
+SVG `strokeDashoffset` drawing, CSS keyframes, and `data-theme` token swaps.
 
-| Effect | How it's done |
-|---|---|
-| Boot sequence | Timed `innerHTML` writes over an ASCII mask, skippable |
-| Network canvas | Proximity-linked particles on `<canvas>`, `requestAnimationFrame` |
-| Scroll reveal & counters | `IntersectionObserver` adds `.in`; counters tick up with rAF |
-| Threat ticker | CSS `tickerRun` keyframes on a duplicated track |
-| Attack tree | SVG Bézier paths + `strokeDashoffset`, nodes staggered with `setTimeout` |
-| Cursor trail | Full-screen canvas particle system on `mousemove` / `click` |
-| Theme | `data-theme` on `<html>`, CSS custom-property swap in `theme.css` |
+<br>
 
----
+<a id="-10"></a>
+<img src="assets/readme/h-mod.svg" alt="// 10 mod it" width="100%">
 
-## ▸ Modding guide
-
-Fork it, then edit the data — no build step to re-run.
+Fork it, then edit the data. There's nothing to rebuild.
 
 <details>
-<summary><b>Add a tool to the arsenal</b> — <code>script.js → TOOLS</code></summary>
+<summary><b>⬡ add a tool</b> → <code>TOOLS</code></summary>
 
 ```js
-TOOLS.push({
-  n:  "Bloodhound",                // name
-  c:  "recon",                     // recon | exploit | web | wireless | misc
-  d:  "AD relationship graphing.", // description
-  t:  "AD",                        // tag
-  s:  "learn",                     // ok | live | learn  (status colour)
-  st: "learning",                  // status text
-});
+TOOLS.push({ n: "BloodHound", c: "recon", d: "AD relationship graphing.", t: "AD", s: "learn", st: "learning" });
+//            name            recon|exploit|web|wireless|misc            tag      ok|live|learn  label
 ```
 </details>
 
 <details>
-<summary><b>Add a roadmap node with a knowledge check</b> — <code>PHASES</code> + <code>QUIZZES</code></summary>
+<summary><b>◈ add a roadmap node + its knowledge check</b> → <code>PHASES</code> + <code>QUIZZES</code></summary>
 
 ```js
 PHASES[2].nodes.push({
-  id: "ad", label: "Active Directory", track: "off",   // found | off | practice | career
-  blurb: "Where enterprise networks actually fall.",
-  why: "Most internal engagements end in AD — learn how trust is abused.",
-  topics: ["Kerberos", "Kerberoasting", "BloodHound"],
-  res: [{ n: "HackTricks — AD", u: "https://book.hacktricks.xyz" }],
+  id: "cloud", label: "Cloud Security", track: "off",        // found | off | practice | career
+  blurb: "Where the crown jewels moved.",
+  why: "Misconfigured IAM and metadata endpoints are today's open doors.",
+  topics: ["IAM", "S3 misconfig", "IMDS / SSRF"],
+  res: [{ n: "flAWS challenge", u: "http://flaws.cloud" }],
 });
-
-QUIZZES.ad = {
-  q: "Which attack requests service tickets to crack them offline?",
-  options: ["Pass-the-Hash", "Kerberoasting", "DCSync", "Golden Ticket"],
+QUIZZES.cloud = {
+  q: "Which IP serves the AWS instance metadata service?",
+  options: ["10.0.0.1", "169.254.169.254", "127.0.0.53", "192.168.0.254"],
   correct: 1,
-  explain: "Kerberoasting requests TGS tickets for SPN accounts and cracks them offline.",
+  explain: "IMDS lives at 169.254.169.254 — a favourite SSRF target for stealing role credentials.",
 };
 ```
 </details>
 
 <details>
-<summary><b>Add a tutorial</b> — <code>TUTORIALS.&lt;cat&gt;</code></summary>
+<summary><b>▶ add a tutorial</b> → <code>TUTORIALS.&lt;recon|webpwn|wireless|privesc|social|forensics&gt;</code></summary>
 
 ```js
 TUTORIALS.webpwn.push({
-  title: "IDOR — Insecure Direct Object Reference",
-  diff: "int",                                   // beg | int | adv
+  title: "IDOR — Insecure Direct Object Reference", diff: "int",   // beg | int | adv
   desc: "Finding broken access control in authorised labs.",
-  steps: [{ h: "Enumerate IDs", p: "Swap your ID for another.", code: "curl -s http://lab.local/api/user/2" }],
-  tags: ["IDOR", "Burp", "PortSwigger"],
-  warn: "Lab or authorised targets only.",
+  steps: [{ h: "Swap the ID", p: "Request another user's object.", code: "curl -s http://lab.local/api/user/2" }],
+  tags: ["IDOR", "Burp"], warn: "Lab or authorised targets only.",
 });
 ```
-Categories: `recon` · `webpwn` · `wireless` · `privesc` · `social` · `forensics`
+Tab counts update automatically.
 </details>
 
 <details>
-<summary><b>Add a field note</b> — <code>NOTES</code></summary>
+<summary><b>✎ add a field note</b> → <code>NOTES</code></summary>
 
 ```js
-NOTES.ad = {
-  title: "// Active Directory",
-  meta: "enumeration checklist · 2026",
-  secs: [{ h: "First look", list: ["whoami /all", "net group \"Domain Admins\" /domain"] }],
-};
+NOTES.ad = { title: "// Active Directory", meta: "enum checklist · 2026",
+  secs: [{ h: "First look", list: ["whoami /all", "net group \"Domain Admins\" /domain"] }] };
 ```
-Tabs are generated from `NOTES`, so the new category appears automatically.
+Tabs are generated from `NOTES`, so the new one appears on its own.
 </details>
 
 <details>
-<summary><b>Add a vuln-hunt challenge</b> — <code>VULN_CHALLENGES</code></summary>
+<summary><b>⚠ add a vuln-hunt round</b> → <code>VULN_CHALLENGES</code></summary>
 
 ```js
-VULN_CHALLENGES.push({
-  lang: "Go",
-  code: `http.Redirect(w, r, r.URL.Query().Get("next"), 302)`,
-  options: ["Open Redirect", "SSRF", "XSS", "CSRF"],
-  correct: 0,
-  explain: "Untrusted `next` goes straight into a redirect. Allow-list destinations.",
-});
+VULN_CHALLENGES.push({ lang: "Go", code: `http.Redirect(w, r, r.URL.Query().Get("next"), 302)`,
+  options: ["Open Redirect", "SSRF", "XSS", "CSRF"], correct: 0,
+  explain: "Untrusted `next` goes straight into a redirect. Allow-list destinations." });
 ```
 </details>
 
 <details>
-<summary><b>Add an attack-tree scenario</b> — <code>TREES</code> inside the top-down attack-tree IIFE</summary>
+<summary><b>△ add an attack-tree scenario</b> → <code>TREES</code> (top-down attack tree IIFE)</summary>
 
 ```js
-TREES.ad = {
-  label: "Active Directory Attack Chain",
-  root: { id: "root", label: "AD ENVIRONMENT", sub: "authorised engagement", color: "#ff2d2d",
-    children: [{ id: "enum", label: "ENUMERATION", sub: "bloodhound · ldap", color: "#ff9900",
-      children: [{ id: "kerb", label: "Kerberoasting", sub: "GetUserSPNs.py", color: "#bf5fff",
-        children: [{ id: "crack", label: "Offline crack", sub: "hashcat -m 13100", color: "#39ff7e", children: [] }] }] }] },
-};
+TREES.ad = { label: "Active Directory Attack Chain",
+  root: { id: "root", label: "AD ENVIRONMENT", sub: "authorised engagement", color: "#ff2d2d", children: [
+    { id: "enum", label: "ENUMERATION", sub: "bloodhound · ldap", color: "#ff9900", children: [
+      { id: "kerb", label: "Kerberoasting", sub: "GetUserSPNs.py", color: "#bf5fff", children: [
+        { id: "crack", label: "Offline crack", sub: "hashcat -m 13100", color: "#39ff7e", children: [] } ] } ] } ] } };
 ```
 ```html
 <button class="atree-btn" data-tree="ad">◈ Active Directory</button>
@@ -417,178 +360,148 @@ TREES.ad = {
 </details>
 
 <details>
-<summary><b>Add a community repo</b> — <code>repos-data.js → REPOS</code></summary>
+<summary><b>★ add a community repo</b> → <code>repos-data.js</code></summary>
 
 ```js
-{
-  owner: "BloodHoundAD", repo: "BloodHound",
-  lang: "TypeScript", stars: 9000,     // a number — formatted automatically
-  featured: false,                     // true → one of the 3 cards on the home page
-  cats: ["ad", "recon"],               // ids from REPO_CATEGORIES
-  desc: "Six degrees of Domain Admin.",
-},
+{ owner: "BloodHoundAD", repo: "BloodHound", lang: "TypeScript", stars: 9000,
+  featured: false,            // true → one of the 3 cards on the home page
+  cats: ["ad", "recon"],      // ids from REPO_CATEGORIES
+  desc: "Six degrees of Domain Admin." },
 ```
-Then run `node refresh-stars.js` to pull the real star count.
 </details>
 
 <details>
-<summary><b>Ticker, shortcuts, stats, contact</b></summary>
+<summary><b>⚙ the rest</b></summary>
 
-- **Threat ticker** → `THREATS` (`sev: "crit" | "high" | "med"`)
-- **Shortcuts** → `KB_SHORTCUTS` for the panel, `NAV_MAP` in the keyboard IIFE for the <kbd>G</kbd> jumps
-- **Hero stats** → `.hero-stats` in `index.html` (`data-to` is the number it counts up to)
-- **Journey / proving ground / contact** → static HTML in `index.html`
-- **Boot sound** → swap `fsociety_enter.mp3`; volume and loop live in the sound IIFE
+`THREATS` → ticker (`crit` · `high` · `med`) &nbsp;·&nbsp; `KB_SHORTCUTS` + `NAV_MAP` → keyboard ops &nbsp;·&nbsp;
+`.hero-stats[data-to]` → count-ups &nbsp;·&nbsp; journey / proving / contact → static HTML in `index.html` &nbsp;·&nbsp;
+`fsociety_enter.mp3` → the entry sound
 </details>
 
----
+<br>
 
-## ▸ Repo map
+<a id="-11"></a>
+<img src="assets/readme/h-vault.svg" alt="// 11 the vault" width="100%">
 
-```
+`Hacking Stuffs/` is a Markdown study vault that lives alongside the site. **16 files**, open the drawer:
+
+<details>
+<summary><b>▸ <code>ls -la "Hacking Stuffs/"</code></b></summary>
+<br>
+
+| | file | |
+|---|---|---|
+| 🗺 | [90-day hacking roadmap](Hacking%20Stuffs/90_Days_Hacking_Roadmap.md) | start here |
+| 🌐 | [TCP/IP & OSI — hacker's guide](Hacking%20Stuffs/TCPIP_OSI_Model_Hacker_Guide_README.md) | foundations |
+| 🔎 | [18 info-gathering tools](Hacking%20Stuffs/18_InfoGatheringTools.md) | recon |
+| 🎯 | [red team recon](Hacking%20Stuffs/README_Red_Team_Recon.md) | recon |
+| 📡 | [network analysis & packet sniffing](Hacking%20Stuffs/README_Network_Analysis_and_Packet_Sniffing.md) | network |
+| 🐍 | [netcat in Python](Hacking%20Stuffs/README_Netcat_Python_Educational.md) | tooling |
+| 🕸 | [web application security concepts](Hacking%20Stuffs/README_Web_Application_Security_Concepts.md) | web |
+| 💉 | [XSS — comprehensive](Hacking%20Stuffs/README_XSS_Comprehensive.md) | web |
+| 🍪 | [session hijacking](Hacking%20Stuffs/Session_Hijacking_README.md) | web |
+| 🔑 | [bypassing password reset · pt 1](Hacking%20Stuffs/Bypassing%20Your%20Password%20Reset%20Readme.md) | web |
+| 🔑 | [bypassing password reset · pt 2](Hacking%20Stuffs/Bypassing%20Your%20Password%20Reset%20Readme%202.md) | web |
+| 💰 | [bug bounty hunting tools](Hacking%20Stuffs/Bug_Bounty_Hunting_Tools_README.md) | bounty |
+| 📶 | [wireless network security](Hacking%20Stuffs/README_Wireless_Network_Security.md) | wireless |
+| 🦷 | [bluetooth tracking & hacking](Hacking%20Stuffs/Bluetooth_Tracking_Hacking_README.md) | wireless |
+| 📱 | [android hacking](Hacking%20Stuffs/Android-Hacking.md) | mobile |
+| 🚗 | [car hacking & vehicle security](Hacking%20Stuffs/README_Car_Hacking_and_Vehicle_Security.md) | hardware |
+
+</details>
+
+```text
 fsociety-web/
-├── index.html            ← the main node — all 12 sections
-├── repos.html            ← THE ARSENAL — searchable community repo index
-├── style.css             ← core styles, components, animations, breakpoints
-├── theme.css             ← light mode + dark/light/system dropdown
-├── script.js             ← data layer + every interactive module
-├── repos-data.js         ← REPOS + REPO_CATEGORIES (shared by both pages)
-├── repos.js              ← arsenal page: search, pills, paging, card fallbacks
-├── refresh-stars.js      ← Node CLI — sync star counts from the GitHub API
-├── fsociety_enter.mp3    ← entry sound
-├── favicons/             ← current icon set + boot ASCII art (40 / 56 col)
-├── old favicons/         ← previous icon set, kept for reference
-├── Hacking Stuffs/       ← Markdown notes vault (see below)
-└── .vscode/settings.json ← Live Server on :5501
+├── index.html          the node — 12 sections
+├── repos.html          THE ARSENAL
+├── style.css           core styles · components · animation · breakpoints
+├── theme.css           light mode + ☾ ☀ ⊙ dropdown
+├── script.js           data layer + every interactive module
+├── repos-data.js       REPOS + REPO_CATEGORIES (shared by both pages)
+├── repos.js            search · pills · paging · image fallbacks
+├── refresh-stars.js    node CLI — sync stars from the GitHub API
+├── fsociety_enter.mp3  the entry sound
+├── favicons/           icon set + boot ASCII mask (40 / 56 col)
+├── assets/readme/      the animated SVGs on this page
+└── Hacking Stuffs/     the vault
 ```
 
----
+<br>
 
-## ▸ Hacking Stuffs — the notes vault
+<a id="-12"></a>
+<img src="assets/readme/h-deploy.svg" alt="// 12 deploy" width="100%">
 
-Long-form Markdown study notes that sit alongside the site.
+It's static files, so it runs anywhere.
 
-| Topic | File |
+| target | how |
 |---|---|
-| 🗺 90-day hacking roadmap | [`90_Days_Hacking_Roadmap.md`](Hacking%20Stuffs/90_Days_Hacking_Roadmap.md) |
-| 🌐 TCP/IP & OSI for hackers | [`TCPIP_OSI_Model_Hacker_Guide_README.md`](Hacking%20Stuffs/TCPIP_OSI_Model_Hacker_Guide_README.md) |
-| 🔎 18 info-gathering tools | [`18_InfoGatheringTools.md`](Hacking%20Stuffs/18_InfoGatheringTools.md) |
-| 🎯 Red team recon | [`README_Red_Team_Recon.md`](Hacking%20Stuffs/README_Red_Team_Recon.md) |
-| 📡 Network analysis & packet sniffing | [`README_Network_Analysis_and_Packet_Sniffing.md`](Hacking%20Stuffs/README_Network_Analysis_and_Packet_Sniffing.md) |
-| 🐍 Netcat in Python | [`README_Netcat_Python_Educational.md`](Hacking%20Stuffs/README_Netcat_Python_Educational.md) |
-| 🕸 Web application security concepts | [`README_Web_Application_Security_Concepts.md`](Hacking%20Stuffs/README_Web_Application_Security_Concepts.md) |
-| 💉 XSS — comprehensive | [`README_XSS_Comprehensive.md`](Hacking%20Stuffs/README_XSS_Comprehensive.md) |
-| 🍪 Session hijacking | [`Session_Hijacking_README.md`](Hacking%20Stuffs/Session_Hijacking_README.md) |
-| 🔑 Bypassing password reset (pt. 1) | [`Bypassing Your Password Reset Readme.md`](Hacking%20Stuffs/Bypassing%20Your%20Password%20Reset%20Readme.md) |
-| 🔑 Bypassing password reset (pt. 2) | [`Bypassing Your Password Reset Readme 2.md`](Hacking%20Stuffs/Bypassing%20Your%20Password%20Reset%20Readme%202.md) |
-| 💰 Bug bounty hunting tools | [`Bug_Bounty_Hunting_Tools_README.md`](Hacking%20Stuffs/Bug_Bounty_Hunting_Tools_README.md) |
-| 📶 Wireless network security | [`README_Wireless_Network_Security.md`](Hacking%20Stuffs/README_Wireless_Network_Security.md) |
-| 🦷 Bluetooth tracking & hacking | [`Bluetooth_Tracking_Hacking_README.md`](Hacking%20Stuffs/Bluetooth_Tracking_Hacking_README.md) |
-| 📱 Android hacking | [`Android-Hacking.md`](Hacking%20Stuffs/Android-Hacking.md) |
-| 🚗 Car hacking & vehicle security | [`README_Car_Hacking_and_Vehicle_Security.md`](Hacking%20Stuffs/README_Car_Hacking_and_Vehicle_Security.md) |
+| **Vercel** *(live)* | import repo → preset *Other* → no build command → output `/` → every push to `main` ships |
+| **GitHub Pages** | *Settings → Pages → Deploy from branch → `main` / root* |
+| **Netlify** | drag the folder onto [app.netlify.com/drop](https://app.netlify.com/drop) |
+| **anywhere** | `nginx` · `caddy file-server` · `npx serve .` · an S3 bucket · a Pi under your desk |
 
----
+<br>
 
-## ▸ Tech stack
+<a id="-13"></a>
+<img src="assets/readme/h-roe.svg" alt="// 13 rules of engagement" width="100%">
 
-| Layer | Choice |
-|---|---|
-| Markup | Semantic HTML5 — two pages, no framework |
-| Styling | CSS3 custom properties, Grid, Flexbox, keyframes, `data-theme` theming |
-| Logic | Vanilla ES6+ in IIFE modules — zero runtime dependencies |
-| Graphics | `<canvas>` particle systems, animated inline SVG |
-| Fonts | Archivo + JetBrains Mono via Google Fonts |
-| Storage | `localStorage` — roadmap progress (`fsoc_cleared_v1`) and theme (`fsoc_theme`) only |
-| Tooling | One optional Node 18+ script (`refresh-stars.js`) |
-| Hosting | Vercel — any static host works |
+> [!CAUTION]
+> **The difference between a pentester and a problem is a signature on a scope document.**
+> Everything here is educational and assumes a lab you own or an engagement you're contracted for.
 
----
-
-## ▸ Deploy
-
-**Vercel** (current) — import the repo, framework preset *Other*, no build command, output directory `/`.
-Every push to `main` redeploys.
-
-**GitHub Pages** — *Settings → Pages → Deploy from branch → `main` / root*.
-
-**Netlify** — drag the folder onto [app.netlify.com/drop](https://app.netlify.com/drop), or connect the repo.
-
-**Anywhere else** — it's static files. `nginx`, `caddy`, an S3 bucket, a Raspberry Pi under your desk.
-
----
-
-## ▸ Rules of engagement
-
-The difference between a pentester and a problem is a signature on a scope document.
-
-| Target | In scope? |
-|---|---|
-| PortSwigger Web Security Academy | ✅ Built for it |
-| DVWA, bWAPP, VulnHub, Metasploitable | ✅ Self-hosted — yours |
-| TryHackMe, HackTheBox | ✅ Their boxes, their rules |
-| Your own network and hardware | ✅ Your call |
-| A bug-bounty program | ⚠️ Only what its policy lists |
-| Anyone else's systems | ❌ **Not without written permission** |
-
-Nothing on this site is a manual for attacking people who didn't agree to it. If you're unsure whether
-something is in scope, it isn't.
-
----
-
-## ▸ What's next
-
-- [x] Dark / light / system theme
-- [x] Spot-the-vulnerability code-review game
-- [x] Quiz-gated roadmap clearance
-- [x] Standalone searchable arsenal page
-- [x] Full mobile responsiveness pass
-- [ ] Active Directory attack tree
-- [ ] Expandable CTF write-up cards
-- [ ] Full interactive quiz section beyond the roadmap checks
-- [ ] Bug-bounty hall of fame
-- [ ] Live threat feed (CISA KEV / NVD) to replace the static ticker
-- [ ] Auto-import field notes from the Obsidian vault
-
----
-
-## ▸ Contribute
-
-Found a broken link, a wrong command or an outdated CVE? [Open an issue](https://github.com/arman080325/fsociety-web/issues)
-or send a PR. Tool and repo suggestions are welcome — add them to `TOOLS` or `repos-data.js` and
-explain why they earn a slot.
-
-## ▸ Connect
-
-| | |
-|---|---|
-| ⬡ GitHub | [github.com/arman080325](https://github.com/arman080325) |
-| ◈ LinkedIn | [linkedin.com/in/arman-ahemad-khan](https://www.linkedin.com/in/arman-ahemad-khan) |
-| ◉ Mail | [armanxploit@gmail.com](mailto:armanxploit@gmail.com) |
-
-Open to CTF teams, bug-bounty collabs and security research.
-
-## ▸ License
-
-Built for learning. Fork it, gut it, make it yours — credit appreciated, not required.
-Don't use it to do anything illegal.
-
-Inspired by the aesthetics of *Mr. Robot*. Not affiliated with USA Network, NBCUniversal or the show's
-creators. All trademarks belong to their owners.
-
----
-
-<div align="center">
-
-```console
-armanxploits@fsociety:~$ ping armanxploits
-PING armanxploits — 56 bytes
-64 bytes: icmp_seq=1 ttl=64 time=0.1ms
---- node is REACHABLE ---
-armanxploits@fsociety:~$ exit
+```diff
++ PortSwigger Web Security Academy ........ built for it
++ DVWA · bWAPP · VulnHub · Metasploitable . self-hosted, yours
++ TryHackMe · HackTheBox .................. their boxes, their rules
++ your own network & hardware ............. your call
+! a bug-bounty program .................... only what its policy lists
+- anyone else's systems ................... NOT without written permission
 ```
 
-**ARMANXPLOITS // fsociety** · break · learn · secure
+<sub>If you're unsure whether something is in scope, it isn't.</sub>
 
-<sub>educational use only · ethical hacking is legal hacking · always get written permission</sub>
+<br>
 
-</div>
+<a id="-14"></a>
+<img src="assets/readme/h-next.svg" alt="// 14 what's next" width="100%">
+
+```diff
++ [x] dark / light / system theme
++ [x] spot-the-vulnerability code-review game
++ [x] quiz-gated roadmap clearance
++ [x] standalone searchable arsenal page
++ [x] full mobile responsiveness pass
+- [ ] active directory attack tree
+- [ ] expandable CTF write-up cards
+- [ ] full interactive quiz section
+- [ ] bug-bounty hall of fame
+- [ ] live threat feed (CISA KEV / NVD) instead of the static ticker
+- [ ] auto-import field notes from the Obsidian vault
+```
+
+Found a dead link, a wrong flag or a stale CVE? [Open an issue](https://github.com/arman080325/fsociety-web/issues) or send a PR.
+If you think a tool deserves a slot, add it to `TOOLS` or `repos-data.js` and explain why.
+
+<br>
+
+<a id="-15"></a>
+<img src="assets/readme/h-connect.svg" alt="// 15 connect" width="100%">
+
+<p align="center">
+  <a href="https://github.com/arman080325"><img src="https://img.shields.io/badge/%E2%AC%A1_github-arman080325-e8e4d9?style=for-the-badge&labelColor=080809&logo=github&logoColor=e8e4d9" alt="github"></a>
+  <a href="https://www.linkedin.com/in/arman-ahemad-khan"><img src="https://img.shields.io/badge/%E2%97%88_linkedin-arman--ahemad--khan-00e5ff?style=for-the-badge&labelColor=080809" alt="linkedin"></a>
+  <a href="mailto:armanxploit@gmail.com"><img src="https://img.shields.io/badge/%E2%97%89_mail-armanxploit%40gmail.com-ff2d2d?style=for-the-badge&labelColor=080809" alt="mail"></a>
+</p>
+
+<p align="center"><sub>open to CTF teams · bug-bounty collabs · security research</sub></p>
+
+<p align="center">
+  <img src="assets/readme/footer.svg" alt="ping armanxploits — node is reachable — hello, friend." width="100%">
+</p>
+
+<p align="center">
+<sub>
+built for learning — fork it, gut it, make it yours. credit appreciated, not required. don't use it for anything illegal.<br>
+aesthetic inspired by <i>Mr. Robot</i>; not affiliated with USA Network, NBCUniversal or the show's creators.
+</sub>
+</p>
